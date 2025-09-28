@@ -1,429 +1,867 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <meta name="robots" content="index, follow">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="index, follow" />
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="">
-    <meta property="og:type" content="website">
-    
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="">
-    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
-    
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/favicon-16x16.png"
+    />
+
     <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <!-- Stylesheet -->
-    <link href="./css/output.css" rel="stylesheet">
-    
+    <link href="./css/output.css" rel="stylesheet" />
+
     <title></title>
-</head>
-<body class="font-sans text-neutral-900 bg-neutral-50 antialiased">
+  </head>
+  <body class="font-sans text-neutral-900 bg-neutral-50 antialiased">
     <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-600 text-white px-4 py-2 rounded-md z-50">
-        Skip to main content
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-600 text-white px-4 py-2 rounded-md z-50"
+    >
+      Skip to main content
     </a>
 
     <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm border-b border-neutral-200 z-40" role="banner">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="#home" class="text-2xl font-bold gradient-text" aria-label="Go to home section">
-                        <span id="nav-name">Portfolio</span>
-                    </a>
-                </div>
+    <header
+      class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm border-b border-neutral-200 z-40"
+      role="banner"
+    >
+      <nav
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a
+              href="#home"
+              class="text-2xl font-bold gradient-text"
+              aria-label="Go to home section"
+            >
+              <span id="nav-name">Portfolio</span>
+            </a>
+          </div>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link text-neutral-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200" aria-label="Go to home section">Home</a>
-                        <a href="#about" class="nav-link text-neutral-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200" aria-label="Go to about section">About</a>
-                        <a href="#experience" class="nav-link text-neutral-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200" aria-label="Go to experience section">Experience</a>
-                        <a href="#projects" class="nav-link text-neutral-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200" aria-label="Go to projects section">Projects</a>
-                        <a href="#contact" class="nav-link text-neutral-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200" aria-label="Go to contact section">Contact</a>
-                    </div>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button type="button" id="mobile-menu-button" class="bg-neutral-100 inline-flex items-center justify-center p-2 rounded-md text-neutral-700 hover:text-primary-600 hover:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition-colors duration-200" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle mobile menu">
-                        <span class="sr-only">Open main menu</span>
-                        <!-- Hamburger icon -->
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <!-- Close icon (hidden by default) -->
-                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="#home"
+                class="nav-link text-neutral-700 hover:text-primary-500 px-3 py-2 rounded-md text-sm font-bold transition-colors duration-200"
+                aria-label="Go to home section"
+                >Home</a
+              >
+              <a
+                href="#about"
+                class="nav-link text-neutral-700 hover:text-primary-500 px-3 py-2 rounded-md text-sm font-bold transition-colors duration-200"
+                aria-label="Go to about section"
+                >About</a
+              >
+              <a
+                href="#experience"
+                class="nav-link text-neutral-700 hover:text-primary-500 px-3 py-2 rounded-md text-sm font-bold transition-colors duration-200"
+                aria-label="Go to experience section"
+                >Experience</a
+              >
+              <a
+                href="#projects"
+                class="nav-link text-neutral-700 hover:text-primary-500 px-3 py-2 rounded-md text-sm font-bold transition-colors duration-200"
+                aria-label="Go to projects section"
+                >Projects</a
+              >
+              <a
+                href="#contact"
+                class="nav-link text-neutral-700 hover:text-primary-500 px-3 py-2 rounded-md text-sm font-bold transition-colors duration-200"
+                aria-label="Go to contact section"
+                >Contact</a
+              >
             </div>
+          </div>
 
-            <!-- Mobile menu -->
-            <div class="md:hidden hidden" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-neutral-200">
-                    <a href="#home" class="mobile-nav-link text-neutral-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Home</a>
-                    <a href="#about" class="mobile-nav-link text-neutral-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">About</a>
-                    <a href="#experience" class="mobile-nav-link text-neutral-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Experience</a>
-                    <a href="#projects" class="mobile-nav-link text-neutral-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Projects</a>
-                    <a href="#contact" class="mobile-nav-link text-neutral-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Contact</a>
-                </div>
-            </div>
-        </nav>
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              type="button"
+              id="mobile-menu-button"
+              class="bg-neutral-100 inline-flex items-center justify-center p-2 rounded-md text-neutral-700 hover:text-primary-600 hover:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition-colors duration-200"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Toggle mobile menu"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!-- Hamburger icon -->
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <!-- Close icon (hidden by default) -->
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+          <div
+            class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-neutral-200"
+          >
+            <a
+              href="#home"
+              class="mobile-nav-link text-neutral-900 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-bold transition-colors duration-200"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="mobile-nav-link text-neutral-900 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-bold transition-colors duration-200"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="mobile-nav-link text-neutral-900 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-bold transition-colors duration-200"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="mobile-nav-link text-neutral-900 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-bold transition-colors duration-200"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="mobile-nav-link text-neutral-900 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-bold transition-colors duration-200"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main id="main-content" role="main">
-        <!-- Hero Section -->
-        <section id="home" class="section pt-24 md:pt-32 bg-gradient-to-br from-neutral-50 via-primary-50/30 to-accent-50/30 min-h-screen flex items-center" role="banner">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <!-- Hero Content -->
-                    <div class="animate-on-scroll">
-                        <div class="mb-6">
-                            <p class="text-primary-600 font-medium text-lg mb-2" id="hero-greeting">Hello, I'm</p>
-                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-4" id="hero-name">
-                                Your Name
-                            </h1>
-                            <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold gradient-text mb-6" id="hero-title">
-                                Your Title
-                            </h2>
-                        </div>
-                        <p class="text-lg md:text-xl text-neutral-600 mb-8 leading-relaxed" id="hero-tagline">
-                            Your tagline goes here
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="#contact" class="btn btn-primary" aria-label="Get in touch">
-                                Get In Touch
-                            </a>
-                            <a href="#" id="hero-resume-link" class="btn btn-outline" aria-label="View resume" target="_blank" rel="noopener noreferrer">
-                                View Resume
-                            </a>
-                        </div>
-                        <!-- Social Links -->
-                        <div class="flex space-x-6 mt-8" id="hero-social-links">
-                            <!-- Social links will be populated by JavaScript -->
-                        </div>
-                    </div>
-
-                    <!-- Hero Image -->
-                    <div class="animate-on-scroll animation-delay-200 lg:order-first lg:order-last">
-                        <div class="relative">
-                            <div class="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 rounded-2xl transform rotate-6"></div>
-                            <div class="relative bg-white p-2 rounded-2xl shadow-xl">
-                                <img id="hero-image" src="" alt="" class="w-full h-auto rounded-xl object-cover aspect-square" loading="eager">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="section section-dark pt-24 md:pt-32 bg-gradient-to-br from-neutral-50 via-primary-50/30 to-accent-50/30 min-h-screen flex items-center"
+        role="banner"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Hero Content -->
+            <div class="animate-on-scroll">
+              <div class="mb-6">
+                <p
+                  class="text-primary-600 font-medium text-lg mb-2"
+                  id="hero-greeting"
+                >
+                  Hello, I'm
+                </p>
+                <h1
+                  class="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-4"
+                  id="hero-name"
+                >
+                  Your Name
+                </h1>
+                <h2
+                  class="text-2xl md:text-3xl lg:text-4xl font-semibold gradient-text mb-6"
+                  id="hero-title"
+                >
+                  Your Title
+                </h2>
+              </div>
+              <p
+                class="text-lg md:text-xl text-adaptive-secondary mb-8 leading-relaxed"
+                id="hero-tagline"
+              >
+                Your tagline goes here
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#contact"
+                  class="btn btn-primary"
+                  aria-label="Get in touch"
+                >
+                  Get In Touch
+                </a>
+                <a
+                  href="#"
+                  id="hero-resume-link"
+                  class="btn btn-outline"
+                  aria-label="View resume"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Resume
+                </a>
+              </div>
+              <!-- Social Links -->
+              <div class="flex space-x-6 mt-8" id="hero-social-links">
+                <!-- Social links will be populated by JavaScript -->
+              </div>
             </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about" class="section bg-white" role="region" aria-labelledby="about-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 id="about-title" class="section-title animate-on-scroll">About Me</h2>
-                    <p class="section-subtitle animate-on-scroll animation-delay-100">Get to know me better</p>
+            <!-- Hero Image -->
+            <div
+              class="animate-on-scroll animation-delay-200 lg:order-first lg:order-last"
+            >
+              <div class="relative">
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 rounded-2xl transform rotate-6"
+                ></div>
+                <div class="relative bg-white p-2 rounded-2xl shadow-xl">
+                  <img
+                    id="hero-image"
+                    src=""
+                    alt=""
+                    class="w-full h-auto rounded-xl object-cover aspect-square"
+                    loading="eager"
+                  />
                 </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    <!-- About Content -->
-                    <div class="animate-on-scroll animation-delay-200">
-                        <div class="prose prose-lg max-w-none">
-                            <p id="about-summary" class="text-neutral-600 leading-relaxed mb-6">
-                                <!-- Summary will be populated by JavaScript -->
-                            </p>
-                        </div>
-
-                        <!-- Education -->
-                        <div class="mt-8">
-                            <h3 class="text-xl font-semibold text-neutral-900 mb-4">Education</h3>
-                            <div class="bg-neutral-50 rounded-lg p-6">
-                                <div class="flex items-start space-x-4">
-                                    <div class="flex-shrink-0">
-                                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                                            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h4 id="education-degree" class="text-lg font-medium text-neutral-900">Degree</h4>
-                                        <p id="education-institution" class="text-primary-600 font-medium">Institution</p>
-                                        <p id="education-year" class="text-neutral-600 text-sm">Year</p>
-                                        <p id="education-gpa" class="text-neutral-600 text-sm mt-1">GPA</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Skills -->
-                    <div class="animate-on-scroll animation-delay-300">
-                        <h3 class="text-2xl font-semibold text-neutral-900 mb-6">Skills & Technologies</h3>
-                        
-                        <!-- Technical Skills -->
-                        <div class="space-y-6">
-                            <div>
-                                <h4 class="text-lg font-medium text-neutral-900 mb-3">Frontend Development</h4>
-                                <div class="flex flex-wrap gap-2" id="frontend-skills">
-                                    <!-- Skills will be populated by JavaScript -->
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 class="text-lg font-medium text-neutral-900 mb-3">Backend Development</h4>
-                                <div class="flex flex-wrap gap-2" id="backend-skills">
-                                    <!-- Skills will be populated by JavaScript -->
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 class="text-lg font-medium text-neutral-900 mb-3">Tools & Technologies</h4>
-                                <div class="flex flex-wrap gap-2" id="tools-skills">
-                                    <!-- Skills will be populated by JavaScript -->
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 class="text-lg font-medium text-neutral-900 mb-3">Concepts & Methodologies</h4>
-                                <div class="flex flex-wrap gap-2" id="concepts-skills">
-                                    <!-- Skills will be populated by JavaScript -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section bg-neutral-50" role="region" aria-labelledby="experience-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 id="experience-title" class="section-title animate-on-scroll">Work Experience</h2>
-                    <p class="section-subtitle animate-on-scroll animation-delay-100">My professional journey</p>
-                </div>
+      <!-- About Section -->
+      <section
+        id="about"
+        class="section section-light"
+        role="region"
+        aria-labelledby="about-title"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 id="about-title" class="section-title animate-on-scroll">
+              About Me
+            </h2>
+            <p class="section-subtitle animate-on-scroll animation-delay-100">
+              Get to know me better
+            </p>
+          </div>
 
-                <div class="space-y-8" id="experience-list">
-                    <!-- Experience items will be populated by JavaScript -->
-                </div>
-            </div>
-        </section>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <!-- About Content -->
+            <div class="animate-on-scroll animation-delay-200">
+              <div class="prose prose-lg max-w-none">
+                <p
+                  id="about-summary"
+                  class="text-adaptive-secondary leading-relaxed mb-6"
+                >
+                  <!-- Summary will be populated by JavaScript -->
+                </p>
+              </div>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section bg-white" role="region" aria-labelledby="projects-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 id="projects-title" class="section-title animate-on-scroll">Featured Projects</h2>
-                    <p class="section-subtitle animate-on-scroll animation-delay-100">Some of my recent work</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-                    <!-- Project cards will be populated by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section bg-gradient-to-br from-primary-50 to-accent-50" role="region" aria-labelledby="contact-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 id="contact-title" class="section-title animate-on-scroll">Get In Touch</h2>
-                    <p class="section-subtitle animate-on-scroll animation-delay-100">Let's work together</p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Contact Info -->
-                    <div class="animate-on-scroll animation-delay-200">
-                        <div class="bg-white rounded-2xl shadow-lg p-8">
-                            <h3 class="text-2xl font-semibold text-neutral-900 mb-6">Let's Connect</h3>
-                            <p id="contact-availability" class="text-neutral-600 mb-8">
-                                <!-- Availability info will be populated by JavaScript -->
-                            </p>
-
-                            <div class="space-y-4">
-                                <div class="flex items-center space-x-4">
-                                    <div class="flex-shrink-0">
-                                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                                            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-medium text-neutral-900">Email</p>
-                                        <a href="#" id="contact-email" class="text-primary-600 hover:text-primary-700 transition-colors">
-                                            <!-- Email will be populated by JavaScript -->
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center space-x-4">
-                                    <div class="flex-shrink-0">
-                                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center">
-                                            <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-medium text-neutral-900">Phone</p>
-                                        <a href="#" id="contact-phone" class="text-accent-600 hover:text-accent-700 transition-colors">
-                                            <!-- Phone will be populated by JavaScript -->
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center space-x-4">
-                                    <div class="flex-shrink-0">
-                                        <div class="w-12 h-12 bg-neutral-100 rounded-lg flex items-center justify-center">
-                                            <svg class="w-6 h-6 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-medium text-neutral-900">Location</p>
-                                        <p id="contact-location" class="text-neutral-600">
-                                            <!-- Location will be populated by JavaScript -->
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Social Links -->
-                            <div class="mt-8 pt-8 border-t border-neutral-200">
-                                <p class="text-sm font-medium text-neutral-900 mb-4">Follow me on</p>
-                                <div class="flex space-x-4" id="contact-social-links">
-                                    <!-- Social links will be populated by JavaScript -->
-                                </div>
-                            </div>
-                        </div>
+              <!-- Education -->
+              <div class="mt-8">
+                <h3 class="text-xl font-semibold text-neutral-900 mb-4">
+                  Education
+                </h3>
+                <div class="bg-neutral-50 rounded-lg p-6">
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                      <div
+                        class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-6 h-6 text-primary-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 14l9-5-9-5-9 5 9 5z"
+                          ></path>
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                          ></path>
+                        </svg>
+                      </div>
                     </div>
-
-                    <!-- Contact Form -->
-                    <div class="animate-on-scroll animation-delay-300">
-                        <div class="bg-white rounded-2xl shadow-lg p-8">
-                            <form id="contact-form" class="space-y-6" novalidate>
-                                <div>
-                                    <label for="name" class="block text-sm font-medium text-neutral-900 mb-2">Name *</label>
-                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" placeholder="Your full name" aria-describedby="name-error">
-                                    <p id="name-error" class="mt-1 text-sm text-red-600 hidden" role="alert"></p>
-                                </div>
-
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-neutral-900 mb-2">Email *</label>
-                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" placeholder="your@email.com" aria-describedby="email-error">
-                                    <p id="email-error" class="mt-1 text-sm text-red-600 hidden" role="alert"></p>
-                                </div>
-
-                                <div>
-                                    <label for="subject" class="block text-sm font-medium text-neutral-900 mb-2">Subject *</label>
-                                    <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" placeholder="What's this about?" aria-describedby="subject-error">
-                                    <p id="subject-error" class="mt-1 text-sm text-red-600 hidden" role="alert"></p>
-                                </div>
-
-                                <div>
-                                    <label for="message" class="block text-sm font-medium text-neutral-900 mb-2">Message *</label>
-                                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-vertical" placeholder="Tell me about your project or idea..." aria-describedby="message-error"></textarea>
-                                    <p id="message-error" class="mt-1 text-sm text-red-600 hidden" role="alert"></p>
-                                </div>
-
-                                <button type="submit" class="w-full btn btn-primary" aria-describedby="form-status">
-                                    <span class="submit-text">Send Message</span>
-                                    <span class="loading-text hidden">Sending...</span>
-                                </button>
-
-                                <p id="form-status" class="text-sm text-center hidden" role="status" aria-live="polite"></p>
-                            </form>
-                        </div>
+                    <div class="flex-1">
+                      <h4
+                        id="education-degree"
+                        class="text-lg font-medium text-neutral-900"
+                      >
+                        Degree
+                      </h4>
+                      <p
+                        id="education-institution"
+                        class="text-primary-600 font-medium"
+                      >
+                        Institution
+                      </p>
+                      <p id="education-year" class="text-neutral-800 text-sm">
+                        Year
+                      </p>
+                      <p
+                        id="education-gpa"
+                        class="text-neutral-800 text-sm mt-1"
+                      >
+                        GPA
+                      </p>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+
+            <!-- Skills -->
+            <div class="animate-on-scroll animation-delay-300">
+              <h3 class="text-2xl font-semibold text-neutral-900 mb-6">
+                Skills & Technologies
+              </h3>
+
+              <!-- Technical Skills -->
+              <div class="space-y-6">
+                <div>
+                  <h4 class="text-lg font-medium text-neutral-900 mb-3">
+                    Frontend Development
+                  </h4>
+                  <div class="flex flex-wrap gap-2" id="frontend-skills">
+                    <!-- Skills will be populated by JavaScript -->
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-lg font-medium text-neutral-900 mb-3">
+                    Backend Development
+                  </h4>
+                  <div class="flex flex-wrap gap-2" id="backend-skills">
+                    <!-- Skills will be populated by JavaScript -->
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-lg font-medium text-neutral-900 mb-3">
+                    Tools & Technologies
+                  </h4>
+                  <div class="flex flex-wrap gap-2" id="tools-skills">
+                    <!-- Skills will be populated by JavaScript -->
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-lg font-medium text-neutral-900 mb-3">
+                    Concepts & Methodologies
+                  </h4>
+                  <div class="flex flex-wrap gap-2" id="concepts-skills">
+                    <!-- Skills will be populated by JavaScript -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section
+        id="experience"
+        class="section section-dark"
+        role="region"
+        aria-labelledby="experience-title"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 id="experience-title" class="section-title animate-on-scroll">
+              Work Experience
+            </h2>
+            <p id="experience-subtitle" class="section-subtitle">
+              My professional journey
+            </p>
+          </div>
+
+          <div class="space-y-8" id="experience-list">
+            <!-- Experience items will be populated by JavaScript -->
+            <div id="experience-loading-indicator" class="text-center py-8">
+              <p>Loading experience...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section
+        id="projects"
+        class="section section-light"
+        role="region"
+        aria-labelledby="projects-title"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 id="projects-title" class="section-title animate-on-scroll">
+              Featured Projects
+            </h2>
+            <p id="projects-subtitle" class="section-subtitle">
+              Some of my recent work
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            id="projects-grid"
+          >
+            <!-- Project cards will be populated by JavaScript -->
+            <div
+              id="projects-loading-indicator"
+              class="col-span-full text-center py-8"
+            >
+              <p>Loading projects...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="section section-dark bg-gradient-to-br from-primary-50 to-accent-50"
+        role="region"
+        aria-labelledby="contact-title"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 id="contact-title" class="section-title animate-on-scroll">
+              Get In Touch
+            </h2>
+            <p class="section-subtitle animate-on-scroll animation-delay-100">
+              Let's work together
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div class="animate-on-scroll animation-delay-200">
+              <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h3 class="text-2xl font-semibold text-neutral-900 mb-6">
+                  Let's Connect
+                </h3>
+                <p
+                  id="contact-availability"
+                  class="text-adaptive-secondary mb-8"
+                >
+                  <!-- Availability info will be populated by JavaScript -->
+                </p>
+
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                      <div
+                        class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-6 h-6 text-primary-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-neutral-900">Email</p>
+                      <a
+                        href="#"
+                        id="contact-email"
+                        class="text-primary-600 hover:text-primary-700 transition-colors"
+                      >
+                        <!-- Email will be populated by JavaScript -->
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                      <div
+                        class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-6 h-6 text-accent-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-neutral-900">Phone</p>
+                      <a
+                        href="#"
+                        id="contact-phone"
+                        class="text-accent-600 hover:text-accent-700 transition-colors"
+                      >
+                        <!-- Phone will be populated by JavaScript -->
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                      <div
+                        class="w-12 h-12 bg-neutral-100 rounded-lg flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-6 h-6 text-neutral-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          ></path>
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-neutral-900">
+                        Location
+                      </p>
+                      <p id="contact-location" class="text-neutral-800">
+                        <!-- Location will be populated by JavaScript -->
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-8 pt-8 border-t border-neutral-200">
+                  <p class="text-sm font-medium text-neutral-900 mb-4">
+                    Follow me on
+                  </p>
+                  <div class="flex space-x-4" id="contact-social-links">
+                    <!-- Social links will be populated by JavaScript -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="animate-on-scroll animation-delay-300">
+              <div class="bg-white rounded-2xl shadow-lg p-8">
+                <form id="contact-form" class="space-y-6" novalidate>
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-medium text-neutral-900 mb-2"
+                      >Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                      placeholder="Your full name"
+                      aria-describedby="name-error"
+                    />
+                    <p
+                      id="name-error"
+                      class="mt-1 text-sm text-red-600 hidden"
+                      role="alert"
+                    ></p>
+                  </div>
+
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-neutral-900 mb-2"
+                      >Email *</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                      placeholder="your@email.com"
+                      aria-describedby="email-error"
+                    />
+                    <p
+                      id="email-error"
+                      class="mt-1 text-sm text-red-600 hidden"
+                      role="alert"
+                    ></p>
+                  </div>
+
+                  <div>
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-neutral-900 mb-2"
+                      >Subject *</label
+                    >
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      required
+                      class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                      placeholder="What's this about?"
+                      aria-describedby="subject-error"
+                    />
+                    <p
+                      id="subject-error"
+                      class="mt-1 text-sm text-red-600 hidden"
+                      role="alert"
+                    ></p>
+                  </div>
+
+                  <div>
+                    <label
+                      for="message"
+                      class="block text-sm font-medium text-neutral-900 mb-2"
+                      >Message *</label
+                    >
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      required
+                      class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-vertical"
+                      placeholder="Tell me about your project or idea..."
+                      aria-describedby="message-error"
+                    ></textarea>
+                    <p
+                      id="message-error"
+                      class="mt-1 text-sm text-red-600 hidden"
+                      role="alert"
+                    ></p>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-full btn btn-primary"
+                    aria-describedby="form-status"
+                  >
+                    <span class="submit-text">Send Message</span>
+                    <span class="loading-text hidden">Sending...</span>
+                  </button>
+
+                  <p
+                    id="form-status"
+                    class="text-sm text-center hidden"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-neutral-900 text-neutral-300 py-12" role="contentinfo">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Footer Brand -->
-                <div>
-                    <h3 id="footer-name" class="text-2xl font-bold text-white mb-4">Your Name</h3>
-                    <p id="footer-tagline" class="text-neutral-400 mb-4">
-                        <!-- Tagline will be populated by JavaScript -->
-                    </p>
-                    <div class="flex space-x-4" id="footer-social-links">
-                        <!-- Social links will be populated by JavaScript -->
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="hover:text-primary-400 transition-colors">Home</a></li>
-                        <li><a href="#about" class="hover:text-primary-400 transition-colors">About</a></li>
-                        <li><a href="#experience" class="hover:text-primary-400 transition-colors">Experience</a></li>
-                        <li><a href="#projects" class="hover:text-primary-400 transition-colors">Projects</a></li>
-                        <li><a href="#contact" class="hover:text-primary-400 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Get In Touch</h4>
-                    <div class="space-y-2">
-                        <p><a href="#" id="footer-email" class="hover:text-primary-400 transition-colors">Email</a></p>
-                        <p><a href="#" id="footer-phone" class="hover:text-primary-400 transition-colors">Phone</a></p>
-                        <p id="footer-location" class="text-neutral-400">Location</p>
-                    </div>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Footer Brand -->
+          <div>
+            <h3 id="footer-name" class="text-2xl font-bold text-white mb-4">
+              Your Name
+            </h3>
+            <p id="footer-tagline" class="text-neutral-400 mb-4">
+              <!-- Tagline will be populated by JavaScript -->
+            </p>
+            <div class="flex space-x-4" id="footer-social-links">
+              <!-- Social links will be populated by JavaScript -->
             </div>
+          </div>
 
-            <div class="border-t border-neutral-800 mt-8 pt-8 text-center">
-                <p class="text-neutral-400">
-                    &copy; <span id="current-year"></span> <span id="footer-copyright-name">Your Name</span>. All rights reserved.
-                </p>
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#home" class="hover:text-primary-400 transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="hover:text-primary-400 transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#experience"
+                  class="hover:text-primary-400 transition-colors"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="hover:text-primary-400 transition-colors"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="hover:text-primary-400 transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4">Get In Touch</h4>
+            <div class="space-y-2">
+              <p>
+                <a
+                  href="#"
+                  id="footer-email"
+                  class="hover:text-primary-400 transition-colors"
+                  >Email</a
+                >
+              </p>
+              <p>
+                <a
+                  href="#"
+                  id="footer-phone"
+                  class="hover:text-primary-400 transition-colors"
+                  >Phone</a
+                >
+              </p>
+              <p id="footer-location" class="text-neutral-400">Location</p>
             </div>
+          </div>
         </div>
+
+        <div class="border-t border-neutral-800 mt-8 pt-8 text-center">
+          <p class="text-neutral-400">
+            &copy; <span id="current-year"></span>
+            <span id="footer-copyright-name">Your Name</span>. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Back to top button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transform translate-y-16 opacity-0 transition-all duration-300 z-30" aria-label="Back to top">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-        </svg>
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transform translate-y-16 opacity-0 transition-all duration-300 z-30"
+      aria-label="Back to top"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        ></path>
+      </svg>
     </button>
 
     <!-- JavaScript -->
     <script src="./js/main.js"></script>
     <script src="./js/animations.js"></script>
     <script src="./js/form.js"></script>
-</body>
+  </body>
 </html>

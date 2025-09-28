@@ -1,0 +1,12 @@
+---
+description: Always include and use ID attributes for DOM nodes
+globs: ["javascript", "typescript", "jsx", "tsx", "html"]
+alwaysApply: true
+instruction: |
+  When generating DOM elements (HTML or JSX/TSX), always create an `id` attribute whenever possible.
+  - Prefer using `id` over `class` for uniquely identifying nodes.
+  - Ensure `id` values are unique and meaningful.
+  - When referring to elements in JavaScript or TypeScript (e.g. `document.getElementById`), use the `id` instead of query selectors where appropriate.
+  - If an element is dynamically created, still generate a unique `id`.
+  - Only omit `id` if there is a strong reason the element cannot or should not have one.
+---

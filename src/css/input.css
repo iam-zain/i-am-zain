@@ -7,31 +7,31 @@
 
 /* CSS Custom Properties for Color Palette */
 :root {
-  /* Primary Color Palette (Blue) */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-primary-950: #172554;
+  /* Primary Color Palette (Indigo - Higher Contrast) */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+  --color-primary-950: #1e1b4b;
 
-  /* Accent Color Palette (Emerald) */
-  --color-accent-50: #ecfdf5;
-  --color-accent-100: #d1fae5;
-  --color-accent-200: #a7f3d0;
-  --color-accent-300: #6ee7b7;
-  --color-accent-400: #34d399;
-  --color-accent-500: #10b981;
-  --color-accent-600: #059669;
-  --color-accent-700: #047857;
-  --color-accent-800: #065f46;
-  --color-accent-900: #064e3b;
-  --color-accent-950: #022c22;
+  /* Accent Color Palette (Teal - Higher Contrast) */
+  --color-accent-50: #f0fdfa;
+  --color-accent-100: #ccfbf1;
+  --color-accent-200: #99f6e4;
+  --color-accent-300: #5eead4;
+  --color-accent-400: #2dd4bf;
+  --color-accent-500: #14b8a6;
+  --color-accent-600: #0d9488;
+  --color-accent-700: #0f766e;
+  --color-accent-800: #115e59;
+  --color-accent-900: #134e4a;
+  --color-accent-950: #042f2e;
 
   /* Neutral Color Palette (Slate) */
   --color-neutral-50: #f8fafc;
@@ -43,7 +43,7 @@
   --color-neutral-600: #475569;
   --color-neutral-700: #334155;
   --color-neutral-800: #1e293b;
-  --color-neutral-900: #0f172a;
+  --color-neutral-900: #0a0f1d;
   --color-neutral-950: #020617;
 
   /* Additional CSS Variables */
@@ -65,6 +65,7 @@
 /* Dark theme support */
 @media (prefers-color-scheme: dark) {
   :root {
+    /* Improved dark mode contrast */
     --color-neutral-50: #020617;
     --color-neutral-100: #0f172a;
     --color-neutral-200: #1e293b;
@@ -74,8 +75,16 @@
     --color-neutral-600: #94a3b8;
     --color-neutral-700: #cbd5e1;
     --color-neutral-800: #e2e8f0;
-    --color-neutral-900: #f1f5f9;
-    --color-neutral-950: #f8fafc;
+    --color-neutral-900: #ffffff;
+    --color-neutral-950: #ffffff;
+    
+    /* Adjust primary colors for dark mode */
+    --color-primary-600: #6366f1;
+    --color-primary-700: #818cf8;
+    
+    /* Adjust accent colors for dark mode */
+    --color-accent-600: #2dd4bf;
+    --color-accent-700: #5eead4;
   }
 }
 
@@ -91,6 +100,16 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Improve contrast for all headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary-900 font-bold;
+  }
+  
+  /* Improve contrast for all paragraph text */
+  p {
+    @apply text-neutral-800;
   }
 
   /* Focus styles for accessibility */
@@ -117,15 +136,15 @@
   }
 
   .btn-primary {
-    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 shadow-md hover:shadow-lg;
+    @apply bg-primary-700 text-white hover:bg-primary-800 focus:ring-primary-500 shadow-md hover:shadow-lg;
   }
 
   .btn-secondary {
-    @apply bg-neutral-100 text-neutral-900 hover:bg-neutral-200 focus:ring-neutral-500 shadow-sm hover:shadow-md;
+    @apply bg-neutral-200 text-primary-900 hover:bg-neutral-300 focus:ring-neutral-500 shadow-sm hover:shadow-md font-medium;
   }
 
   .btn-outline {
-    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500;
+    @apply border-2 border-primary-700 text-primary-700 hover:bg-primary-700 hover:text-white focus:ring-primary-500 font-medium;
   }
 
   /* Card styles */
@@ -141,13 +160,68 @@
   .section {
     @apply py-16 md:py-24;
   }
+  
+  /* Background-aware section styles */
+  .section-light {
+    @apply bg-white;
+  }
+  
+  .section-dark {
+    @apply bg-neutral-50;
+  }
+  
+  /* Ensure text in alternating sections has proper contrast */
+  .section-light h1, .section-light h2, .section-light h3, .section-light h4, .section-light h5, .section-light h6 {
+    @apply text-primary-900;
+  }
+  
+  .section-light p {
+    @apply text-neutral-800;
+  }
+  
+  .section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4, .section-dark h5, .section-dark h6 {
+    @apply text-primary-900;
+  }
+  
+  .section-dark p {
+    @apply text-neutral-800;
+  }
+
+  .card p {
+    color: var(--color-neutral-200);
+  }
 
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-extrabold text-primary-900;
+  }
+  
+  /* White background sections need darker text */
+  .bg-white .section-title {
+    @apply text-primary-900;
+  }
+  
+  /* Lighter background sections need darker text */
+  .bg-neutral-50 .section-title {
+    @apply text-primary-900;
+  }
+  
+  /* Gradient background sections need darker text */
+  .bg-gradient-to-br .section-title {
+    @apply text-primary-900;
   }
 
   .section-subtitle {
-    @apply text-lg md:text-xl text-neutral-600 mb-8 md:mb-12;
+    @apply text-lg md:text-xl text-primary-800 mb-8 md:mb-12 font-medium;
+  }
+  
+  /* White background sections need darker subtitle text */
+  .bg-white .section-subtitle {
+    @apply text-primary-800;
+  }
+  
+  /* Lighter background sections need darker subtitle text */
+  .bg-neutral-50 .section-subtitle {
+    @apply text-primary-800;
   }
 
   /* Animation utilities */
@@ -161,10 +235,37 @@
     opacity: 1;
     transform: translateY(0);
   }
+  
+  /* Fallback animation that doesn't rely on IntersectionObserver */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  /* Ensure project cards and experience items are visible by default */
+  .project-card,
+  .experience-item {
+    opacity: 1;
+  }
 
-  /* Gradient text */
+  /* Gradient text with improved contrast */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-800 to-accent-800 bg-clip-text text-transparent font-bold;
+  }
+  
+  /* Ensure gradient text is visible on white backgrounds */
+  .bg-white .gradient-text {
+    @apply from-primary-800 to-accent-800;
   }
 
   /* Custom scrollbar */
@@ -187,6 +288,48 @@
 
 /* Utility styles */
 @layer utilities {
+  /* Background-aware text utilities */
+  .text-on-light {
+    @apply text-neutral-900;
+  }
+  
+  .text-on-dark {
+    @apply text-white;
+  }
+  
+  .text-secondary-on-light {
+    @apply text-neutral-800;
+  }
+  
+  .text-secondary-on-dark {
+    @apply text-neutral-100;
+  }
+  
+  .text-tertiary-on-light {
+    @apply text-neutral-700;
+  }
+  
+  .text-tertiary-on-dark {
+    @apply text-neutral-300;
+  }
+  
+  /* Apply to sections with alternating backgrounds */
+  .bg-white .text-adaptive, .bg-neutral-50 .text-adaptive, .bg-neutral-100 .text-adaptive {
+    @apply text-neutral-900;
+  }
+  
+  .bg-neutral-800 .text-adaptive, .bg-neutral-900 .text-adaptive, .bg-primary-900 .text-adaptive, .bg-primary-800 .text-adaptive {
+    @apply text-white;
+  }
+  
+  .bg-white .text-adaptive-secondary, .bg-neutral-50 .text-adaptive-secondary, .bg-neutral-100 .text-adaptive-secondary {
+    @apply text-neutral-800;
+  }
+  
+  .bg-neutral-800 .text-adaptive-secondary, .bg-neutral-900 .text-adaptive-secondary, .bg-primary-900 .text-adaptive-secondary, .bg-primary-800 .text-adaptive-secondary {
+    @apply text-neutral-100;
+  }
+  
   /* Text shadow utilities */
   .text-shadow-sm {
     text-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
@@ -234,4 +377,9 @@
   .animation-delay-500 {
     animation-delay: 500ms;
   }
+}
+
+
+#about-summary{
+  color: var(--color-neutral-200);
 }

@@ -1,11 +1,11 @@
 {
   "personal": {
-    "name": "Zain",
+    "name": "Md Zainul Ali",
     "title": "Doctoral Research Scholar",
     "tagline": "Computational Neuroscience & Bioinformatics",
     "location": "University of Hyderabad, India",
-    "email": "zainulali@uohyd.ac.in",
-    "phone": "+91 (123) 456-7890",
+    "email": "mdzainulali@gmail.com",
+    "phone": "+91 9475810661",
     "website": "https://i-am-zain.netlify.app",
     "profileImage": "/public/images/profile.jpg",
     "resumeUrl": "/public/documents/zain-resume.pdf"
@@ -20,9 +20,9 @@
   "summary": "Md Zainul Ali is a doctoral research scholar in the Department of Biotechnology & Bioinformatics, School of Life Sciences, University of Hyderabad, India. His research broadly focuses on the computational exploration of neurodegenerative disorders, with a specialization in Parkinson's disease. He applies machine learning, statistical modeling, and systems biology approaches to identify clinically relevant non-motor features and their molecular underpinnings.",
   "skills": {
     "technical": {
-      "frontend": ["HTML", "CSS", "JavaScript", "React", "Flask", "Shiny"],
+      "frontend": ["Flask", "Shiny"],
       "backend": ["Python", "R", "SQL", "Bioinformatics Tools"],
-      "tools": ["Git", "Docker", "Jupyter", "RStudio", "Bioconductor", "WGCNA"],
+      "tools": ["Jupyter", "RStudio", "Git", "Docker"],
       "concepts": ["Machine Learning", "Statistical Modeling", "Systems Biology", "Data Visualization", "Transcriptomics"]
     },
     "soft": ["Research", "Scientific Writing", "Presentation", "Leadership", "Multilingual", "Science Outreach"]

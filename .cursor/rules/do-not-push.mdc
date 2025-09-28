@@ -1,0 +1,5 @@
+---
+description: do not push to git automatically, wait for user confirmation. git push is triggering auto deplyment in netlify that is costing credits.
+globs:
+alwaysApply: true
+---
