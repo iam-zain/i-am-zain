@@ -129,12 +129,8 @@ function populateHeroSection() {
   updateElement("hero-title", personal.title);
   updateElement("hero-tagline", personal.tagline);
 
-  // Update hero image
-  const heroImage = document.getElementById("hero-image");
-  if (heroImage && personal.profileImage) {
-    heroImage.src = personal.profileImage;
-    heroImage.alt = `${personal.name} - Profile Photo`;
-  }
+  // Initialize profile image carousel
+  initializeProfileCarousel(personal.profileImages || []);
 
   // Update resume link
   const resumeLink = document.getElementById("hero-resume-link");
@@ -144,6 +140,152 @@ function populateHeroSection() {
 
   // Populate social links
   populateSocialLinks("hero-social-links", social);
+}
+
+/**
+ * Initialize profile image carousel
+ * @param {Array} images - Array of image objects with src and alt properties
+ */
+function initializeProfileCarousel(images) {
+  // Fallback for backward compatibility
+  if (!images || !Array.isArray(images) || images.length === 0) {
+    // Check if there's a legacy profileImage property
+    if (portfolioData.personal.profileImage) {
+      images = [
+        {
+          src: portfolioData.personal.profileImage,
+          alt: `${portfolioData.personal.name} - Profile Photo`,
+        },
+      ];
+    } else {
+      console.error("No profile images found in configuration");
+      return;
+    }
+  }
+
+  // Get carousel elements
+  const carouselItems = document.getElementById("carousel-items");
+  const carouselDots = document.getElementById("carousel-dots");
+  const prevButton = document.getElementById("carousel-prev");
+  const nextButton = document.getElementById("carousel-next");
+  
+  if (!carouselItems || !carouselDots) return;
+  
+  // Clear existing content
+  carouselItems.innerHTML = "";
+  carouselDots.innerHTML = "";
+  
+  // Variables for carousel state
+  let currentIndex = 0;
+  let autoRotateInterval = null;
+  
+  // Create carousel items
+  images.forEach((image, index) => {
+    // Create image element
+    const imgElement = document.createElement("img");
+    imgElement.src = image.src;
+    imgElement.alt = image.alt;
+    imgElement.className = "w-full h-auto rounded-xl object-cover aspect-square absolute inset-0 transition-opacity duration-500";
+    imgElement.style.opacity = index === 0 ? "1" : "0";
+    imgElement.style.zIndex = index === 0 ? "10" : "0";
+    carouselItems.appendChild(imgElement);
+    
+    // Create dot element
+    const dotElement = document.createElement("button");
+    dotElement.className = `w-3 h-3 rounded-full transition-colors duration-300 ${
+      index === 0 ? "bg-primary-500" : "bg-white/70"
+    }`;
+    dotElement.setAttribute("aria-label", `View image ${index + 1}`);
+    dotElement.setAttribute("data-index", index);
+    dotElement.onclick = () => goToSlide(index);
+    carouselDots.appendChild(dotElement);
+  });
+  
+  // Only show navigation if there are multiple images
+  if (images.length <= 1) {
+    if (prevButton) prevButton.style.display = "none";
+    if (nextButton) nextButton.style.display = "none";
+    carouselDots.style.display = "none";
+    return;
+  }
+  
+  // Add event listeners to navigation buttons
+  if (prevButton) {
+    prevButton.onclick = () => {
+      goToSlide(currentIndex - 1 < 0 ? images.length - 1 : currentIndex - 1);
+    };
+  }
+  
+  if (nextButton) {
+    nextButton.onclick = () => {
+      goToSlide(currentIndex + 1 >= images.length ? 0 : currentIndex + 1);
+    };
+  }
+  
+  // Function to go to a specific slide
+  function goToSlide(index) {
+    // Reset auto-rotation timer
+    resetAutoRotate();
+    
+    // Hide all images
+    const allImages = carouselItems.querySelectorAll("img");
+    allImages.forEach((img, i) => {
+      img.style.opacity = "0";
+      img.style.zIndex = "0";
+    });
+    
+    // Show selected image
+    allImages[index].style.opacity = "1";
+    allImages[index].style.zIndex = "10";
+    
+    // Update dots
+    const allDots = carouselDots.querySelectorAll("button");
+    allDots.forEach((dot, i) => {
+      dot.className = `w-3 h-3 rounded-full transition-colors duration-300 ${
+        i === index ? "bg-primary-500" : "bg-white/70"
+      }`;
+    });
+    
+    // Update current index
+    currentIndex = index;
+  }
+  
+  // Function to start auto-rotation
+  function startAutoRotate() {
+    // Only set interval if it doesn't already exist
+    if (!autoRotateInterval) {
+      autoRotateInterval = setInterval(() => {
+        goToSlide(currentIndex + 1 >= images.length ? 0 : currentIndex + 1);
+      }, 10000); // 10 seconds
+    }
+  }
+  
+  // Function to reset auto-rotation
+  function resetAutoRotate() {
+    if (autoRotateInterval) {
+      clearInterval(autoRotateInterval);
+      autoRotateInterval = null;
+    }
+    startAutoRotate();
+  }
+  
+  // Start auto-rotation
+  startAutoRotate();
+  
+  // Pause rotation when user hovers over the carousel
+  const carousel = document.getElementById("profile-carousel");
+  if (carousel) {
+    carousel.addEventListener("mouseenter", () => {
+      if (autoRotateInterval) {
+        clearInterval(autoRotateInterval);
+        autoRotateInterval = null;
+      }
+    });
+    
+    carousel.addEventListener("mouseleave", () => {
+      startAutoRotate();
+    });
+  }
 }
 
 /**

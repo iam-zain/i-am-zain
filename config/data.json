@@ -7,7 +7,16 @@
     "email": "mdzainulali@gmail.com",
     "phone": "+91 9475810661",
     "website": "https://i-am-zain.netlify.app",
-    "profileImage": "/public/images/profile.jpg",
+    "profileImages": [
+      {
+        "src": "/public/images/profile.jpg",
+        "alt": "Md Zainul Ali - Profile Photo"
+      },
+      {
+        "src": "/public/images/placeholder-profile.jpg",
+        "alt": "Md Zainul Ali - Alternate Photo"
+      }
+    ],
     "resumeUrl": "/public/documents/zain-resume.pdf"
   },
   "education": {
