@@ -1,0 +1,237 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* CSS Custom Properties for Color Palette */
+:root {
+  /* Primary Color Palette (Blue) */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-primary-950: #172554;
+
+  /* Accent Color Palette (Emerald) */
+  --color-accent-50: #ecfdf5;
+  --color-accent-100: #d1fae5;
+  --color-accent-200: #a7f3d0;
+  --color-accent-300: #6ee7b7;
+  --color-accent-400: #34d399;
+  --color-accent-500: #10b981;
+  --color-accent-600: #059669;
+  --color-accent-700: #047857;
+  --color-accent-800: #065f46;
+  --color-accent-900: #064e3b;
+  --color-accent-950: #022c22;
+
+  /* Neutral Color Palette (Slate) */
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+
+  /* Additional CSS Variables */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  --border-radius-sm: 0.375rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-neutral-50: #020617;
+    --color-neutral-100: #0f172a;
+    --color-neutral-200: #1e293b;
+    --color-neutral-300: #334155;
+    --color-neutral-400: #475569;
+    --color-neutral-500: #64748b;
+    --color-neutral-600: #94a3b8;
+    --color-neutral-700: #cbd5e1;
+    --color-neutral-800: #e2e8f0;
+    --color-neutral-900: #f1f5f9;
+    --color-neutral-950: #f8fafc;
+  }
+}
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    font-variation-settings: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+}
+
+/* Component styles */
+@layer components {
+  /* Custom button styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-neutral-100 text-neutral-900 hover:bg-neutral-200 focus:ring-neutral-500 shadow-sm hover:shadow-md;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-neutral-200;
+  }
+
+  .card-hover {
+    @apply transform hover:-translate-y-1 transition-transform duration-300;
+  }
+
+  /* Section styles */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-neutral-600 mb-8 md:mb-12;
+  }
+
+  /* Animation utilities */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-neutral-100;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-neutral-400 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-neutral-500;
+  }
+}
+
+/* Utility styles */
+@layer utilities {
+  /* Text shadow utilities */
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
+  }
+
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgb(0 0 0 / 0.15);
+  }
+
+  /* Backdrop blur utilities */
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+
+  /* Custom spacing utilities */
+  .space-y-18 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 4.5rem;
+  }
+
+  /* Animation delay utilities */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}

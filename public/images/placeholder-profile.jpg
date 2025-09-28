@@ -1,0 +1,9 @@
+# Placeholder Profile Image
+
+This is a placeholder file. Replace this with your actual profile image:
+- Recommended size: 400x400px or larger (square aspect ratio)
+- Format: JPG, PNG, or WebP
+- File name: profile.jpg
+- Location: /public/images/profile.jpg
+
+Make sure to update the path in config/data.json if you use a different filename.

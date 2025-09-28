@@ -1,0 +1,136 @@
+{
+  "personal": {
+    "name": "Zain Ahmad",
+    "title": "Full Stack Developer & UI/UX Designer",
+    "tagline": "Crafting digital experiences that make a difference",
+    "location": "San Francisco, CA",
+    "email": "hello@zainahmad.dev",
+    "phone": "+1 (555) 123-4567",
+    "website": "https://zainahmad.dev",
+    "profileImage": "/public/images/profile.jpg",
+    "resumeUrl": "/public/documents/zain-ahmad-resume.pdf"
+  },
+  "education": {
+    "institution": "Stanford University",
+    "degree": "Bachelor of Science in Computer Science",
+    "graduationYear": "2022",
+    "gpa": "3.8/4.0",
+    "relevantCoursework": ["Data Structures & Algorithms", "Web Development", "Human-Computer Interaction", "Database Systems"]
+  },
+  "summary": "Passionate full-stack developer with 3+ years of experience creating user-centered digital solutions. Specialized in React, Node.js, and modern web technologies. I thrive on turning complex problems into simple, beautiful, and intuitive designs. Always eager to learn new technologies and collaborate on impactful projects.",
+  "skills": {
+    "technical": {
+      "frontend": ["React", "Vue.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "SASS"],
+      "backend": ["Node.js", "Express.js", "Python", "Django", "PostgreSQL", "MongoDB", "Redis"],
+      "tools": ["Git", "Docker", "AWS", "Figma", "Adobe Creative Suite", "Jest", "Cypress"],
+      "concepts": ["Responsive Design", "RESTful APIs", "GraphQL", "Microservices", "CI/CD", "Agile Development"]
+    },
+    "soft": ["Problem Solving", "Team Leadership", "Communication", "Project Management", "Creative Thinking", "Adaptability"]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "company": "TechFlow Solutions",
+      "position": "Senior Frontend Developer",
+      "duration": "2022 - Present",
+      "location": "San Francisco, CA",
+      "description": "Lead frontend development for enterprise-level applications serving 100K+ users. Architected and implemented responsive web applications using React and TypeScript.",
+      "achievements": [
+        "Improved application performance by 40% through code optimization and lazy loading",
+        "Led a team of 4 developers in delivering 3 major product releases",
+        "Implemented comprehensive testing suite, reducing bugs by 60%"
+      ],
+      "technologies": ["React", "TypeScript", "Redux", "Material-UI", "Jest"]
+    },
+    {
+      "id": 2,
+      "company": "StartupXYZ",
+      "position": "Full Stack Developer",
+      "duration": "2021 - 2022",
+      "location": "Remote",
+      "description": "Developed and maintained full-stack web applications for early-stage startup. Worked closely with founders to define product requirements and user experience.",
+      "achievements": [
+        "Built MVP from scratch, helping secure $2M in Series A funding",
+        "Implemented real-time features using WebSockets and Socket.io",
+        "Optimized database queries, reducing response time by 50%"
+      ],
+      "technologies": ["Vue.js", "Node.js", "Express", "MongoDB", "Socket.io"]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "EcoTracker",
+      "subtitle": "Sustainability Tracking App",
+      "description": "A comprehensive web application that helps users track their carbon footprint and adopt sustainable practices. Features real-time data visualization and personalized recommendations.",
+      "image": "/public/images/projects/ecotracker.jpg",
+      "technologies": ["React", "Node.js", "Chart.js", "PostgreSQL", "Tailwind CSS"],
+      "features": [
+        "Real-time carbon footprint calculation",
+        "Interactive data visualizations",
+        "Personalized sustainability recommendations",
+        "Social sharing and challenges"
+      ],
+      "liveUrl": "https://ecotracker-demo.netlify.app",
+      "githubUrl": "https://github.com/zain/ecotracker",
+      "status": "completed",
+      "year": "2023"
+    },
+    {
+      "id": 2,
+      "title": "TaskMaster Pro",
+      "subtitle": "Advanced Project Management Tool",
+      "description": "A modern project management application with advanced features like time tracking, team collaboration, and automated reporting. Built for small to medium-sized teams.",
+      "image": "/public/images/projects/taskmaster.jpg",
+      "technologies": ["Vue.js", "Express.js", "MongoDB", "Socket.io", "SCSS"],
+      "features": [
+        "Real-time collaboration",
+        "Advanced time tracking",
+        "Automated progress reporting",
+        "Customizable workflows"
+      ],
+      "liveUrl": "https://taskmaster-pro.netlify.app",
+      "githubUrl": "https://github.com/zain/taskmaster-pro",
+      "status": "completed",
+      "year": "2023"
+    },
+    {
+      "id": 3,
+      "title": "HealthHub Dashboard",
+      "subtitle": "Healthcare Analytics Platform",
+      "description": "A comprehensive dashboard for healthcare professionals to visualize patient data, track treatment progress, and generate insights. Features advanced data visualization and reporting capabilities.",
+      "image": "/public/images/projects/healthhub.jpg",
+      "technologies": ["React", "TypeScript", "D3.js", "Python", "FastAPI"],
+      "features": [
+        "Advanced data visualization",
+        "Patient progress tracking",
+        "Automated report generation",
+        "HIPAA-compliant architecture"
+      ],
+      "liveUrl": "https://healthhub-demo.netlify.app",
+      "githubUrl": "https://github.com/zain/healthhub",
+      "status": "in-progress",
+      "year": "2024"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/zainahmad",
+    "linkedin": "https://linkedin.com/in/zainahmad",
+    "twitter": "https://twitter.com/zainahmad_dev",
+    "dribbble": "https://dribbble.com/zainahmad",
+    "behance": "https://behance.net/zainahmad",
+    "medium": "https://medium.com/@zainahmad"
+  },
+  "contact": {
+    "availability": "Available for freelance projects and full-time opportunities",
+    "preferredContact": "email",
+    "responseTime": "Within 24 hours",
+    "timezone": "PST (UTC-8)"
+  },
+  "seo": {
+    "metaTitle": "Zain Ahmad - Full Stack Developer & UI/UX Designer",
+    "metaDescription": "Passionate full-stack developer specializing in React, Node.js, and modern web technologies. Creating user-centered digital solutions in San Francisco.",
+    "keywords": ["full stack developer", "react developer", "nodejs", "web development", "ui ux designer", "javascript", "frontend developer"],
+    "ogImage": "/public/images/og-image.jpg"
+  }
+}

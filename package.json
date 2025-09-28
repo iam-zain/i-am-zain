@@ -1,0 +1,40 @@
+{
+  "name": "i-am-zain",
+  "version": "1.0.0",
+  "description": "A highly performant, accessible, and modern personal portfolio website",
+  "main": "src/index.html",
+  "scripts": {
+    "dev": "concurrently \"tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch\" \"live-server --host=localhost --port=3000 --open=src\"",
+    "build": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css --minify",
+    "start": "npm run dev",
+    "preview": "live-server --host=localhost --port=3000 --open=src"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "tailwindcss",
+    "javascript",
+    "html5",
+    "responsive",
+    "accessibility"
+  ],
+  "author": "Zain",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "live-server": "^1.2.2",
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/i-am-zain.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/i-am-zain/issues"
+  },
+  "homepage": "https://github.com/yourusername/i-am-zain#readme"
+}
