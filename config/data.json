@@ -1,136 +1,135 @@
 {
   "personal": {
-    "name": "Zain Ahmad",
-    "title": "Full Stack Developer & UI/UX Designer",
-    "tagline": "Crafting digital experiences that make a difference",
-    "location": "San Francisco, CA",
-    "email": "hello@zainahmad.dev",
-    "phone": "+1 (555) 123-4567",
-    "website": "https://zainahmad.dev",
+    "name": "Zain",
+    "title": "Doctoral Research Scholar",
+    "tagline": "Computational Neuroscience & Bioinformatics",
+    "location": "University of Hyderabad, India",
+    "email": "zainulali@uohyd.ac.in",
+    "phone": "+91 (123) 456-7890",
+    "website": "https://i-am-zain.netlify.app",
     "profileImage": "/public/images/profile.jpg",
-    "resumeUrl": "/public/documents/zain-ahmad-resume.pdf"
+    "resumeUrl": "/public/documents/zain-resume.pdf"
   },
   "education": {
-    "institution": "Stanford University",
-    "degree": "Bachelor of Science in Computer Science",
-    "graduationYear": "2022",
-    "gpa": "3.8/4.0",
-    "relevantCoursework": ["Data Structures & Algorithms", "Web Development", "Human-Computer Interaction", "Database Systems"]
+    "institution": "University of Hyderabad",
+    "degree": "Ph.D. in Biotechnology & Bioinformatics",
+    "graduationYear": "Ongoing",
+    "gpa": "Excellent Academic Record",
+    "relevantCoursework": ["Computational Biology", "Machine Learning", "Systems Biology", "Neurodegenerative Disorders"]
   },
-  "summary": "Passionate full-stack developer with 3+ years of experience creating user-centered digital solutions. Specialized in React, Node.js, and modern web technologies. I thrive on turning complex problems into simple, beautiful, and intuitive designs. Always eager to learn new technologies and collaborate on impactful projects.",
+  "summary": "Md Zainul Ali is a doctoral research scholar in the Department of Biotechnology & Bioinformatics, School of Life Sciences, University of Hyderabad, India. His research broadly focuses on the computational exploration of neurodegenerative disorders, with a specialization in Parkinson's disease. He applies machine learning, statistical modeling, and systems biology approaches to identify clinically relevant non-motor features and their molecular underpinnings.",
   "skills": {
     "technical": {
-      "frontend": ["React", "Vue.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "SASS"],
-      "backend": ["Node.js", "Express.js", "Python", "Django", "PostgreSQL", "MongoDB", "Redis"],
-      "tools": ["Git", "Docker", "AWS", "Figma", "Adobe Creative Suite", "Jest", "Cypress"],
-      "concepts": ["Responsive Design", "RESTful APIs", "GraphQL", "Microservices", "CI/CD", "Agile Development"]
+      "frontend": ["HTML", "CSS", "JavaScript", "React", "Flask", "Shiny"],
+      "backend": ["Python", "R", "SQL", "Bioinformatics Tools"],
+      "tools": ["Git", "Docker", "Jupyter", "RStudio", "Bioconductor", "WGCNA"],
+      "concepts": ["Machine Learning", "Statistical Modeling", "Systems Biology", "Data Visualization", "Transcriptomics"]
     },
-    "soft": ["Problem Solving", "Team Leadership", "Communication", "Project Management", "Creative Thinking", "Adaptability"]
+    "soft": ["Research", "Scientific Writing", "Presentation", "Leadership", "Multilingual", "Science Outreach"]
   },
   "experience": [
     {
       "id": 1,
-      "company": "TechFlow Solutions",
-      "position": "Senior Frontend Developer",
-      "duration": "2022 - Present",
-      "location": "San Francisco, CA",
-      "description": "Lead frontend development for enterprise-level applications serving 100K+ users. Architected and implemented responsive web applications using React and TypeScript.",
+      "company": "University of Hyderabad",
+      "position": "Doctoral Research Scholar",
+      "duration": "2020 - Present",
+      "location": "Hyderabad, India",
+      "description": "Conducting computational research on neurodegenerative disorders with a focus on Parkinson's disease, applying machine learning and systems biology approaches to identify clinically relevant biomarkers.",
       "achievements": [
-        "Improved application performance by 40% through code optimization and lazy loading",
-        "Led a team of 4 developers in delivering 3 major product releases",
-        "Implemented comprehensive testing suite, reducing bugs by 60%"
+        "Authored research articles in international journals including Neurochemistry International",
+        "Developed interactive computational tools for Parkinson's risk assessment",
+        "Presented research at the MDS International Congress (Copenhagen, 2023)"
       ],
-      "technologies": ["React", "TypeScript", "Redux", "Material-UI", "Jest"]
+      "technologies": ["Python", "R", "Machine Learning", "Systems Biology", "Transcriptomics"]
     },
     {
       "id": 2,
-      "company": "StartupXYZ",
-      "position": "Full Stack Developer",
-      "duration": "2021 - 2022",
-      "location": "Remote",
-      "description": "Developed and maintained full-stack web applications for early-stage startup. Worked closely with founders to define product requirements and user experience.",
+      "company": "University of Hyderabad",
+      "position": "M.Sc. Biotechnology",
+      "duration": "2018 - 2020",
+      "location": "Hyderabad, India",
+      "description": "Completed Master's degree in Biotechnology with a focus on computational biology and bioinformatics.",
       "achievements": [
-        "Built MVP from scratch, helping secure $2M in Series A funding",
-        "Implemented real-time features using WebSockets and Socket.io",
-        "Optimized database queries, reducing response time by 50%"
+        "Qualified national-level competitive exams: CSIR-JRF (Life Sciences, AIR 81) and GATE (Biotechnology)",
+        "Received fellowships from CSIR-HRDG, India",
+        "Developed strong foundation in computational approaches to biological problems"
       ],
-      "technologies": ["Vue.js", "Node.js", "Express", "MongoDB", "Socket.io"]
+      "technologies": ["Bioinformatics", "Computational Biology", "Molecular Biology"]
     }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "EcoTracker",
-      "subtitle": "Sustainability Tracking App",
-      "description": "A comprehensive web application that helps users track their carbon footprint and adopt sustainable practices. Features real-time data visualization and personalized recommendations.",
-      "image": "/public/images/projects/ecotracker.jpg",
-      "technologies": ["React", "Node.js", "Chart.js", "PostgreSQL", "Tailwind CSS"],
+      "title": "PDPrevent",
+      "subtitle": "Parkinson's Disease Risk Assessment Tool",
+      "description": "An interactive computational tool for assessing Parkinson's disease risk based on non-motor symptoms and molecular biomarkers, integrating machine learning models for early diagnosis.",
+      "image": "/public/images/projects/pdprevent.jpg",
+      "technologies": ["Python", "Flask", "Machine Learning", "Data Visualization", "Bioinformatics"],
       "features": [
-        "Real-time carbon footprint calculation",
-        "Interactive data visualizations",
-        "Personalized sustainability recommendations",
-        "Social sharing and challenges"
+        "Risk assessment based on non-motor symptoms",
+        "Integration of molecular biomarkers",
+        "Interactive visualization of results",
+        "Clinically relevant predictive modeling"
       ],
-      "liveUrl": "https://ecotracker-demo.netlify.app",
-      "githubUrl": "https://github.com/zain/ecotracker",
+      "liveUrl": "https://pdprevent-demo.netlify.app",
+      "githubUrl": "https://github.com/iam-zain/pdprevent",
       "status": "completed",
       "year": "2023"
     },
     {
       "id": 2,
-      "title": "TaskMaster Pro",
-      "subtitle": "Advanced Project Management Tool",
-      "description": "A modern project management application with advanced features like time tracking, team collaboration, and automated reporting. Built for small to medium-sized teams.",
-      "image": "/public/images/projects/taskmaster.jpg",
-      "technologies": ["Vue.js", "Express.js", "MongoDB", "Socket.io", "SCSS"],
+      "title": "Olfactory Dysfunction Analysis",
+      "subtitle": "Molecular Basis of Smell Loss in Parkinson's",
+      "description": "Research project exploring the molecular underpinnings of olfactory dysfunction in Parkinson's disease through transcriptomic and epigenetic analyses, identifying key pathways and potential biomarkers.",
+      "image": "/public/images/projects/olfactory.jpg",
+      "technologies": ["R", "Bioconductor", "WGCNA", "Statistical Modeling", "Pathway Analysis"],
       "features": [
-        "Real-time collaboration",
-        "Advanced time tracking",
-        "Automated progress reporting",
-        "Customizable workflows"
+        "Transcriptomic analysis of olfactory tissues",
+        "Epigenetic profiling of smell-related genes",
+        "Network-based pathway identification",
+        "Integration with clinical data"
       ],
-      "liveUrl": "https://taskmaster-pro.netlify.app",
-      "githubUrl": "https://github.com/zain/taskmaster-pro",
-      "status": "completed",
-      "year": "2023"
+      "liveUrl": "https://olfactory-research.netlify.app",
+      "githubUrl": "https://github.com/iam-zain/olfactory-research",
+      "status": "in-progress",
+      "year": "2024"
     },
     {
       "id": 3,
-      "title": "HealthHub Dashboard",
-      "subtitle": "Healthcare Analytics Platform",
-      "description": "A comprehensive dashboard for healthcare professionals to visualize patient data, track treatment progress, and generate insights. Features advanced data visualization and reporting capabilities.",
-      "image": "/public/images/projects/healthhub.jpg",
-      "technologies": ["React", "TypeScript", "D3.js", "Python", "FastAPI"],
+      "title": "PD Visualization Platform",
+      "subtitle": "Interactive Data Exploration for Parkinson's Research",
+      "description": "A comprehensive visualization platform for exploring Parkinson's disease data, allowing researchers to interactively analyze clinical features, molecular profiles, and statistical relationships.",
+      "image": "/public/images/projects/pdviz.jpg",
+      "technologies": ["R", "Shiny", "D3.js", "Statistical Analysis", "Data Integration"],
       "features": [
-        "Advanced data visualization",
-        "Patient progress tracking",
-        "Automated report generation",
-        "HIPAA-compliant architecture"
+        "Interactive exploration of clinical data",
+        "Molecular profile visualization",
+        "Statistical relationship mapping",
+        "Customizable analysis parameters"
       ],
-      "liveUrl": "https://healthhub-demo.netlify.app",
-      "githubUrl": "https://github.com/zain/healthhub",
-      "status": "in-progress",
-      "year": "2024"
+      "liveUrl": "https://pd-visualization.netlify.app",
+      "githubUrl": "https://github.com/iam-zain/pd-visualization",
+      "status": "completed",
+      "year": "2023"
     }
   ],
   "social": {
-    "github": "https://github.com/zainahmad",
-    "linkedin": "https://linkedin.com/in/zainahmad",
-    "twitter": "https://twitter.com/zainahmad_dev",
-    "dribbble": "https://dribbble.com/zainahmad",
-    "behance": "https://behance.net/zainahmad",
-    "medium": "https://medium.com/@zainahmad"
+    "github": "https://github.com/iam-zain",
+    "linkedin": "https://linkedin.com/in/zainulali",
+    "twitter": "https://twitter.com/zain_research",
+    "researchgate": "https://researchgate.net/profile/Md-Zainul-Ali",
+    "orcid": "https://orcid.org/0000-0000-0000-0000"
   },
   "contact": {
-    "availability": "Available for freelance projects and full-time opportunities",
+    "availability": "Open to research collaborations and academic opportunities",
     "preferredContact": "email",
-    "responseTime": "Within 24 hours",
-    "timezone": "PST (UTC-8)"
+    "responseTime": "Within 48 hours",
+    "timezone": "IST (UTC+5:30)"
   },
   "seo": {
-    "metaTitle": "Zain Ahmad - Full Stack Developer & UI/UX Designer",
-    "metaDescription": "Passionate full-stack developer specializing in React, Node.js, and modern web technologies. Creating user-centered digital solutions in San Francisco.",
-    "keywords": ["full stack developer", "react developer", "nodejs", "web development", "ui ux designer", "javascript", "frontend developer"],
+    "metaTitle": "Zain - Doctoral Research Scholar in Computational Neuroscience",
+    "metaDescription": "Md Zainul Ali is a doctoral research scholar specializing in computational approaches to neurodegenerative disorders, with a focus on Parkinson's disease at University of Hyderabad.",
+    "keywords": ["computational neuroscience", "Parkinson's disease", "bioinformatics", "machine learning", "systems biology", "neurodegenerative disorders", "research"],
     "ogImage": "/public/images/og-image.jpg"
   }
 }
