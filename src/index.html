@@ -109,6 +109,18 @@
                 >Projects</a
               >
               <a
+                href="#conferences"
+                class="nav-link text-neutral-700 hover:text-primary-500 px-3 py-2 rounded-md text-sm font-bold transition-colors duration-200"
+                aria-label="Go to conferences section"
+                >Conferences</a
+              >
+              <a
+                href="#articles"
+                class="nav-link text-neutral-700 hover:text-primary-500 px-3 py-2 rounded-md text-sm font-bold transition-colors duration-200"
+                aria-label="Go to articles section"
+                >Articles</a
+              >
+              <a
                 href="#contact"
                 class="nav-link text-neutral-700 hover:text-primary-500 px-3 py-2 rounded-md text-sm font-bold transition-colors duration-200"
                 aria-label="Go to contact section"
@@ -190,6 +202,16 @@
               >Projects</a
             >
             <a
+              href="#conferences"
+              class="mobile-nav-link text-neutral-900 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-bold transition-colors duration-200"
+              >Conferences</a
+            >
+            <a
+              href="#articles"
+              class="mobile-nav-link text-neutral-900 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-bold transition-colors duration-200"
+              >Articles</a
+            >
+            <a
               href="#contact"
               class="mobile-nav-link text-neutral-900 hover:text-primary-700 block px-3 py-2 rounded-md text-base font-bold transition-colors duration-200"
               >Contact</a
@@ -204,7 +226,7 @@
       <!-- Hero Section -->
       <section
         id="home"
-        class="section section-dark pt-24 md:pt-32 bg-gradient-to-br from-neutral-50 via-primary-50/30 to-accent-50/30 min-h-screen flex items-center"
+        class="section section-light pt-24 md:pt-32 bg-gradient-to-br from-slate-50 via-blue-50/30 to-teal-50/30 min-h-screen flex items-center"
         role="banner"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,7 +254,7 @@
                 </h2>
               </div>
               <p
-                class="text-lg md:text-xl text-adaptive-secondary mb-8 leading-relaxed"
+                class="text-lg md:text-xl text-neutral-800 mb-8 leading-relaxed"
                 id="hero-tagline"
               >
                 Your tagline goes here
@@ -262,7 +284,7 @@
               </div>
             </div>
 
-              <!-- Hero Image Carousel -->
+            <!-- Hero Image Carousel -->
             <div
               class="animate-on-scroll animation-delay-200 lg:order-first lg:order-last"
             >
@@ -274,30 +296,57 @@
                   <!-- Carousel Container -->
                   <div id="profile-carousel" class="relative">
                     <!-- Images will be populated by JavaScript -->
-                    <div id="carousel-items" class="relative w-full h-auto rounded-xl overflow-hidden">
-                      <img
-                        id="hero-image"
-                        src=""
-                        alt=""
-                        class="w-full h-auto rounded-xl object-cover aspect-square"
-                        loading="eager"
-                      />
+                    <div
+                      id="carousel-items"
+                      class="relative w-full h-auto rounded-xl overflow-hidden"
+                      style="min-height: 300px; aspect-ratio: 1/1"
+                    >
+                      <!-- Initial placeholder removed - images will be added by JavaScript -->
                     </div>
-                    
+
                     <!-- Navigation Dots -->
-                    <div id="carousel-dots" class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                    <div
+                      id="carousel-dots"
+                      class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2"
+                    >
                       <!-- Dots will be populated by JavaScript -->
                     </div>
-                    
+
                     <!-- Navigation Arrows -->
-                    <button id="carousel-prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-neutral-800 p-2 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-primary-500" aria-label="Previous image">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    <button
+                      id="carousel-prev"
+                      class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-neutral-800 p-2 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                      aria-label="Previous image"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        />
                       </svg>
                     </button>
-                    <button id="carousel-next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-neutral-800 p-2 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-primary-500" aria-label="Next image">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    <button
+                      id="carousel-next"
+                      class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-neutral-800 p-2 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                      aria-label="Next image"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd"
+                        />
                       </svg>
                     </button>
                   </div>
@@ -311,7 +360,7 @@
       <!-- About Section -->
       <section
         id="about"
-        class="section section-light"
+        class="section section-light bg-white"
         role="region"
         aria-labelledby="about-title"
       >
@@ -331,7 +380,7 @@
               <div class="prose prose-lg max-w-none">
                 <p
                   id="about-summary"
-                  class="text-adaptive-secondary leading-relaxed mb-6"
+                  class="text-neutral-800 leading-relaxed mb-6"
                 >
                   <!-- Summary will be populated by JavaScript -->
                 </p>
@@ -450,7 +499,7 @@
       <!-- Experience Section -->
       <section
         id="experience"
-        class="section section-dark"
+        class="section section-dark bg-slate-50"
         role="region"
         aria-labelledby="experience-title"
       >
@@ -476,7 +525,7 @@
       <!-- Projects Section -->
       <section
         id="projects"
-        class="section section-light"
+        class="section section-light bg-white"
         role="region"
         aria-labelledby="projects-title"
       >
@@ -505,10 +554,643 @@
         </div>
       </section>
 
+      <!-- Conferences Section -->
+      <section
+        id="conferences"
+        class="section section-light bg-white"
+        role="region"
+        aria-labelledby="conferences-title"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div class="text-center mb-16">
+            <h2 id="conferences-title" class="section-title animate-on-scroll">
+              Conferences & Workshops
+            </h2>
+            <p id="conferences-subtitle" class="section-subtitle">
+              My academic engagements
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Conferences Carousel -->
+            <div class="animate-on-scroll animation-delay-100">
+              <div class="card card-hover h-full">
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-neutral-900 mb-4">
+                    Conferences
+                  </h3>
+
+                  <!-- Conferences Carousel Container -->
+                  <div id="conference-carousel" class="relative">
+                    <!-- Conferences Items Container -->
+                    <div id="conference-items" class="min-h-[400px]">
+                      <!-- Conference items will be populated by JavaScript -->
+                      <div class="conference-item">
+                        <div class="relative mb-4">
+                          <div class="overflow-hidden rounded-lg relative">
+                            <img
+                              src="/public/images/placeholder-project.jpg"
+                              alt="Conference Image"
+                              class="w-full h-48 object-cover"
+                            />
+                            <div class="absolute top-4 right-4">
+                              <span
+                                class="px-2 py-1 bg-accent-100 text-accent-700 rounded-full text-xs font-medium capitalize"
+                              >
+                                Oral Presentation
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="font-medium text-neutral-900 mb-1">
+                          International Congress on Parkinson's Disease
+                        </h4>
+                        <p class="text-neutral-600 text-sm mb-3">
+                          Presented research on computational approaches to
+                          identify early biomarkers of Parkinson's disease.
+                        </p>
+                        <div class="flex justify-between items-center mb-2">
+                          <span class="text-primary-600 text-sm"
+                            >Copenhagen, Denmark</span
+                          >
+                          <span class="text-neutral-500 text-sm"
+                            >June 2023</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between mt-6">
+                      <button
+                        id="conference-prev"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Previous conference"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <div id="conference-indicators" class="flex space-x-2">
+                        <!-- Indicators will be populated by JavaScript -->
+                      </div>
+                      <button
+                        id="conference-next"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Next conference"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Workshops Carousel -->
+            <div class="animate-on-scroll animation-delay-200">
+              <div class="card card-hover h-full">
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-neutral-900 mb-4">
+                    Workshops
+                  </h3>
+
+                  <!-- Workshops Carousel Container -->
+                  <div id="workshop-carousel" class="relative">
+                    <!-- Workshops Items Container -->
+                    <div id="workshop-items" class="min-h-[400px]">
+                      <!-- Workshop items will be populated by JavaScript -->
+                      <div class="workshop-item">
+                        <div class="relative mb-4">
+                          <div class="overflow-hidden rounded-lg relative">
+                            <img
+                              src="/public/images/placeholder-project.jpg"
+                              alt="Workshop Image"
+                              class="w-full h-48 object-cover"
+                            />
+                            <div class="absolute top-4 right-4">
+                              <span
+                                class="px-2 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-medium capitalize"
+                              >
+                                Offline
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="font-medium text-neutral-900 mb-1">
+                          Advanced Machine Learning for Bioinformatics
+                        </h4>
+                        <p class="text-neutral-600 text-sm mb-3">
+                          Intensive workshop on applying machine learning
+                          techniques to biological data analysis and
+                          interpretation.
+                        </p>
+                        <div class="flex justify-between items-center mb-2">
+                          <span class="text-primary-600 text-sm"
+                            >University of Hyderabad</span
+                          >
+                          <span class="text-neutral-500 text-sm"
+                            >March 2023</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between mt-6">
+                      <button
+                        id="workshop-prev"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Previous workshop"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <div id="workshop-indicators" class="flex space-x-2">
+                        <!-- Indicators will be populated by JavaScript -->
+                      </div>
+                      <button
+                        id="workshop-next"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Next workshop"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Articles Section -->
+      <section
+        id="articles"
+        class="section section-dark bg-slate-50"
+        role="region"
+        aria-labelledby="articles-title"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 id="articles-title" class="section-title animate-on-scroll">
+              Published Articles
+            </h2>
+            <p id="articles-subtitle" class="section-subtitle">
+              My academic publications
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Research Articles Carousel -->
+            <div class="animate-on-scroll animation-delay-100">
+              <div class="card card-hover h-full">
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-neutral-900 mb-4">
+                    Research Articles
+                  </h3>
+
+                  <!-- Research Articles Carousel Container -->
+                  <div id="research-carousel" class="relative">
+                    <!-- Research Articles Items Container -->
+                    <div id="research-items" class="min-h-[400px]">
+                      <!-- Research articles will be populated by JavaScript -->
+                      <div class="research-item">
+                        <div class="relative mb-4">
+                          <div class="overflow-hidden rounded-lg relative">
+                            <img
+                              src="/public/images/projects/pdprevent.jpg"
+                              alt="Research Article Image"
+                              class="w-full h-48 object-cover"
+                            />
+                            <div class="absolute top-4 right-4">
+                              <span
+                                class="px-2 py-1 bg-accent-100 text-accent-700 rounded-full text-xs font-medium capitalize"
+                              >
+                                Research
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="font-medium text-neutral-900 mb-1">
+                          Olfactory Dysfunction in Parkinson's Disease:
+                          Molecular Mechanisms and Therapeutic Approaches
+                        </h4>
+                        <p class="text-neutral-600 text-sm mb-3">
+                          Investigation of the molecular pathways underlying
+                          smell loss in Parkinson's disease and potential
+                          therapeutic interventions.
+                        </p>
+                        <div class="flex justify-between items-center mb-2">
+                          <span class="text-primary-600 text-sm">2023</span>
+                          <a
+                            href="https://doi.org/10.1016/example"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm text-primary-600 hover:text-primary-800 transition-colors"
+                          >
+                            View Article
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between mt-6">
+                      <button
+                        id="research-prev"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Previous research article"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <div id="research-indicators" class="flex space-x-2">
+                        <!-- Indicators will be populated by JavaScript -->
+                      </div>
+                      <button
+                        id="research-next"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Next research article"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review Articles Carousel -->
+            <div class="animate-on-scroll animation-delay-200">
+              <div class="card card-hover h-full">
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-neutral-900 mb-4">
+                    Review Articles
+                  </h3>
+
+                  <!-- Review Articles Carousel Container -->
+                  <div id="review-carousel" class="relative">
+                    <!-- Review Articles Items Container -->
+                    <div id="review-items" class="min-h-[400px]">
+                      <!-- Review articles will be populated by JavaScript -->
+                      <div class="review-item">
+                        <div class="relative mb-4">
+                          <div class="overflow-hidden rounded-lg relative">
+                            <img
+                              src="/public/images/projects/olfactory.jpg"
+                              alt="Review Article Image"
+                              class="w-full h-48 object-cover"
+                            />
+                            <div class="absolute top-4 right-4">
+                              <span
+                                class="px-2 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-medium capitalize"
+                              >
+                                Review
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="font-medium text-neutral-900 mb-1">
+                          Non-Motor Symptoms in Parkinson's Disease: A
+                          Comprehensive Review
+                        </h4>
+                        <p class="text-neutral-600 text-sm mb-3">
+                          Systematic review of the current understanding of
+                          non-motor symptoms in Parkinson's disease and their
+                          clinical significance.
+                        </p>
+                        <div class="flex justify-between items-center mb-2">
+                          <span class="text-primary-600 text-sm">2022</span>
+                          <a
+                            href="https://doi.org/10.1016/example-review"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm text-primary-600 hover:text-primary-800 transition-colors"
+                          >
+                            View Article
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between mt-6">
+                      <button
+                        id="review-prev"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Previous review article"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <div id="review-indicators" class="flex space-x-2">
+                        <!-- Indicators will be populated by JavaScript -->
+                      </div>
+                      <button
+                        id="review-next"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Next review article"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Book Chapters Carousel -->
+            <div class="animate-on-scroll animation-delay-300">
+              <div class="card card-hover h-full">
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-neutral-900 mb-4">
+                    Book Chapters
+                  </h3>
+
+                  <!-- Book Chapters Carousel Container -->
+                  <div id="chapter-carousel" class="relative">
+                    <!-- Book Chapters Items Container -->
+                    <div id="chapter-items" class="min-h-[400px]">
+                      <!-- Book chapters will be populated by JavaScript -->
+                      <div class="chapter-item">
+                        <div class="relative mb-4">
+                          <div class="overflow-hidden rounded-lg relative">
+                            <img
+                              src="/public/images/projects/pdprevent.jpg"
+                              alt="Book Chapter Image"
+                              class="w-full h-48 object-cover"
+                            />
+                            <div class="absolute top-4 right-4">
+                              <span
+                                class="px-2 py-1 bg-accent-100 text-accent-700 rounded-full text-xs font-medium capitalize"
+                              >
+                                Chapter
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="font-medium text-neutral-900 mb-1">
+                          Computational Approaches in Neurodegenerative Disease
+                          Research
+                        </h4>
+                        <p class="text-neutral-600 text-sm mb-3">
+                          Chapter discussing the application of computational
+                          methods in studying neurodegenerative disorders, with
+                          emphasis on machine learning techniques.
+                        </p>
+                        <div class="flex justify-between items-center mb-2">
+                          <span class="text-primary-600 text-sm">2023</span>
+                          <a
+                            href="https://doi.org/10.1007/example-chapter"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm text-primary-600 hover:text-primary-800 transition-colors"
+                          >
+                            View Chapter
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between mt-6">
+                      <button
+                        id="chapter-prev"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Previous book chapter"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <div id="chapter-indicators" class="flex space-x-2">
+                        <!-- Indicators will be populated by JavaScript -->
+                      </div>
+                      <button
+                        id="chapter-next"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Next book chapter"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Abstracts Carousel -->
+            <div class="animate-on-scroll animation-delay-400">
+              <div class="card card-hover h-full">
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-neutral-900 mb-4">
+                    Conference Abstracts
+                  </h3>
+
+                  <!-- Abstracts Carousel Container -->
+                  <div id="abstract-carousel" class="relative">
+                    <!-- Abstracts Items Container -->
+                    <div id="abstract-items" class="min-h-[400px]">
+                      <!-- Abstracts will be populated by JavaScript -->
+                      <div class="abstract-item">
+                        <div class="relative mb-4">
+                          <div class="overflow-hidden rounded-lg relative">
+                            <img
+                              src="/public/images/projects/pdviz.jpg"
+                              alt="Abstract Image"
+                              class="w-full h-48 object-cover"
+                            />
+                            <div class="absolute top-4 right-4">
+                              <span
+                                class="px-2 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-medium capitalize"
+                              >
+                                Abstract
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="font-medium text-neutral-900 mb-1">
+                          Machine Learning Models for Early Detection of
+                          Parkinson's Disease
+                        </h4>
+                        <p class="text-neutral-600 text-sm mb-3">
+                          Presentation of novel machine learning approaches for
+                          identifying early biomarkers of Parkinson's disease
+                          from clinical data.
+                        </p>
+                        <div class="flex justify-between items-center mb-2">
+                          <span class="text-primary-600 text-sm">2023</span>
+                          <a
+                            href="https://doi.org/10.1016/example-abstract"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm text-primary-600 hover:text-primary-800 transition-colors"
+                          >
+                            View Abstract
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between mt-6">
+                      <button
+                        id="abstract-prev"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Previous abstract"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <div id="abstract-indicators" class="flex space-x-2">
+                        <!-- Indicators will be populated by JavaScript -->
+                      </div>
+                      <button
+                        id="abstract-next"
+                        class="bg-primary-100 hover:bg-primary-200 text-primary-700 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Next abstract"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Contact Section -->
       <section
         id="contact"
-        class="section section-dark bg-gradient-to-br from-primary-50 to-accent-50"
+        class="section section-light bg-white"
         role="region"
         aria-labelledby="contact-title"
       >
@@ -813,6 +1495,20 @@
                   href="#projects"
                   class="hover:text-primary-400 transition-colors"
                   >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#conferences"
+                  class="hover:text-primary-400 transition-colors"
+                  >Conferences</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#articles"
+                  class="hover:text-primary-400 transition-colors"
+                  >Articles</a
                 >
               </li>
               <li>

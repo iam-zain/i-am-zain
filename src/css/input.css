@@ -7,20 +7,20 @@
 
 /* CSS Custom Properties for Color Palette */
 :root {
-  /* Primary Color Palette (Indigo - Higher Contrast) */
-  --color-primary-50: #eef2ff;
-  --color-primary-100: #e0e7ff;
-  --color-primary-200: #c7d2fe;
-  --color-primary-300: #a5b4fc;
-  --color-primary-400: #818cf8;
-  --color-primary-500: #6366f1;
-  --color-primary-600: #4f46e5;
-  --color-primary-700: #4338ca;
-  --color-primary-800: #3730a3;
-  --color-primary-900: #312e81;
-  --color-primary-950: #1e1b4b;
+  /* Primary Color Palette (Soft Blue) */
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+  --color-primary-950: #082f49;
 
-  /* Accent Color Palette (Teal - Higher Contrast) */
+  /* Accent Color Palette (Soft Teal) */
   --color-accent-50: #f0fdfa;
   --color-accent-100: #ccfbf1;
   --color-accent-200: #99f6e4;
@@ -33,18 +33,24 @@
   --color-accent-900: #134e4a;
   --color-accent-950: #042f2e;
 
-  /* Neutral Color Palette (Slate) */
-  --color-neutral-50: #f8fafc;
-  --color-neutral-100: #f1f5f9;
-  --color-neutral-200: #e2e8f0;
-  --color-neutral-300: #cbd5e1;
-  --color-neutral-400: #94a3b8;
-  --color-neutral-500: #64748b;
-  --color-neutral-600: #475569;
-  --color-neutral-700: #334155;
-  --color-neutral-800: #1e293b;
-  --color-neutral-900: #0a0f1d;
-  --color-neutral-950: #020617;
+  /* Neutral Color Palette (Warm Gray) */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+
+  /* Background Colors for Sections */
+  --color-bg-light: #fefefe;
+  --color-bg-light-alt: #f8fafc;
+  --color-bg-blue-tint: #f0f9ff;
+  --color-bg-teal-tint: #f0fdfa;
 
   /* Additional CSS Variables */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -102,14 +108,37 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Improve contrast for all headings */
+  /* Force all text to be very dark and visible - using 100-300 range */
   h1, h2, h3, h4, h5, h6 {
-    @apply text-primary-900 font-bold;
+    color: #171717 !important; /* neutral-900 equivalent */
+    font-weight: bold !important;
   }
   
-  /* Improve contrast for all paragraph text */
   p {
-    @apply text-neutral-800;
+    color: #262626 !important; /* neutral-800 equivalent */
+  }
+  
+  /* Override any adaptive text classes */
+  .text-adaptive,
+  .text-adaptive-secondary {
+    color: #262626 !important; /* neutral-800 equivalent */
+  }
+  
+  /* Force specific text colors for hero section */
+  #hero-name {
+    color: #171717 !important; /* neutral-900 */
+  }
+  
+  #hero-title {
+    color: #171717 !important; /* neutral-900 */
+  }
+  
+  #hero-tagline {
+    color: #262626 !important; /* neutral-800 */
+  }
+  
+  #hero-greeting {
+    color: #0284c7 !important; /* primary-600 */
   }
 
   /* Focus styles for accessibility */
@@ -136,15 +165,15 @@
   }
 
   .btn-primary {
-    @apply bg-primary-700 text-white hover:bg-primary-800 focus:ring-primary-500 shadow-md hover:shadow-lg;
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 shadow-md hover:shadow-lg;
   }
 
   .btn-secondary {
-    @apply bg-neutral-200 text-primary-900 hover:bg-neutral-300 focus:ring-neutral-500 shadow-sm hover:shadow-md font-medium;
+    @apply bg-neutral-200 text-neutral-800 hover:bg-neutral-300 focus:ring-neutral-500 shadow-sm hover:shadow-md font-medium;
   }
 
   .btn-outline {
-    @apply border-2 border-primary-700 text-primary-700 hover:bg-primary-700 hover:text-white focus:ring-primary-500 font-medium;
+    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500 font-medium;
   }
 
   /* Card styles */
@@ -167,61 +196,60 @@
   }
   
   .section-dark {
-    @apply bg-neutral-50;
+    @apply bg-slate-50;
   }
   
-  /* Ensure text in alternating sections has proper contrast */
+  /* Force dark text in all sections - using darkest colors */
   .section-light h1, .section-light h2, .section-light h3, .section-light h4, .section-light h5, .section-light h6 {
-    @apply text-primary-900;
+    color: #171717 !important; /* neutral-900 */
   }
   
   .section-light p {
-    @apply text-neutral-800;
+    color: #262626 !important; /* neutral-800 */
   }
   
   .section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4, .section-dark h5, .section-dark h6 {
-    @apply text-primary-900;
+    color: #171717 !important; /* neutral-900 */
   }
   
   .section-dark p {
-    @apply text-neutral-800;
+    color: #262626 !important; /* neutral-800 */
   }
 
   .card p {
-    color: var(--color-neutral-200);
+    color: #262626 !important; /* neutral-800 */
   }
 
+  /* Ensure all text is visible with high contrast - using darkest colors */
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-extrabold text-primary-900;
+    color: #171717 !important; /* neutral-900 */
+    font-size: 3rem !important;
+    font-weight: bold !important;
+    margin-bottom: 1rem !important;
   }
   
-  /* White background sections need darker text */
-  .bg-white .section-title {
-    @apply text-primary-900;
-  }
-  
-  /* Lighter background sections need darker text */
-  .bg-neutral-50 .section-title {
-    @apply text-primary-900;
-  }
-  
-  /* Gradient background sections need darker text */
-  .bg-gradient-to-br .section-title {
-    @apply text-primary-900;
-  }
-
   .section-subtitle {
-    @apply text-lg md:text-xl text-primary-800 mb-8 md:mb-12 font-medium;
+    color: #262626 !important; /* neutral-800 */
+    font-size: 1.125rem !important;
+    font-weight: 500 !important;
+    margin-bottom: 2rem !important;
   }
   
-  /* White background sections need darker subtitle text */
-  .bg-white .section-subtitle {
-    @apply text-primary-800;
+  /* Force dark text on all backgrounds */
+  .bg-white .section-title,
+  .bg-slate-50 .section-title,
+  .bg-blue-50 .section-title,
+  .bg-teal-50 .section-title,
+  .bg-gradient-to-br .section-title {
+    color: #171717 !important; /* neutral-900 */
   }
   
-  /* Lighter background sections need darker subtitle text */
-  .bg-neutral-50 .section-subtitle {
-    @apply text-primary-800;
+  .bg-white .section-subtitle,
+  .bg-slate-50 .section-subtitle,
+  .bg-blue-50 .section-subtitle,
+  .bg-teal-50 .section-subtitle,
+  .bg-gradient-to-br .section-subtitle {
+    color: #262626 !important; /* neutral-800 */
   }
 
   /* Animation utilities */
@@ -262,6 +290,8 @@
   #carousel-items {
     min-height: 300px;
     position: relative;
+    aspect-ratio: 1/1;
+    display: block;
   }
   
   #carousel-items img {
@@ -299,12 +329,12 @@
 
   /* Gradient text with improved contrast */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-800 to-accent-800 bg-clip-text text-transparent font-bold;
+    @apply bg-gradient-to-r from-primary-700 to-accent-700 bg-clip-text text-transparent font-bold;
   }
   
   /* Ensure gradient text is visible on white backgrounds */
   .bg-white .gradient-text {
-    @apply from-primary-800 to-accent-800;
+    @apply from-primary-700 to-accent-700;
   }
 
   /* Custom scrollbar */
@@ -420,5 +450,55 @@
 
 
 #about-summary{
-  color: var(--color-neutral-200);
+  color: #262626 !important; /* neutral-800 */
+}
+
+/* COMPREHENSIVE TEXT OVERRIDE - Force all text to be visible */
+/* Override all possible Tailwind text classes */
+.text-neutral-50, .text-neutral-100, .text-neutral-200, .text-neutral-300, .text-neutral-400, .text-neutral-500 {
+  color: #262626 !important; /* neutral-800 */
+}
+
+.text-neutral-600, .text-neutral-700, .text-neutral-800, .text-neutral-900 {
+  color: #171717 !important; /* neutral-900 */
+}
+
+/* Override adaptive text classes */
+.text-adaptive, .text-adaptive-secondary {
+  color: #262626 !important; /* neutral-800 */
+}
+
+/* Force all headings to be darkest */
+h1, h2, h3, h4, h5, h6 {
+  color: #171717 !important; /* neutral-900 */
+  font-weight: bold !important;
+}
+
+/* Force all paragraphs to be dark */
+p {
+  color: #262626 !important; /* neutral-800 */
+}
+
+/* Override any gradient text that might be too light */
+.gradient-text {
+  color: #171717 !important; /* neutral-900 */
+}
+
+/* Force specific element visibility */
+#hero-name, #hero-title, #hero-tagline {
+  color: #171717 !important; /* neutral-900 */
+}
+
+#hero-greeting {
+  color: #0284c7 !important; /* primary-600 */
+}
+
+/* Force all section content to be dark */
+.section-light *, .section-dark * {
+  color: #262626 !important; /* neutral-800 */
+}
+
+.section-light h1, .section-light h2, .section-light h3, .section-light h4, .section-light h5, .section-light h6,
+.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4, .section-dark h5, .section-dark h6 {
+  color: #171717 !important; /* neutral-900 */
 }

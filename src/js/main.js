@@ -82,6 +82,12 @@ function populateContent() {
   // Populate projects section
   populateProjectsSection();
 
+  // Populate conferences section
+  populateConferencesSection();
+
+  // Populate articles section
+  populateArticlesSection();
+
   // Populate contact section
   populateContactSection();
 
@@ -122,7 +128,7 @@ function populateHeroSection() {
   const { personal, social } = portfolioData;
 
   // Update navigation name
-  updateElement("nav-name", personal.name.split(" ")[0]);
+  updateElement("nav-name", personal.name.split(" ")[1]);
 
   // Update hero content
   updateElement("hero-name", personal.name);
@@ -147,6 +153,9 @@ function populateHeroSection() {
  * @param {Array} images - Array of image objects with src and alt properties
  */
 function initializeProfileCarousel(images) {
+  // Debug log to see what images are being passed
+  console.log("Profile Images:", images);
+
   // Fallback for backward compatibility
   if (!images || !Array.isArray(images) || images.length === 0) {
     // Check if there's a legacy profileImage property
@@ -163,33 +172,53 @@ function initializeProfileCarousel(images) {
     }
   }
 
+  // Debug log after potential fallback
+  console.log("Final Images Array:", images);
+
   // Get carousel elements
   const carouselItems = document.getElementById("carousel-items");
   const carouselDots = document.getElementById("carousel-dots");
   const prevButton = document.getElementById("carousel-prev");
   const nextButton = document.getElementById("carousel-next");
-  
-  if (!carouselItems || !carouselDots) return;
-  
+
+  if (!carouselItems || !carouselDots) {
+    console.error("Carousel elements not found");
+    return;
+  }
+
+  console.log("Carousel container before clearing:", carouselItems.innerHTML);
+
   // Clear existing content
   carouselItems.innerHTML = "";
   carouselDots.innerHTML = "";
-  
+
+  console.log("Carousel container after clearing:", carouselItems.innerHTML);
+
   // Variables for carousel state
   let currentIndex = 0;
   let autoRotateInterval = null;
-  
+
   // Create carousel items
   images.forEach((image, index) => {
     // Create image element
     const imgElement = document.createElement("img");
     imgElement.src = image.src;
     imgElement.alt = image.alt;
-    imgElement.className = "w-full h-auto rounded-xl object-cover aspect-square absolute inset-0 transition-opacity duration-500";
+    imgElement.className =
+      "w-full h-auto rounded-xl object-cover aspect-square absolute inset-0 transition-opacity duration-500";
     imgElement.style.opacity = index === 0 ? "1" : "0";
     imgElement.style.zIndex = index === 0 ? "10" : "0";
+    imgElement.style.position = "absolute";
+    imgElement.style.top = "0";
+    imgElement.style.left = "0";
+    imgElement.style.width = "100%";
+    imgElement.style.height = "100%";
+    imgElement.onload = () => console.log(`Image ${index} loaded:`, image.src);
+    imgElement.onerror = () =>
+      console.error(`Failed to load image ${index}:`, image.src);
     carouselItems.appendChild(imgElement);
-    
+    console.log(`Added image ${index}:`, image.src);
+
     // Create dot element
     const dotElement = document.createElement("button");
     dotElement.className = `w-3 h-3 rounded-full transition-colors duration-300 ${
@@ -200,7 +229,7 @@ function initializeProfileCarousel(images) {
     dotElement.onclick = () => goToSlide(index);
     carouselDots.appendChild(dotElement);
   });
-  
+
   // Only show navigation if there are multiple images
   if (images.length <= 1) {
     if (prevButton) prevButton.style.display = "none";
@@ -208,36 +237,46 @@ function initializeProfileCarousel(images) {
     carouselDots.style.display = "none";
     return;
   }
-  
+
   // Add event listeners to navigation buttons
   if (prevButton) {
     prevButton.onclick = () => {
       goToSlide(currentIndex - 1 < 0 ? images.length - 1 : currentIndex - 1);
     };
   }
-  
+
   if (nextButton) {
     nextButton.onclick = () => {
       goToSlide(currentIndex + 1 >= images.length ? 0 : currentIndex + 1);
     };
   }
-  
+
   // Function to go to a specific slide
   function goToSlide(index) {
+    console.log("Going to slide:", index);
+
     // Reset auto-rotation timer
     resetAutoRotate();
-    
+
     // Hide all images
     const allImages = carouselItems.querySelectorAll("img");
+    console.log("Total images found:", allImages.length);
+
     allImages.forEach((img, i) => {
+      console.log(`Setting image ${i} to opacity 0`);
       img.style.opacity = "0";
       img.style.zIndex = "0";
     });
-    
+
     // Show selected image
-    allImages[index].style.opacity = "1";
-    allImages[index].style.zIndex = "10";
-    
+    if (allImages[index]) {
+      console.log(`Setting image ${index} to opacity 1`);
+      allImages[index].style.opacity = "1";
+      allImages[index].style.zIndex = "10";
+    } else {
+      console.error(`Image at index ${index} not found`);
+    }
+
     // Update dots
     const allDots = carouselDots.querySelectorAll("button");
     allDots.forEach((dot, i) => {
@@ -245,21 +284,26 @@ function initializeProfileCarousel(images) {
         i === index ? "bg-primary-500" : "bg-white/70"
       }`;
     });
-    
+
     // Update current index
     currentIndex = index;
+    console.log("Current index updated to:", currentIndex);
   }
-  
+
   // Function to start auto-rotation
   function startAutoRotate() {
     // Only set interval if it doesn't already exist
     if (!autoRotateInterval) {
+      console.log("Starting auto-rotation with interval of 10 seconds");
       autoRotateInterval = setInterval(() => {
-        goToSlide(currentIndex + 1 >= images.length ? 0 : currentIndex + 1);
-      }, 10000); // 10 seconds
+        console.log("Auto-rotating to next slide");
+        const nextIndex =
+          currentIndex + 1 >= images.length ? 0 : currentIndex + 1;
+        goToSlide(nextIndex);
+      }, 5000); // 5 seconds for testing (will change back to 10 seconds later)
     }
   }
-  
+
   // Function to reset auto-rotation
   function resetAutoRotate() {
     if (autoRotateInterval) {
@@ -268,10 +312,10 @@ function initializeProfileCarousel(images) {
     }
     startAutoRotate();
   }
-  
+
   // Start auto-rotation
   startAutoRotate();
-  
+
   // Pause rotation when user hovers over the carousel
   const carousel = document.getElementById("profile-carousel");
   if (carousel) {
@@ -281,7 +325,7 @@ function initializeProfileCarousel(images) {
         autoRotateInterval = null;
       }
     });
-    
+
     carousel.addEventListener("mouseleave", () => {
       startAutoRotate();
     });
@@ -400,6 +444,422 @@ function populateExperienceSection() {
   } catch (error) {
     console.error("Error applying animations to experience items:", error);
     // Experience items will still be visible even if animations fail
+  }
+}
+
+/**
+ * Populate conferences section
+ */
+function populateConferencesSection() {
+  const { conferences, workshops } = portfolioData;
+
+  // Initialize conferences carousel
+  if (conferences && conferences.length > 0) {
+    initializeConferenceCarousel(conferences);
+  }
+
+  // Initialize workshops carousel
+  if (workshops && workshops.length > 0) {
+    initializeWorkshopCarousel(workshops);
+  }
+}
+
+/**
+ * Initialize conference carousel
+ * @param {Array} conferences - Array of conference objects
+ */
+function initializeConferenceCarousel(conferences) {
+  // Get carousel elements
+  const carouselItems = document.getElementById("conference-items");
+  const indicators = document.getElementById("conference-indicators");
+  const prevButton = document.getElementById("conference-prev");
+  const nextButton = document.getElementById("conference-next");
+
+  if (!carouselItems || !indicators) {
+    console.error("Conference carousel elements not found");
+    return;
+  }
+
+  // Clear existing content
+  carouselItems.innerHTML = "";
+  indicators.innerHTML = "";
+
+  // Variables for carousel state
+  let currentIndex = 0;
+
+  // Create carousel items
+  conferences.forEach((conference, index) => {
+    // Create conference item
+    const itemElement = document.createElement("div");
+    itemElement.className = "conference-item";
+    itemElement.style.display = index === 0 ? "block" : "none";
+
+    itemElement.innerHTML = `
+      <div class="relative mb-4">
+        <div class="overflow-hidden rounded-lg relative">
+          <img 
+            src="${
+              conference.image || "/public/images/placeholder-project.jpg"
+            }" 
+            alt="${conference.title}" 
+            class="w-full h-48 object-cover"
+          >
+          <div class="absolute top-4 right-4">
+          <span class="px-2 py-1 bg-${
+            conference.presentationType === "oral" ? "accent" : "primary"
+          }-100 text-${
+      conference.presentationType === "oral" ? "accent" : "primary"
+    }-700 rounded-full text-xs font-medium capitalize">
+            ${
+              conference.presentationType === "oral"
+                ? "Oral Presentation"
+                : "Poster Presentation"
+            }
+          </span>
+        </div>
+      </div>
+      <h4 class="font-medium text-neutral-900 mb-1">
+        ${conference.title}
+      </h4>
+      <p class="text-neutral-600 text-sm mb-3">
+        ${conference.description}
+      </p>
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-primary-600 text-sm">${conference.location}</span>
+        <span class="text-neutral-500 text-sm">${conference.date}</span>
+      </div>
+    `;
+
+    carouselItems.appendChild(itemElement);
+
+    // Create indicator
+    const indicatorElement = document.createElement("button");
+    indicatorElement.className = `w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+      index === 0 ? "bg-primary-500" : "bg-neutral-300"
+    }`;
+    indicatorElement.setAttribute(
+      "aria-label",
+      `Go to conference ${index + 1}`
+    );
+    indicatorElement.onclick = () => goToSlide(index);
+    indicators.appendChild(indicatorElement);
+  });
+
+  // Add event listeners to navigation buttons
+  if (prevButton) {
+    prevButton.onclick = () => {
+      goToSlide(
+        currentIndex - 1 < 0 ? conferences.length - 1 : currentIndex - 1
+      );
+    };
+  }
+
+  if (nextButton) {
+    nextButton.onclick = () => {
+      goToSlide(currentIndex + 1 >= conferences.length ? 0 : currentIndex + 1);
+    };
+  }
+
+  // Function to go to a specific slide
+  function goToSlide(index) {
+    // Hide all items
+    const allItems = carouselItems.querySelectorAll(".conference-item");
+    allItems.forEach((item) => {
+      item.style.display = "none";
+    });
+
+    // Show selected item
+    if (allItems[index]) {
+      allItems[index].style.display = "block";
+    }
+
+    // Update indicators
+    const allIndicators = indicators.querySelectorAll("button");
+    allIndicators.forEach((dot, i) => {
+      dot.className = `w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+        i === index ? "bg-primary-500" : "bg-neutral-300"
+      }`;
+    });
+
+    // Update current index
+    currentIndex = index;
+  }
+}
+
+/**
+ * Initialize workshop carousel
+ * @param {Array} workshops - Array of workshop objects
+ */
+function initializeWorkshopCarousel(workshops) {
+  // Get carousel elements
+  const carouselItems = document.getElementById("workshop-items");
+  const indicators = document.getElementById("workshop-indicators");
+  const prevButton = document.getElementById("workshop-prev");
+  const nextButton = document.getElementById("workshop-next");
+
+  if (!carouselItems || !indicators) {
+    console.error("Workshop carousel elements not found");
+    return;
+  }
+
+  // Clear existing content
+  carouselItems.innerHTML = "";
+  indicators.innerHTML = "";
+
+  // Variables for carousel state
+  let currentIndex = 0;
+
+  // Create carousel items
+  workshops.forEach((workshop, index) => {
+    // Create workshop item
+    const itemElement = document.createElement("div");
+    itemElement.className = "workshop-item";
+    itemElement.style.display = index === 0 ? "block" : "none";
+
+    itemElement.innerHTML = `
+      <div class="relative mb-4">
+        <div class="overflow-hidden rounded-lg relative">
+          <img 
+            src="${workshop.image || "/public/images/placeholder-project.jpg"}" 
+            alt="${workshop.title}" 
+            class="w-full h-48 object-cover"
+          >
+          <div class="absolute top-4 right-4">
+          <span class="px-2 py-1 bg-${
+            workshop.mode === "online" ? "accent" : "primary"
+          }-100 text-${
+      workshop.mode === "online" ? "accent" : "primary"
+    }-700 rounded-full text-xs font-medium capitalize">
+            ${workshop.mode}
+          </span>
+        </div>
+      </div>
+      <h4 class="font-medium text-neutral-900 mb-1">
+        ${workshop.title}
+      </h4>
+      <p class="text-neutral-600 text-sm mb-3">
+        ${workshop.description}
+      </p>
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-primary-600 text-sm">${workshop.location}</span>
+        <span class="text-neutral-500 text-sm">${workshop.date}</span>
+      </div>
+    `;
+
+    carouselItems.appendChild(itemElement);
+
+    // Create indicator
+    const indicatorElement = document.createElement("button");
+    indicatorElement.className = `w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+      index === 0 ? "bg-primary-500" : "bg-neutral-300"
+    }`;
+    indicatorElement.setAttribute("aria-label", `Go to workshop ${index + 1}`);
+    indicatorElement.onclick = () => goToSlide(index);
+    indicators.appendChild(indicatorElement);
+  });
+
+  // Add event listeners to navigation buttons
+  if (prevButton) {
+    prevButton.onclick = () => {
+      goToSlide(currentIndex - 1 < 0 ? workshops.length - 1 : currentIndex - 1);
+    };
+  }
+
+  if (nextButton) {
+    nextButton.onclick = () => {
+      goToSlide(currentIndex + 1 >= workshops.length ? 0 : currentIndex + 1);
+    };
+  }
+
+  // Function to go to a specific slide
+  function goToSlide(index) {
+    // Hide all items
+    const allItems = carouselItems.querySelectorAll(".workshop-item");
+    allItems.forEach((item) => {
+      item.style.display = "none";
+    });
+
+    // Show selected item
+    if (allItems[index]) {
+      allItems[index].style.display = "block";
+    }
+
+    // Update indicators
+    const allIndicators = indicators.querySelectorAll("button");
+    allIndicators.forEach((dot, i) => {
+      dot.className = `w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+        i === index ? "bg-primary-500" : "bg-neutral-300"
+      }`;
+    });
+
+    // Update current index
+    currentIndex = index;
+  }
+}
+
+/**
+ * Populate articles section
+ */
+function populateArticlesSection() {
+  const { articles } = portfolioData;
+
+  // If articles data is available, populate the sections
+  if (articles) {
+    // Initialize research articles carousel
+    if (articles.research && articles.research.length > 0) {
+      initializeArticleCarousel("research", articles.research);
+    }
+
+    // Initialize review articles carousel
+    if (articles.reviews && articles.reviews.length > 0) {
+      initializeArticleCarousel("review", articles.reviews);
+    }
+
+    // Initialize book chapters carousel
+    if (articles.bookChapters && articles.bookChapters.length > 0) {
+      initializeArticleCarousel("chapter", articles.bookChapters);
+    }
+
+    // Initialize conference abstracts carousel
+    if (articles.abstracts && articles.abstracts.length > 0) {
+      initializeArticleCarousel("abstract", articles.abstracts);
+    }
+  }
+}
+
+/**
+ * Initialize article carousel
+ * @param {string} type - Type of article (research, review, chapter, abstract)
+ * @param {Array} articles - Array of article objects
+ */
+function initializeArticleCarousel(type, articles) {
+  // Get carousel elements
+  const carouselItems = document.getElementById(`${type}-items`);
+  const indicators = document.getElementById(`${type}-indicators`);
+  const prevButton = document.getElementById(`${type}-prev`);
+  const nextButton = document.getElementById(`${type}-next`);
+
+  if (!carouselItems || !indicators) {
+    console.error(`${type} carousel elements not found`);
+    return;
+  }
+
+  // Clear existing content
+  carouselItems.innerHTML = "";
+  indicators.innerHTML = "";
+
+  // Variables for carousel state
+  let currentIndex = 0;
+
+  // Create carousel items
+  articles.forEach((article, index) => {
+    // Create article item
+    const itemElement = document.createElement("div");
+    itemElement.className = `${type}-item`;
+    itemElement.style.display = index === 0 ? "block" : "none";
+
+    // Determine badge color based on type
+    const badgeColor =
+      type === "research" || type === "chapter" ? "accent" : "primary";
+
+    // Determine badge text based on type
+    let badgeText;
+    switch (type) {
+      case "research":
+        badgeText = "Research";
+        break;
+      case "review":
+        badgeText = "Review";
+        break;
+      case "chapter":
+        badgeText = "Chapter";
+        break;
+      case "abstract":
+        badgeText = "Abstract";
+        break;
+      default:
+        badgeText = "Article";
+    }
+
+    itemElement.innerHTML = `
+      <div class="relative mb-4">
+        <div class="overflow-hidden rounded-lg relative">
+          <img 
+            src="${article.image || "/public/images/placeholder-project.jpg"}" 
+            alt="${article.title}" 
+            class="w-full h-48 object-cover"
+          />
+          <div class="absolute top-4 right-4">
+            <span class="px-2 py-1 bg-${badgeColor}-100 text-${badgeColor}-700 rounded-full text-xs font-medium capitalize">
+              ${badgeText}
+            </span>
+          </div>
+        </div>
+      </div>
+      <h4 class="font-medium text-neutral-900 mb-1">
+        ${article.title}
+      </h4>
+      <p class="text-neutral-600 text-sm mb-3">
+        ${article.summary}
+      </p>
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-primary-600 text-sm">${article.year}</span>
+        <a href="${
+          article.url
+        }" target="_blank" rel="noopener noreferrer" class="text-sm text-primary-600 hover:text-primary-800 transition-colors">
+          View ${article.type || "Article"}
+        </a>
+      </div>
+    `;
+
+    carouselItems.appendChild(itemElement);
+
+    // Create indicator
+    const indicatorElement = document.createElement("button");
+    indicatorElement.className = `w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+      index === 0 ? "bg-primary-500" : "bg-neutral-300"
+    }`;
+    indicatorElement.setAttribute("aria-label", `Go to ${type} ${index + 1}`);
+    indicatorElement.onclick = () => goToSlide(index);
+    indicators.appendChild(indicatorElement);
+  });
+
+  // Add event listeners to navigation buttons
+  if (prevButton) {
+    prevButton.onclick = () => {
+      goToSlide(currentIndex - 1 < 0 ? articles.length - 1 : currentIndex - 1);
+    };
+  }
+
+  if (nextButton) {
+    nextButton.onclick = () => {
+      goToSlide(currentIndex + 1 >= articles.length ? 0 : currentIndex + 1);
+    };
+  }
+
+  // Function to go to a specific slide
+  function goToSlide(index) {
+    // Hide all items
+    const allItems = carouselItems.querySelectorAll(`.${type}-item`);
+    allItems.forEach((item) => {
+      item.style.display = "none";
+    });
+
+    // Show selected item
+    if (allItems[index]) {
+      allItems[index].style.display = "block";
+    }
+
+    // Update indicators
+    const allIndicators = indicators.querySelectorAll("button");
+    allIndicators.forEach((dot, i) => {
+      dot.className = `w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+        i === index ? "bg-primary-500" : "bg-neutral-300"
+      }`;
+    });
+
+    // Update current index
+    currentIndex = index;
   }
 }
 
