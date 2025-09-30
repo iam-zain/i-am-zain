@@ -9,33 +9,47 @@
     "website": "https://i-am-zain.netlify.app",
     "profileImages": [
       {
-        "src": "/images/profile.jpg",
+        "src": "/public/images/profile_01.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       },
       {
-        "src": "/images/profile_01.jpg",
-        "alt": "Md Zainul Ali - Profile Photo"
-      },{
-        "src": "/images/profile_02.jpg",
-        "alt": "Md Zainul Ali - Profile Photo"
-      },{
-        "src": "/images/profile_03.jpg",
+        "src": "/public/images/profile_02.jpeg",
         "alt": "Md Zainul Ali - Profile Photo"
       },
       {
-        "src": "/images/placeholder-profile.jpg",
-        "alt": "Md Zainul Ali - Alternate Photo"
+        "src": "/public/images/profile_03.jpg",
+        "alt": "Md Zainul Ali - Profile Photo"
+      },
+      {
+        "src": "/public/images/profile_04.jpg",
+        "alt": "Md Zainul Ali - Profile Photo"
       }
     ],
     "resumeUrl": "/documents/zain-resume.pdf"
   },
-  "education": {
-    "institution": "University of Hyderabad",
-    "degree": "Ph.D. in Biotechnology & Bioinformatics",
-    "graduationYear": "Ongoing",
-    "gpa": "Excellent Academic Record",
-    "relevantCoursework": ["Computational Biology", "Machine Learning", "Systems Biology", "Neurodegenerative Disorders"]
-  },
+  "education": [
+    {
+      "institution": "University of Hyderabad",
+      "degree": "Ph.D. in Biotechnology & Bioinformatics",
+      "graduationYear": "Ongoing",
+      "gpa": "Excellent Academic Record",
+      "relevantCoursework": ["Computational Biology", "Machine Learning", "Systems Biology", "Neurodegenerative Disorders"]
+    },
+    {
+      "institution": "University of Hyderabad, India",
+      "degree": "M.Sc. in Biotechnology",
+      "graduationYear": "Completed 2020",
+      "gpa": "8.4",
+      "relevantCoursework": ["Bioinformatics", "Computational Biology", "Molecular Biology"]
+    },
+    {
+      "institution": "Aligarh Muslim University, Aligarh",
+      "degree": "B.Sc. in Biochemistry",
+      "graduationYear": "Completed 2018",
+      "gpa": "7.6",
+      "relevantCoursework": ["Biochemistry", "Molecular Biology", "Cell Biology"]
+    }
+  ],
   "summary": "Md Zainul Ali is a doctoral research scholar in the Department of Biotechnology & Bioinformatics, School of Life Sciences, University of Hyderabad, India. His research broadly focuses on the computational exploration of neurodegenerative disorders, with a specialization in Parkinson's disease. He applies machine learning, statistical modeling, and systems biology approaches to identify clinically relevant non-motor features and their molecular underpinnings.",
   "skills": {
     "technical": {
@@ -82,7 +96,7 @@
       "title": "PDPrevent",
       "subtitle": "Parkinson's Disease Risk Assessment Tool",
       "description": "An interactive computational tool for assessing Parkinson's disease risk based on non-motor symptoms and molecular biomarkers, integrating machine learning models for early diagnosis.",
-      "image": "/images/projects/pdprevent.jpg",
+      "image": "/public/images/projects/pdprevent.jpg",
       "technologies": ["Python", "Flask", "Machine Learning", "Data Visualization", "Bioinformatics"],
       "features": [
         "Risk assessment based on non-motor symptoms",
@@ -100,7 +114,7 @@
       "title": "Olfactory Dysfunction Analysis",
       "subtitle": "Molecular Basis of Smell Loss in Parkinson's",
       "description": "Research project exploring the molecular underpinnings of olfactory dysfunction in Parkinson's disease through transcriptomic and epigenetic analyses, identifying key pathways and potential biomarkers.",
-      "image": "/images/projects/olfactory.jpg",
+      "image": "/public/images/projects/olfactory.jpg",
       "technologies": ["R", "Bioconductor", "WGCNA", "Statistical Modeling", "Pathway Analysis"],
       "features": [
         "Transcriptomic analysis of olfactory tissues",
@@ -118,7 +132,7 @@
       "title": "PD Visualization Platform",
       "subtitle": "Interactive Data Exploration for Parkinson's Research",
       "description": "A comprehensive visualization platform for exploring Parkinson's disease data, allowing researchers to interactively analyze clinical features, molecular profiles, and statistical relationships.",
-      "image": "/images/projects/pdviz.jpg",
+      "image": "/public/images/projects/pdviz.jpg",
       "technologies": ["R", "Shiny", "D3.js", "Statistical Analysis", "Data Integration"],
       "features": [
         "Interactive exploration of clinical data",
@@ -153,7 +167,7 @@
       "location": "Philadelphia, US",
       "date": "29 September 2024",
       "presentationType": "oral",
-      "image": "/images/US_o.jpg"
+      "image": "/public/images/us_o.jpg"
     },
     {
       "id": 2,
@@ -162,7 +176,7 @@
       "location": "Philadelphia, US",
       "date": "27 September 2024",
       "presentationType": "poster",
-      "image": "/images/US_p.jpg"
+      "image": "/public/images/us_p.jpg"
     },
     {
       "id": 3,
@@ -171,7 +185,7 @@
       "location": "Copenhagen, Denmark",
       "date": "26 August 2023",
       "presentationType": "poster",
-      "image": "/images/Denmark.jpeg"
+      "image": "/public/images/denmark.jpeg"
     }
   ],
   "workshops": [
@@ -182,7 +196,7 @@
       "location": "Seoul, South Korea",
       "date": "14-16 Feb 2024",
       "mode": "offline",
-      "image": "/images/Korea.jpeg"
+      "image": "/public/images/korea.jpeg"
     },
     {
       "id": 2,
@@ -191,7 +205,7 @@
       "location": "Manila, Philippines",
       "date": "16-18 April 2023",
       "mode": "offline",
-      "image": "/images/Philip.jpeg"
+      "image": "/public/images/philip.jpeg"
     }
   ],
   "articles": {
@@ -225,7 +239,7 @@
         "impactFactor": "4.0",
         "authorship": "1st author",
         "publicationDate": "July 2022",
-        "image": "/images/Review_01.jpg"
+        "image": "/public/images/review_01.jpg"
       }
     ],
     "bookChapters": [
@@ -240,7 +254,7 @@
         "publisher": "Intech Open",
         "publicationDate": "11 November 2022",
         "authorship": "shared 1st author",
-        "image": "/images/Book_01.jpg"
+        "image": "/public/images/book_01.jpg"
       }
     ],
     "abstracts": [
@@ -254,7 +268,7 @@
         "conference": "International Conference on Parkinson's Disease Research",
         "location": "Philadelphia, US",
         "date": "27 Sept to 1st Oct 2024",
-        "image": "/images/US_a.jpeg"
+        "image": "/public/images/us_a.jpeg"
       },
       {
         "id": 2,
@@ -266,7 +280,7 @@
         "conference": "European Conference on Computational Biology",
         "location": "Copenhagen, Denmark",
         "date": "26 Aug to 31 Aug 2023",
-        "image": "/images/Denmark_a.jpg"
+        "image": "/public/images/denmark_a.jpg"
       }
     ]
   },
@@ -274,6 +288,6 @@
     "metaTitle": "Zain - Doctoral Research Scholar in Computational Neuroscience",
     "metaDescription": "Md Zainul Ali is a doctoral research scholar specializing in computational approaches to neurodegenerative disorders, with a focus on Parkinson's disease at University of Hyderabad.",
     "keywords": ["computational neuroscience", "Parkinson's disease", "bioinformatics", "machine learning", "systems biology", "neurodegenerative disorders", "research"],
-    "ogImage": "/images/og-image.jpeg"
+    "ogImage": "/public/images/og-image.jpeg"
   }
 }
