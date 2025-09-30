@@ -134,10 +134,10 @@
   ],
   "social": {
     "github": "https://github.com/iam-zain",
-    "linkedin": "https://linkedin.com/in/zainulali",
+    "linkedin": "https://linkedin.com/in/mdzainulali",
     "twitter": "https://twitter.com/zain_research",
-    "researchgate": "https://researchgate.net/profile/Md-Zainul-Ali",
-    "orcid": "https://orcid.org/0000-0000-0000-0000"
+    "researchgate": "https://www.researchgate.net/profile/Md-Ali-141?ev=hdr_xprf",
+    "orcid": "https://orcid.org/0000-0001-8001-8339"
   },
   "contact": {
     "availability": "Open to research collaborations and academic opportunities",
@@ -148,59 +148,50 @@
   "conferences": [
     {
       "id": 1,
-      "title": "International Congress on Parkinson's Disease",
+      "title": "International Conference on Parkinson's Disease Research",
       "description": "Presented research on computational approaches to identify early biomarkers of Parkinson's disease.",
-      "location": "Copenhagen, Denmark",
-      "date": "June 2023",
+      "location": "Philadelphia, US",
+      "date": "29 September 2024",
       "presentationType": "oral",
-      "image": "/public/images/placeholder-project.jpg"
+      "image": "/public/images/US_o.jpg"
     },
     {
       "id": 2,
-      "title": "International Symposium on Systems Biology",
+      "title": "International Symposium on Neurodegenerative Disorders",
       "description": "Showcased research on network-based analysis of neurodegenerative disorders using multi-omics data integration.",
-      "location": "Boston, USA",
-      "date": "September 2022",
+      "location": "Philadelphia, US",
+      "date": "27 September 2024",
       "presentationType": "poster",
-      "image": "/public/images/placeholder-project.jpg"
+      "image": "/public/images/US_p.jpg"
     },
     {
       "id": 3,
-      "title": "Asian Conference on Computational Biology",
+      "title": "European Conference on Computational Biology",
       "description": "Presented work on machine learning approaches for predicting disease progression in Parkinson's patients.",
-      "location": "Singapore",
-      "date": "November 2021",
-      "presentationType": "oral",
-      "image": "/public/images/placeholder-project.jpg"
+      "location": "Copenhagen, Denmark",
+      "date": "26 August 2023",
+      "presentationType": "poster",
+      "image": "/public/images/Denmark.jpeg"
     }
   ],
   "workshops": [
     {
       "id": 1,
-      "title": "Advanced Machine Learning for Bioinformatics",
+      "title": "International Workshop on Computational Biology",
       "description": "Intensive workshop on applying machine learning techniques to biological data analysis and interpretation.",
-      "location": "University of Hyderabad",
-      "date": "March 2023",
+      "location": "Seoul, South Korea",
+      "date": "14-16 Feb 2024",
       "mode": "offline",
-      "image": "/public/images/placeholder-project.jpg"
+      "image": "/public/images/Korea.jpeg"
     },
     {
       "id": 2,
-      "title": "Systems Biology Modeling Workshop",
+      "title": "Advanced Bioinformatics Workshop",
       "description": "Hands-on training in computational modeling of biological systems and network analysis techniques.",
-      "location": "Virtual Event",
-      "date": "July 2022",
-      "mode": "online",
-      "image": "/public/images/placeholder-project.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Neuroinformatics Summer School",
-      "description": "Comprehensive training in computational methods for analyzing neurological data and building predictive models.",
-      "location": "Indian Institute of Science",
-      "date": "May 2021",
+      "location": "Manila, Philippines",
+      "date": "16-18 April 2023",
       "mode": "offline",
-      "image": "/public/images/placeholder-project.jpg"
+      "image": "/public/images/Philip.jpeg"
     }
   ],
   "articles": {
@@ -225,55 +216,57 @@
     "reviews": [
       {
         "id": 1,
-        "title": "Non-Motor Symptoms in Parkinson's Disease: A Comprehensive Review",
-        "summary": "Systematic review of the current understanding of non-motor symptoms in Parkinson's disease and their clinical significance.",
+        "title": "Oxidative phosphorylation mediated pathogenesis of Parkinson's disease and its implication via Akt signaling",
+        "summary": "Comprehensive review examining the role of oxidative phosphorylation dysfunction in Parkinson's disease pathogenesis and its implications through Akt signaling pathways.",
         "year": "2022",
-        "url": "https://doi.org/10.1016/example-review",
-        "type": "Review"
-      },
-      {
-        "id": 2,
-        "title": "Computational Approaches in Neurodegenerative Disease Research: Current Status and Future Directions",
-        "summary": "Review of computational methods used in studying neurodegenerative disorders, highlighting recent advances and future challenges.",
-        "year": "2021",
-        "url": "https://doi.org/10.1016/example-review2",
-        "type": "Review"
+        "url": "https://doi.org/10.1016/j.neuint.2022.105312",
+        "type": "Review",
+        "journal": "Neurochemistry International",
+        "impactFactor": "4.0",
+        "authorship": "1st author",
+        "publicationDate": "July 2022",
+        "image": "/public/images/Review_01.jpg"
       }
     ],
     "bookChapters": [
       {
         "id": 1,
-        "title": "Computational Approaches in Neurodegenerative Disease Research",
-        "summary": "Chapter discussing the application of computational methods in studying neurodegenerative disorders, with emphasis on machine learning techniques.",
-        "year": "2023",
-        "url": "https://doi.org/10.1007/example-chapter",
-        "type": "Chapter"
+        "title": "Early Diagnosis of Parkinson's Disease: Utility of Animal Models",
+        "summary": "Chapter discussing the utility of animal models in early diagnosis of Parkinson's disease, exploring their role in understanding disease mechanisms and developing diagnostic strategies.",
+        "year": "2022",
+        "url": "https://doi.org/10.5772/intechopen.108234",
+        "type": "Chapter",
+        "bookTitle": "Parkinson's Disease - Animal Models, Current Therapies and Clinical Trials",
+        "publisher": "Intech Open",
+        "publicationDate": "11 November 2022",
+        "authorship": "shared 1st author",
+        "image": "/public/images/Book_01.jpg"
       }
     ],
     "abstracts": [
       {
         "id": 1,
-        "title": "Machine Learning Models for Early Detection of Parkinson's Disease",
-        "summary": "Presentation of novel machine learning approaches for identifying early biomarkers of Parkinson's disease from clinical data.",
-        "year": "2023",
-        "url": "https://doi.org/10.1016/example-abstract",
-        "type": "Abstract"
+        "title": "Integrating Non-Motor Symptoms and Gender Variability in Machine Learning for Early Parkinson's Disease Detection",
+        "summary": "Presentation of novel machine learning approaches integrating non-motor symptoms and gender variability for early detection of Parkinson's disease.",
+        "year": "2024",
+        "url": "https://doi.org/10.1016/example-abstract-philadelphia",
+        "type": "Abstract",
+        "conference": "International Conference on Parkinson's Disease Research",
+        "location": "Philadelphia, US",
+        "date": "27 Sept to 1st Oct 2024",
+        "image": "/public/images/US_a.jpeg"
       },
       {
         "id": 2,
-        "title": "Olfactory Dysfunction as a Prodromal Marker for Parkinson's Disease",
-        "summary": "Analysis of olfactory dysfunction patterns as potential early markers for Parkinson's disease diagnosis.",
-        "year": "2022",
-        "url": "https://doi.org/10.1016/example-abstract2",
-        "type": "Abstract"
-      },
-      {
-        "id": 3,
-        "title": "Systems Biology Approach to Understanding Neurodegeneration",
-        "summary": "Application of systems biology methods to elucidate complex molecular interactions in neurodegenerative processes.",
-        "year": "2021",
-        "url": "https://doi.org/10.1016/example-abstract3",
-        "type": "Abstract"
+        "title": "Gender-Specific Classification Models for Parkinson's Disease Using Non-Motor Symptoms and DNA Methylation Data",
+        "summary": "Analysis of gender-specific classification models utilizing non-motor symptoms and DNA methylation data for Parkinson's disease diagnosis.",
+        "year": "2023",
+        "url": "https://doi.org/10.1016/example-abstract-copenhagen",
+        "type": "Abstract",
+        "conference": "European Conference on Computational Biology",
+        "location": "Copenhagen, Denmark",
+        "date": "26 Aug to 31 Aug 2023",
+        "image": "/public/images/Denmark_a.jpg"
       }
     ]
   },
@@ -281,6 +274,6 @@
     "metaTitle": "Zain - Doctoral Research Scholar in Computational Neuroscience",
     "metaDescription": "Md Zainul Ali is a doctoral research scholar specializing in computational approaches to neurodegenerative disorders, with a focus on Parkinson's disease at University of Hyderabad.",
     "keywords": ["computational neuroscience", "Parkinson's disease", "bioinformatics", "machine learning", "systems biology", "neurodegenerative disorders", "research"],
-    "ogImage": "/public/images/og-image.jpg"
+    "ogImage": "/public/images/og-image.jpeg"
   }
 }
