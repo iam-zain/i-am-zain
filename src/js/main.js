@@ -341,17 +341,82 @@ function populateAboutSection() {
   // Update summary
   updateElement("about-summary", summary);
 
-  // Update education
-  updateElement("education-degree", education.degree);
-  updateElement("education-institution", education.institution);
-  updateElement("education-year", `Class of ${education.graduationYear}`);
-  updateElement("education-gpa", `GPA: ${education.gpa}`);
+  // Populate education cards
+  populateEducationCards(education);
 
   // Populate skills
   populateSkills("frontend-skills", skills.technical.frontend);
   populateSkills("backend-skills", skills.technical.backend);
   populateSkills("tools-skills", skills.technical.tools);
   populateSkills("concepts-skills", skills.technical.concepts);
+}
+
+/**
+ * Populate education cards
+ * @param {Array} educationData - Array of education objects
+ */
+function populateEducationCards(educationData) {
+  const educationCardsContainer = document.getElementById("education-cards");
+
+  if (!educationCardsContainer || !educationData) {
+    console.error("Education cards container or education data not found");
+    return;
+  }
+
+  // Handle both array and single object formats for backward compatibility
+  const educationArray = Array.isArray(educationData)
+    ? educationData
+    : [educationData];
+
+  // Generate education cards HTML
+  educationCardsContainer.innerHTML = educationArray
+    .map(
+      (edu, index) => `
+      <div class="bg-white rounded-lg p-6 border border-neutral-200 shadow-sm hover:shadow-md transition-shadow duration-200">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+              <svg
+                class="w-6 h-6 text-primary-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 14l9-5-9-5-9 5 9 5z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-lg font-semibold text-neutral-900 mb-2">
+              ${edu.degree}
+            </h4>
+            <p class="text-primary-600 font-medium mb-2">
+              ${edu.institution}
+            </p>
+            <p class="text-neutral-700 text-sm mb-1">
+              ${edu.graduationYear}
+            </p>
+            <p class="text-neutral-700 text-sm font-medium">
+              CGPA: ${edu.gpa}
+            </p>
+          </div>
+        </div>
+      </div>
+    `
+    )
+    .join("");
 }
 
 /**
