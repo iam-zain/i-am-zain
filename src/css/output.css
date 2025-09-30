@@ -1864,6 +1864,10 @@ p {
   color: rgb(234 88 12 / var(--tw-text-opacity, 1));
 }
 
+.text-primary-500{
+  color: var(--color-primary-500);
+}
+
 .text-primary-600{
   color: var(--color-primary-600);
 }
@@ -1885,14 +1889,6 @@ p {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-neutral-100{
-  color: var(--color-neutral-100);
-}
-
-.text-primary-500{
-  color: var(--color-primary-500);
 }
 
 .antialiased{

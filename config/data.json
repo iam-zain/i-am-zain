@@ -9,25 +9,25 @@
     "website": "https://i-am-zain.netlify.app",
     "profileImages": [
       {
-        "src": "/public/images/profile.jpg",
+        "src": "/images/profile.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       },
       {
-        "src": "/public/images/profile_01.jpg",
+        "src": "/images/profile_01.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       },{
-        "src": "/public/images/profile_02.jpg",
+        "src": "/images/profile_02.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       },{
-        "src": "/public/images/profile_03.jpg",
+        "src": "/images/profile_03.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       },
       {
-        "src": "/public/images/placeholder-profile.jpg",
+        "src": "/images/placeholder-profile.jpg",
         "alt": "Md Zainul Ali - Alternate Photo"
       }
     ],
-    "resumeUrl": "/public/documents/zain-resume.pdf"
+    "resumeUrl": "/documents/zain-resume.pdf"
   },
   "education": {
     "institution": "University of Hyderabad",
@@ -82,7 +82,7 @@
       "title": "PDPrevent",
       "subtitle": "Parkinson's Disease Risk Assessment Tool",
       "description": "An interactive computational tool for assessing Parkinson's disease risk based on non-motor symptoms and molecular biomarkers, integrating machine learning models for early diagnosis.",
-      "image": "/public/images/projects/pdprevent.jpg",
+      "image": "/images/projects/pdprevent.jpg",
       "technologies": ["Python", "Flask", "Machine Learning", "Data Visualization", "Bioinformatics"],
       "features": [
         "Risk assessment based on non-motor symptoms",
@@ -100,7 +100,7 @@
       "title": "Olfactory Dysfunction Analysis",
       "subtitle": "Molecular Basis of Smell Loss in Parkinson's",
       "description": "Research project exploring the molecular underpinnings of olfactory dysfunction in Parkinson's disease through transcriptomic and epigenetic analyses, identifying key pathways and potential biomarkers.",
-      "image": "/public/images/projects/olfactory.jpg",
+      "image": "/images/projects/olfactory.jpg",
       "technologies": ["R", "Bioconductor", "WGCNA", "Statistical Modeling", "Pathway Analysis"],
       "features": [
         "Transcriptomic analysis of olfactory tissues",
@@ -118,7 +118,7 @@
       "title": "PD Visualization Platform",
       "subtitle": "Interactive Data Exploration for Parkinson's Research",
       "description": "A comprehensive visualization platform for exploring Parkinson's disease data, allowing researchers to interactively analyze clinical features, molecular profiles, and statistical relationships.",
-      "image": "/public/images/projects/pdviz.jpg",
+      "image": "/images/projects/pdviz.jpg",
       "technologies": ["R", "Shiny", "D3.js", "Statistical Analysis", "Data Integration"],
       "features": [
         "Interactive exploration of clinical data",
@@ -153,7 +153,7 @@
       "location": "Philadelphia, US",
       "date": "29 September 2024",
       "presentationType": "oral",
-      "image": "/public/images/US_o.jpg"
+      "image": "/images/US_o.jpg"
     },
     {
       "id": 2,
@@ -162,7 +162,7 @@
       "location": "Philadelphia, US",
       "date": "27 September 2024",
       "presentationType": "poster",
-      "image": "/public/images/US_p.jpg"
+      "image": "/images/US_p.jpg"
     },
     {
       "id": 3,
@@ -171,7 +171,7 @@
       "location": "Copenhagen, Denmark",
       "date": "26 August 2023",
       "presentationType": "poster",
-      "image": "/public/images/Denmark.jpeg"
+      "image": "/images/Denmark.jpeg"
     }
   ],
   "workshops": [
@@ -182,7 +182,7 @@
       "location": "Seoul, South Korea",
       "date": "14-16 Feb 2024",
       "mode": "offline",
-      "image": "/public/images/Korea.jpeg"
+      "image": "/images/Korea.jpeg"
     },
     {
       "id": 2,
@@ -191,7 +191,7 @@
       "location": "Manila, Philippines",
       "date": "16-18 April 2023",
       "mode": "offline",
-      "image": "/public/images/Philip.jpeg"
+      "image": "/images/Philip.jpeg"
     }
   ],
   "articles": {
@@ -225,7 +225,7 @@
         "impactFactor": "4.0",
         "authorship": "1st author",
         "publicationDate": "July 2022",
-        "image": "/public/images/Review_01.jpg"
+        "image": "/images/Review_01.jpg"
       }
     ],
     "bookChapters": [
@@ -240,7 +240,7 @@
         "publisher": "Intech Open",
         "publicationDate": "11 November 2022",
         "authorship": "shared 1st author",
-        "image": "/public/images/Book_01.jpg"
+        "image": "/images/Book_01.jpg"
       }
     ],
     "abstracts": [
@@ -254,7 +254,7 @@
         "conference": "International Conference on Parkinson's Disease Research",
         "location": "Philadelphia, US",
         "date": "27 Sept to 1st Oct 2024",
-        "image": "/public/images/US_a.jpeg"
+        "image": "/images/US_a.jpeg"
       },
       {
         "id": 2,
@@ -266,7 +266,7 @@
         "conference": "European Conference on Computational Biology",
         "location": "Copenhagen, Denmark",
         "date": "26 Aug to 31 Aug 2023",
-        "image": "/public/images/Denmark_a.jpg"
+        "image": "/images/Denmark_a.jpg"
       }
     ]
   },
@@ -274,6 +274,6 @@
     "metaTitle": "Zain - Doctoral Research Scholar in Computational Neuroscience",
     "metaDescription": "Md Zainul Ali is a doctoral research scholar specializing in computational approaches to neurodegenerative disorders, with a focus on Parkinson's disease at University of Hyderabad.",
     "keywords": ["computational neuroscience", "Parkinson's disease", "bioinformatics", "machine learning", "systems biology", "neurodegenerative disorders", "research"],
-    "ogImage": "/public/images/og-image.jpeg"
+    "ogImage": "/images/og-image.jpeg"
   }
 }
