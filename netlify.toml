@@ -13,7 +13,7 @@
 [[redirects]]
   # Redirect /resume to the actual resume file
   from = "/resume"
-  to = "/public/documents/zain-ahmad-resume.pdf"
+  to = "/public/documents/zain-resume.pdf"
   status = 302
 
 [[redirects]]
