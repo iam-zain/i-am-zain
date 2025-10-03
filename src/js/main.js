@@ -345,7 +345,7 @@ function populateAboutSection() {
   populateEducationCards(education);
 
   // Populate skills
-  populateSkills("frontend-skills", skills.technical.frontend);
+  populateSkills("frontend-skills", skills.technical.programming);
   populateSkills("backend-skills", skills.technical.backend);
   populateSkills("tools-skills", skills.technical.tools);
   populateSkills("concepts-skills", skills.technical.concepts);
@@ -1011,7 +1011,7 @@ function populateProjectsSection() {
                                 ${project.technologies
                                   .map(
                                     (tech) => `
-                                    <span class="px-2 py-1 bg-neutral-100 text-neutral-700 rounded text-xs font-medium">${tech}</span>
+                                    <span class="px-2 py-1 bg-gray-50 text-gray-800 border border-gray-200 rounded text-xs font-medium">${tech}</span>
                                 `
                                   )
                                   .join("")}
