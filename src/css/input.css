@@ -1,9 +1,9 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Import Inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 /* CSS Custom Properties for Color Palette */
 :root {
@@ -55,14 +55,16 @@
   /* Additional CSS Variables */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+
   --border-radius-sm: 0.375rem;
   --border-radius-md: 0.5rem;
   --border-radius-lg: 0.75rem;
   --border-radius-xl: 1rem;
-  
+
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
   --transition-slow: 350ms ease;
@@ -83,11 +85,11 @@
     --color-neutral-800: #e2e8f0;
     --color-neutral-900: #ffffff;
     --color-neutral-950: #ffffff;
-    
+
     /* Adjust primary colors for dark mode */
     --color-primary-600: #6366f1;
     --color-primary-700: #818cf8;
-    
+
     /* Adjust accent colors for dark mode */
     --color-accent-600: #2dd4bf;
     --color-accent-700: #5eead4;
@@ -99,44 +101,49 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     font-variation-settings: normal;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   /* Force all text to be very dark and visible - using 100-300 range */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #171717 !important; /* neutral-900 equivalent */
     font-weight: bold !important;
   }
-  
+
   p {
     color: #262626 !important; /* neutral-800 equivalent */
   }
-  
+
   /* Override any adaptive text classes */
   .text-adaptive,
   .text-adaptive-secondary {
     color: #262626 !important; /* neutral-800 equivalent */
   }
-  
+
   /* Force specific text colors for hero section */
   #hero-name {
     color: #171717 !important; /* neutral-900 */
   }
-  
+
   #hero-title {
     color: #171717 !important; /* neutral-900 */
   }
-  
+
   #hero-tagline {
     color: #262626 !important; /* neutral-800 */
   }
-  
+
   #hero-greeting {
     color: #0284c7 !important; /* primary-600 */
   }
@@ -178,7 +185,7 @@
 
   /* Card styles */
   .card {
-    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-neutral-200;
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-neutral-700;
   }
 
   .card-hover {
@@ -189,29 +196,39 @@
   .section {
     @apply py-16 md:py-24;
   }
-  
+
   /* Background-aware section styles */
   .section-light {
     @apply bg-white;
   }
-  
+
   .section-dark {
     @apply bg-slate-50;
   }
-  
+
   /* Force dark text in all sections - using darkest colors */
-  .section-light h1, .section-light h2, .section-light h3, .section-light h4, .section-light h5, .section-light h6 {
+  .section-light h1,
+  .section-light h2,
+  .section-light h3,
+  .section-light h4,
+  .section-light h5,
+  .section-light h6 {
     color: #171717 !important; /* neutral-900 */
   }
-  
+
   .section-light p {
     color: #262626 !important; /* neutral-800 */
   }
-  
-  .section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4, .section-dark h5, .section-dark h6 {
+
+  .section-dark h1,
+  .section-dark h2,
+  .section-dark h3,
+  .section-dark h4,
+  .section-dark h5,
+  .section-dark h6 {
     color: #171717 !important; /* neutral-900 */
   }
-  
+
   .section-dark p {
     color: #262626 !important; /* neutral-800 */
   }
@@ -227,14 +244,14 @@
     font-weight: bold !important;
     margin-bottom: 1rem !important;
   }
-  
+
   .section-subtitle {
     color: #262626 !important; /* neutral-800 */
     font-size: 1.125rem !important;
     font-weight: 500 !important;
     margin-bottom: 2rem !important;
   }
-  
+
   /* Force dark text on all backgrounds */
   .bg-white .section-title,
   .bg-slate-50 .section-title,
@@ -243,7 +260,7 @@
   .bg-gradient-to-br .section-title {
     color: #171717 !important; /* neutral-900 */
   }
-  
+
   .bg-white .section-subtitle,
   .bg-slate-50 .section-subtitle,
   .bg-blue-50 .section-subtitle,
@@ -263,7 +280,7 @@
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   /* Fallback animation that doesn't rely on IntersectionObserver */
   @keyframes fadeIn {
     from {
@@ -275,52 +292,68 @@
       transform: translateY(0);
     }
   }
-  
+
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
   }
-  
+
   /* Ensure project cards and experience items are visible by default */
   .project-card,
   .experience-item {
     opacity: 1;
   }
-  
+
   /* Profile image carousel styles */
   #carousel-items {
     min-height: 300px;
     position: relative;
     aspect-ratio: 1/1;
     display: block;
+    z-index: 1; /* Base z-index */
   }
-  
+
+  #profile-carousel {
+    position: relative;
+    z-index: 1; /* Establish a stacking context */
+  }
+
+  /* Navigation elements need higher z-index than images */
+  #carousel-prev,
+  #carousel-next,
+  #carousel-dots {
+    z-index: 20; /* Higher than carousel images */
+  }
+
   #carousel-items img {
     transition: opacity 0.5s ease-in-out;
   }
-  
+
   #carousel-dots button {
     transition: background-color 0.3s ease;
   }
-  
+
   #carousel-dots button:hover {
     background-color: var(--color-primary-300);
   }
-  
-  #carousel-prev, #carousel-next {
+
+  #carousel-prev,
+  #carousel-next {
     opacity: 0.7;
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  
-  #carousel-prev:hover, #carousel-next:hover {
+
+  #carousel-prev:hover,
+  #carousel-next:hover {
     opacity: 1;
     transform: translateY(-50%) scale(1.1);
   }
-  
+
   @media (max-width: 640px) {
-    #carousel-prev, #carousel-next {
+    #carousel-prev,
+    #carousel-next {
       padding: 0.5rem;
     }
-    
+
     #carousel-dots button {
       width: 0.5rem;
       height: 0.5rem;
@@ -331,7 +364,7 @@
   .gradient-text {
     @apply bg-gradient-to-r from-primary-700 to-accent-700 bg-clip-text text-transparent font-bold;
   }
-  
+
   /* Ensure gradient text is visible on white backgrounds */
   .bg-white .gradient-text {
     @apply from-primary-700 to-accent-700;
@@ -361,44 +394,54 @@
   .text-on-light {
     @apply text-neutral-900;
   }
-  
+
   .text-on-dark {
     @apply text-white;
   }
-  
+
   .text-secondary-on-light {
     @apply text-neutral-800;
   }
-  
+
   .text-secondary-on-dark {
     @apply text-neutral-100;
   }
-  
+
   .text-tertiary-on-light {
     @apply text-neutral-700;
   }
-  
+
   .text-tertiary-on-dark {
     @apply text-neutral-300;
   }
-  
+
   /* Apply to sections with alternating backgrounds */
-  .bg-white .text-adaptive, .bg-neutral-50 .text-adaptive, .bg-neutral-100 .text-adaptive {
+  .bg-white .text-adaptive,
+  .bg-neutral-50 .text-adaptive,
+  .bg-neutral-100 .text-adaptive {
     @apply text-neutral-900;
   }
-  
-  .bg-neutral-800 .text-adaptive, .bg-neutral-900 .text-adaptive, .bg-primary-900 .text-adaptive, .bg-primary-800 .text-adaptive {
+
+  .bg-neutral-800 .text-adaptive,
+  .bg-neutral-900 .text-adaptive,
+  .bg-primary-900 .text-adaptive,
+  .bg-primary-800 .text-adaptive {
     @apply text-white;
   }
-  
-  .bg-white .text-adaptive-secondary, .bg-neutral-50 .text-adaptive-secondary, .bg-neutral-100 .text-adaptive-secondary {
+
+  .bg-white .text-adaptive-secondary,
+  .bg-neutral-50 .text-adaptive-secondary,
+  .bg-neutral-100 .text-adaptive-secondary {
     @apply text-neutral-800;
   }
-  
-  .bg-neutral-800 .text-adaptive-secondary, .bg-neutral-900 .text-adaptive-secondary, .bg-primary-900 .text-adaptive-secondary, .bg-primary-800 .text-adaptive-secondary {
+
+  .bg-neutral-800 .text-adaptive-secondary,
+  .bg-neutral-900 .text-adaptive-secondary,
+  .bg-primary-900 .text-adaptive-secondary,
+  .bg-primary-800 .text-adaptive-secondary {
     @apply text-neutral-100;
   }
-  
+
   /* Text shadow utilities */
   .text-shadow-sm {
     text-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
@@ -448,28 +491,41 @@
   }
 }
 
-
-#about-summary{
+#about-summary {
   color: #262626 !important; /* neutral-800 */
 }
 
 /* COMPREHENSIVE TEXT OVERRIDE - Force all text to be visible */
 /* Override all possible Tailwind text classes */
-.text-neutral-50, .text-neutral-100, .text-neutral-200, .text-neutral-300, .text-neutral-400, .text-neutral-500 {
-  color: #262626 !important; /* neutral-800 */
+.text-neutral-50,
+.text-neutral-100,
+.text-neutral-200,
+.text-neutral-300,
+.text-neutral-400,
+.text-neutral-500 {
+  color: #262626; /* neutral-800 */
 }
 
-.text-neutral-600, .text-neutral-700, .text-neutral-800, .text-neutral-900 {
-  color: #171717 !important; /* neutral-900 */
+.text-neutral-600,
+.text-neutral-700,
+.text-neutral-800,
+.text-neutral-900 {
+  color: #171717; /* neutral-900 */
 }
 
 /* Override adaptive text classes */
-.text-adaptive, .text-adaptive-secondary {
+.text-adaptive,
+.text-adaptive-secondary {
   color: #262626 !important; /* neutral-800 */
 }
 
 /* Force all headings to be darkest */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #171717 !important; /* neutral-900 */
   font-weight: bold !important;
 }
@@ -485,20 +541,34 @@ p {
 }
 
 /* Force specific element visibility */
-#hero-name, #hero-title, #hero-tagline {
+#hero-name,
+#hero-title,
+#hero-tagline {
   color: #171717 !important; /* neutral-900 */
 }
 
 #hero-greeting {
-  color: #0284c7 !important; /* primary-600 */
+  color: var(--color-primary-600) !important;
+  font-weight: 600;
 }
 
 /* Force all section content to be dark */
-.section-light *, .section-dark * {
+.section-light *,
+.section-dark * {
   color: #262626 !important; /* neutral-800 */
 }
 
-.section-light h1, .section-light h2, .section-light h3, .section-light h4, .section-light h5, .section-light h6,
-.section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4, .section-dark h5, .section-dark h6 {
+.section-light h1,
+.section-light h2,
+.section-light h3,
+.section-light h4,
+.section-light h5,
+.section-light h6,
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark h5,
+.section-dark h6 {
   color: #171717 !important; /* neutral-900 */
 }
