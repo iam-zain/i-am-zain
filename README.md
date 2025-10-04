@@ -111,9 +111,9 @@ All personal information, projects, skills, and content are managed through the 
 
 ### Adding Your Images
 
-1. **Profile Photo**: Add your professional headshot as `/public/images/profile.jpg`
-2. **Project Images**: Add project screenshots to `/public/images/projects/`
-3. **Resume**: Add your resume PDF to `/public/documents/`
+1. **Profile Photo**: Add your professional headshot to `/src/public/images/` (referenced as `/images/profile.jpg` in data.json)
+2. **Project Images**: Add project screenshots to `/src/public/images/projects/` (referenced as `/images/projects/...` in data.json)
+3. **Resume**: Add your resume PDF to `/src/public/documents/` (referenced as `/documents/...` in data.json)
 
 ## 🎨 Styling Guide
 
