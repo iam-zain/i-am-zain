@@ -177,11 +177,12 @@ function initializeProfileCarousel(images) {
 
   // Get carousel elements
   const carouselItems = document.getElementById("carousel-items");
+  const backdropItems = document.getElementById("stacked-backdrop");
   const carouselDots = document.getElementById("carousel-dots");
   const prevButton = document.getElementById("carousel-prev");
   const nextButton = document.getElementById("carousel-next");
 
-  if (!carouselItems || !carouselDots) {
+  if (!carouselItems || !carouselDots || !backdropItems) {
     console.error("Carousel elements not found");
     return;
   }
@@ -190,6 +191,7 @@ function initializeProfileCarousel(images) {
 
   // Clear existing content
   carouselItems.innerHTML = "";
+  backdropItems.innerHTML = "";
   carouselDots.innerHTML = "";
 
   console.log("Carousel container after clearing:", carouselItems.innerHTML);
@@ -216,7 +218,11 @@ function initializeProfileCarousel(images) {
     imgElement.onload = () => console.log(`Image ${index} loaded:`, image.src);
     imgElement.onerror = () =>
       console.error(`Failed to load image ${index}:`, image.src);
+    const backdropElement = imgElement.cloneNode(true);
+    backdropElement.style.opacity = index === 1 ? "1" : "0";
+    backdropElement.style.zIndex = index === 1 ? "9" : "0";
     carouselItems.appendChild(imgElement);
+    backdropItems.appendChild(backdropElement);
     console.log(`Added image ${index}:`, image.src);
 
     // Create dot element
@@ -254,16 +260,24 @@ function initializeProfileCarousel(images) {
   // Function to go to a specific slide
   function goToSlide(index) {
     console.log("Going to slide:", index);
+    const backdropIndex = index + 1 >= images.length ? 0 : index + 1;
 
     // Reset auto-rotation timer
     resetAutoRotate();
 
     // Hide all images
     const allImages = carouselItems.querySelectorAll("img");
+    const allBackdrops = backdropItems.querySelectorAll("img");
     console.log("Total images found:", allImages.length);
 
     allImages.forEach((img, i) => {
       console.log(`Setting image ${i} to opacity 0`);
+      img.style.opacity = "0";
+      img.style.zIndex = "0";
+    });
+
+    allBackdrops.forEach((img, i) => {
+      console.log(`Setting backdrop ${i} to opacity 0`);
       img.style.opacity = "0";
       img.style.zIndex = "0";
     });
@@ -273,6 +287,8 @@ function initializeProfileCarousel(images) {
       console.log(`Setting image ${index} to opacity 1`);
       allImages[index].style.opacity = "1";
       allImages[index].style.zIndex = "10";
+      allBackdrops[backdropIndex].style.opacity = "1";
+      allBackdrops[backdropIndex].style.zIndex = "9";
     } else {
       console.error(`Image at index ${index} not found`);
     }
@@ -300,7 +316,7 @@ function initializeProfileCarousel(images) {
         const nextIndex =
           currentIndex + 1 >= images.length ? 0 : currentIndex + 1;
         goToSlide(nextIndex);
-      }, 5000); // 5 seconds for testing (will change back to 10 seconds later)
+      }, 4000); // 4 seconds for testing (will change back to 10 seconds later)
     }
   }
 

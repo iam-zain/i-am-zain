@@ -503,14 +503,14 @@
 .text-neutral-300,
 .text-neutral-400,
 .text-neutral-500 {
-  color: #262626 !important; /* neutral-800 */
+  color: #262626; /* neutral-800 */
 }
 
 .text-neutral-600,
 .text-neutral-700,
 .text-neutral-800,
 .text-neutral-900 {
-  color: #171717 !important; /* neutral-900 */
+  color: #171717; /* neutral-900 */
 }
 
 /* Override adaptive text classes */
@@ -548,7 +548,8 @@ p {
 }
 
 #hero-greeting {
-  color: #0284c7 !important; /* primary-600 */
+  color: var(--color-primary-600) !important;
+  font-weight: 600;
 }
 
 /* Force all section content to be dark */
