@@ -65,7 +65,7 @@ This generates optimized CSS for production deployment.
 
 ### Personal Content Customization
 
-All personal information, projects, skills, and content are managed through the `config/data.json` file. Simply edit this file to customize your portfolio:
+All personal information, projects, skills, and content are managed through the `src/config/data.json` file. Simply edit this file to customize your portfolio:
 
 ```json
 {
@@ -218,12 +218,12 @@ i-am-zain/
 │   ├── css/
 │   │   ├── input.css           # Tailwind input file with custom styles
 │   │   └── output.css          # Generated CSS (auto-created)
+│   ├── config/
+│   │   └── data.json           # All editable content and data
 │   └── js/
 │       ├── main.js             # Main JavaScript functionality
 │       ├── animations.js       # Animation and scroll effects
 │       └── form.js             # Contact form handling
-├── config/
-│   └── data.json               # All editable content and data
 ├── public/
 │   ├── images/                 # Profile and project images
 │   │   └── projects/           # Project screenshots
@@ -283,7 +283,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Clear browser cache
 
 **Images not loading?**
-- Check file paths in `config/data.json`
+- Check file paths in `src/config/data.json`
 - Ensure images are in the correct `/public/images/` directory
 
 **Form not working?**
