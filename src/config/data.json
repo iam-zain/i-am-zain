@@ -9,23 +9,23 @@
     "website": "https://i-am-zain.netlify.app",
     "profileImages": [
       {
-        "src": "/public/images/profile_01.jpg",
+        "src": "/images/profile_01.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       },
       {
-        "src": "/public/images/profile_02.jpeg",
+        "src": "/images/profile_02.jpeg",
         "alt": "Md Zainul Ali - Profile Photo"
       },
       {
-        "src": "/public/images/profile_03.jpg",
+        "src": "/images/profile_03.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       },
       {
-        "src": "/public/images/profile_04.jpg",
+        "src": "/images/profile_04.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       }
     ],  
-    "resumeUrl": "/public/documents/zain-resume.pdf"
+    "resumeUrl": "/documents/zain-resume.pdf"
   },
   "education": [
     {
@@ -96,7 +96,7 @@
       "title": "Identification of Early Biomarkers for Parkinson's Disease Using Machine Learning and WGCNA",
       "subtitle": "Molecular Basis of Smell Loss in Parkinson's",
       "description": "Applying ML and WGCNA on clinical and transcriptomic data to detect early biomarkers, with special focus on smell loss; improving patient-healthy control classification.",
-      "image": "/public/images/projects/olfactory.jpg",
+      "image": "/images/projects/olfactory.jpg",
       "technologies": ["R", "Python", "WGCNA", "RNA Seq Analysis", "Pathway Analysis"],
       "features": [
         "A subset of Non-motor symptom predicts Parkinson's disease",
@@ -114,7 +114,7 @@
       "title": "Early Diagnosis Tool Using Transfer Learning & Collaborative Filtering",
       "subtitle": "Parkinson's Disease Risk Assessment Tool",
       "description": "An interactive computational tool for assessing Parkinson's disease risk based on non-motor symptoms and molecular biomarkers, integrating machine learning models for early diagnosis.",
-      "image": "/public/images/projects/pdprevent.jpg",
+      "image": "/images/projects/pdprevent.jpg",
       "technologies": ["Python", "Flask", "Transfer Learning", "Collaborative Filtering"],
       "features": [
         "Risk assessment based on non-motor symptoms",
@@ -131,7 +131,7 @@
       "title": "Analysis of Complex-I Associated Genes in Parkinson's Disease",
       "subtitle": "Interactive Data Exploration for Parkinson's Research",
       "description": "An online predictor tool using HTML, CSS, JavaScript to assess gene-based risk in Parkinson's Disease.",
-      "image": "/public/images/projects/pdviz.jpg",
+      "image": "/images/projects/pdviz.jpg",
       "technologies": ["Bioinformatics", "HTML", "Statistical Analysis", "Data Integration"],
       "features": [
         "Complex-I & PD genes interaction mapping",
@@ -165,7 +165,7 @@
       "location": "Philadelphia, US",
       "date": "29 September 2024",
       "presentationType": "oral",
-      "image": "/public/images/us_o.jpg"
+      "image": "/images/us_o.jpg"
     },
     {
       "id": 2,
@@ -174,7 +174,7 @@
       "location": "Philadelphia, US",
       "date": "27 September 2024",
       "presentationType": "poster",
-      "image": "/public/images/us_p.jpg"
+      "image": "/images/us_p.jpg"
     },
     {
       "id": 3,
@@ -183,7 +183,7 @@
       "location": "Copenhagen, Denmark",
       "date": "26 August 2023",
       "presentationType": "poster",
-      "image": "/public/images/denmark.jpeg"
+      "image": "/images/denmark.jpeg"
     }
   ],
   "workshops": [
@@ -194,7 +194,7 @@
       "location": "Seoul, South Korea",
       "date": "14-16 Feb 2024",
       "mode": "offline",
-      "image": "/public/images/korea.jpeg"
+      "image": "/images/korea.jpeg"
     },
     {
       "id": 2,
@@ -203,7 +203,7 @@
       "location": "Manila, Philippines",
       "date": "16-18 April 2023",
       "mode": "offline",
-      "image": "/public/images/philip.jpeg"
+      "image": "/images/philip.jpeg"
     }
   ],
   "articles": {
@@ -228,7 +228,7 @@
         "impactFactor": "4.0",
         "authorship": "1st author",
         "publicationDate": "July 2022",
-        "image": "/public/images/review_01.jpg"
+        "image": "/images/review_01.jpg"
       }
     ],
     "bookChapters": [
@@ -243,7 +243,7 @@
         "publisher": "Intech Open",
         "publicationDate": "11 November 2022",
         "authorship": "shared 1st author",
-        "image": "/public/images/book_01.jpg"
+        "image": "/images/book_01.jpg"
       }
     ],
     "abstracts": [
@@ -257,7 +257,7 @@
         "conference": "International Conference on Parkinson's Disease Research",
         "location": "Philadelphia, US",
         "date": "27 Sept to 1st Oct 2024",
-        "image": "/public/images/us_a.jpeg"
+        "image": "/images/us_a.jpeg"
       },
       {
         "id": 2,
@@ -269,7 +269,7 @@
         "conference": "European Conference on Computational Biology",
         "location": "Copenhagen, Denmark",
         "date": "26 Aug to 31 Aug 2023",
-        "image": "/public/images/denmark_a.jpg"
+        "image": "/images/denmark_a.jpg"
       }
     ]
   },
@@ -321,6 +321,6 @@
     "metaTitle": "Zain - Doctoral Research Scholar in Computational Neuroscience",
     "metaDescription": "Md Zainul Ali is a doctoral research scholar specializing in computational approaches to neurodegenerative disorders, with a focus on Parkinson's disease at University of Hyderabad.",
     "keywords": ["computational neuroscience", "Parkinson's disease", "bioinformatics", "machine learning", "systems biology", "neurodegenerative disorders", "research"],
-    "ogImage": "/public/images/og-image.jpeg"
+    "ogImage": "/images/og-image.jpeg"
   }
 }
