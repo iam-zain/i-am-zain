@@ -156,6 +156,12 @@ The website includes several built-in animations:
 
 ## 🚀 Netlify Deployment Guide
 
+### Live Deployment
+
+The project is currently deployed and accessible at:
+
+**[https://i-am-zain.netlify.app](https://i-am-zain.netlify.app)**
+
 ### Automatic Deployment Setup
 
 1. **Push to GitHub**: Ensure your code is pushed to a GitHub repository
