@@ -205,7 +205,7 @@ function initializeProfileCarousel(images) {
     imgElement.src = image.src;
     imgElement.alt = image.alt;
     imgElement.className =
-      "w-full h-auto rounded-xl object-cover aspect-square absolute inset-0 transition-opacity duration-500";
+      "w-full h-auto rounded-xl object-contain aspect-square absolute inset-0 transition-opacity duration-500";
     imgElement.style.opacity = index === 0 ? "1" : "0";
     imgElement.style.zIndex = index === 0 ? "10" : "0";
     imgElement.style.position = "absolute";
@@ -567,7 +567,7 @@ function initializeConferenceCarousel(conferences) {
               conference.image || "/public/images/placeholder-project.jpg"
             }" 
             alt="${conference.title}" 
-            class="w-full h-48 object-cover"
+            class="w-full h-48 object-contain"
           >
           <div class="absolute top-4 right-4">
           <span class="px-2 py-1 bg-${
@@ -687,7 +687,7 @@ function initializeWorkshopCarousel(workshops) {
           <img 
             src="${workshop.image || "/public/images/placeholder-project.jpg"}" 
             alt="${workshop.title}" 
-            class="w-full h-48 object-cover"
+            class="w-full h-48 object-contain"
           >
           <div class="absolute top-4 right-4">
           <span class="px-2 py-1 bg-${
@@ -852,7 +852,7 @@ function initializeArticleCarousel(type, articles) {
           <img 
             src="${article.image || "/public/images/placeholder-project.jpg"}" 
             alt="${article.title}" 
-            class="w-full h-48 object-cover"
+            class="w-full h-48 object-contain"
           />
           <div class="absolute top-4 right-4">
             <span class="px-2 py-1 bg-${badgeColor}-100 text-${badgeColor}-700 rounded-full text-xs font-medium capitalize">
@@ -959,7 +959,7 @@ function populateProjectsSection() {
                       project.image || "/public/images/placeholder-project.jpg"
                     }" 
                          alt="${project.title}" 
-                         class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                         class="w-full h-48 object-contain transition-transform duration-300 hover:scale-105"
                          loading="lazy">
                     <div class="absolute top-4 right-4">
                         <span class="px-2 py-1 bg-${
@@ -1136,7 +1136,7 @@ function populateSocialLinks(containerId, socialData) {
   const socialIcons = {
     github: `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path></svg>`,
     linkedin: `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path></svg>`,
-    orcid: `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M12.186 4.672c0 1.294-1.049 2.343-2.343 2.343S7.5 5.966 7.5 4.672s1.049-2.343 2.343-2.343 2.343 1.049 2.343 2.343zm-2.343 8.656c-4.186 0-7.578 3.392-7.578 7.578H20c0-4.186-3.392-7.578-7.578-7.578zm0-1.5c5.012 0 9.078 4.066 9.078 9.078H1.265c0-5.012 4.066-9.078 9.078-9.078z"/></svg>`,
+    orcid: `<svg class="w-5 h-5" fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"> <path d="M16 0c-8.839 0-16 7.161-16 16s7.161 16 16 16c8.839 0 16-7.161 16-16s-7.161-16-16-16zM9.823 5.839c0.704 0 1.265 0.573 1.265 1.26 0 0.688-0.561 1.265-1.265 1.265-0.692-0.004-1.26-0.567-1.26-1.265 0-0.697 0.563-1.26 1.26-1.26zM8.864 9.885h1.923v13.391h-1.923zM13.615 9.885h5.197c4.948 0 7.125 3.541 7.125 6.703 0 3.439-2.687 6.699-7.099 6.699h-5.224zM15.536 11.625v9.927h3.063c4.365 0 5.365-3.312 5.365-4.964 0-2.687-1.713-4.963-5.464-4.963z"/> </svg>`,
     dribbble: `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10c5.51 0 10-4.48 10-10S15.51 0 10 0zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM10 1.475c1.87 0 3.595.711 4.896 1.875-.226.248-1.506 1.962-4.513 3.135A26.31 26.31 0 005.186 3.23c1.42-.896 3.105-1.755 4.814-1.755zm-5.351 2.467c.434.03 1.758.138 3.46.404a25.286 25.286 0 015.088 3.254c.065.141.12.293.184.445-2.842.358-5.662-.217-5.943-.271A8.502 8.502 0 014.649 3.942z" clip-rule="evenodd"></path></svg>`,
     behance: `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M13.12 5.615h3.708v.906H13.12v-.906zM8.23 8.991c.555-.445.832-1.07.832-1.874 0-.803-.277-1.428-.832-1.874-.554-.445-1.316-.668-2.285-.668H2v8.82h4.015c1.04 0 1.854-.223 2.443-.668.59-.445.884-1.07.884-1.874 0-.803-.295-1.428-.884-1.874-.589-.445-1.403-.668-2.443-.668zm-3.353-2.82h1.478c.416 0 .747.111.993.334.247.223.37.535.37.937s-.123.714-.37.937c-.246.223-.577.334-.993.334H4.877v-2.542zm1.478 5.64H4.877v-2.542h1.478c.416 0 .747.111.993.334.247.223.37.535.37.937s-.123.714-.37.937c-.246.223-.577.334-.993.334z"></path><path d="M15.6 9.684c-.832 0-1.478.334-1.94 1.002-.462.668-.693 1.558-.693 2.67 0 1.113.231 2.003.693 2.67.462.668 1.108 1.002 1.94 1.002.832 0 1.478-.334 1.94-1.002.462-.667.693-1.557.693-2.67 0-1.112-.231-2.002-.693-2.67-.462-.668-1.108-1.002-1.94-1.002zm0 5.64c-.416 0-.747-.223-.993-.668-.246-.445-.37-1.07-.37-1.874s.124-1.428.37-1.874c.246-.445.577-.668.993-.668s.747.223.993.668c.246.446.37 1.07.37 1.874s-.124 1.429-.37 1.874c-.246.445-.577.668-.993.668z"></path></svg>`,
     medium: `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M2.846 6.887c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.403h6.958l5.378 11.795 4.728-11.795H20L20 5.55l-1.917 1.837c-.165.126-.247.333-.213.538v13.498c-.034.204.048.411.213.537l1.871 1.837v.403h-9.412v-.403l1.939-1.882c.19-.19.19-.246.19-.537V7.794l-5.389 13.688h-.728L4.51 7.794v9.174c-.052.385.076.774.347 1.052l2.521 3.058v.404H0v-.404l2.521-3.058c.27-.279.39-.67.325-1.052V6.887z" clip-rule="evenodd"></path></svg>`,
