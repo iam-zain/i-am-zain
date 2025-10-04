@@ -46,7 +46,7 @@ async function initializeApp() {
  */
 async function loadPortfolioData() {
   try {
-    const response = await fetch("../config/data.json");
+    const response = await fetch("/config/data.json");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

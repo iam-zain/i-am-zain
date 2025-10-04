@@ -71,6 +71,7 @@
   [headers.values]
     # Config files - cache for a short time to allow updates
     Cache-Control = "public, max-age=1800, s-maxage=1800"
+    Content-Type = "application/json; charset=utf-8"
 
 [[headers]]
   for = "*.json"
