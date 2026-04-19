@@ -1,0 +1,589 @@
+{
+  "theme": {
+    "defaultMode": "dark",
+    "accent": null,
+    "accent2": null
+  },
+
+  "meta": {
+    "lastUpdated": "2026-04-20",
+    "version": "2.0.0"
+  },
+
+  "personal": {
+    "name": "Md Zainul Ali",
+    "title": "Doctoral Research Scholar",
+    "tagline": "Computational Neuroscience & Bioinformatics",
+    "location": "University of Hyderabad, India",
+    "email": "mdzainulali@gmail.com",
+    "phone": "+91 9475810661",
+    "website": "https://i-am-zain.netlify.app",
+    "profileImages": [
+      {
+        "src": "/images/profile/profile_01.jpg",
+        "alt": "Md Zainul Ali — portrait",
+        "width": 1200,
+        "height": 1600
+      },
+      {
+        "src": "/images/profile/profile_02.jpeg",
+        "alt": "Md Zainul Ali — portrait",
+        "width": 1200,
+        "height": 1600
+      },
+      {
+        "src": "/images/profile/profile_03.jpg",
+        "alt": "Md Zainul Ali — portrait",
+        "width": 1200,
+        "height": 1600
+      },
+      {
+        "src": "/images/profile/profile_04.jpg",
+        "alt": "Md Zainul Ali — portrait",
+        "width": 1200,
+        "height": 1600
+      }
+    ],
+    "resumeUrl": "/documents/zain-resume.pdf"
+  },
+
+  "now": {
+    "text": "Currently investigating molecular biomarkers of olfactory dysfunction in early-stage Parkinson's disease — integrating clinical and transcriptomic data.",
+    "asOf": "2026-04-20"
+  },
+
+  "summary": "Md Zainul Ali is a doctoral research scholar in the Department of Biotechnology & Bioinformatics, School of Life Sciences, University of Hyderabad. His research focuses on the computational exploration of neurodegenerative disorders, with a specialization in Parkinson's disease. He applies machine learning, statistical modeling, and systems biology approaches to identify clinically relevant non-motor features and their molecular underpinnings.",
+
+  "education": [
+    {
+      "institution": "University of Hyderabad",
+      "degree": "Ph.D. in Biotechnology & Bioinformatics",
+      "graduationYear": "Ongoing",
+      "gpa": "Excellent Academic Record",
+      "relevantCoursework": [
+        "Computational Biology",
+        "Machine Learning",
+        "Systems Biology",
+        "Neurodegenerative Disorders"
+      ]
+    },
+    {
+      "institution": "University of Hyderabad",
+      "degree": "M.Sc. in Biotechnology",
+      "graduationYear": "Completed 2020",
+      "gpa": "8.4 CGPA",
+      "relevantCoursework": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Molecular Biology"
+      ]
+    },
+    {
+      "institution": "Aligarh Muslim University",
+      "degree": "B.Sc. in Biochemistry",
+      "graduationYear": "Completed 2018",
+      "gpa": "7.6 CGPA",
+      "relevantCoursework": [
+        "Biochemistry",
+        "Molecular Biology",
+        "Cell Biology"
+      ]
+    }
+  ],
+
+  "skills": {
+    "technical": {
+      "programming": ["Python", "R", "SQL", "Bash"],
+      "backend": [
+        "Collaborative Filtering",
+        "Contrastive Learning",
+        "Neural Networks",
+        "Transfer Learning"
+      ],
+      "tools": ["Bulk RNA-Seq", "Single-cell RNA-Seq", "WGCNA", "Epigenomics"],
+      "concepts": ["Flask", "Shiny", "Git", "Jupyter", "Colab", "Conda"]
+    },
+    "soft": [
+      "Research",
+      "Scientific Writing",
+      "Presentation",
+      "Leadership",
+      "Multilingual",
+      "Science Outreach"
+    ]
+  },
+
+  "milestones": [
+    {
+      "id": "m1",
+      "date": "2018-06",
+      "title": "Completed B.Sc. in Biochemistry",
+      "description": "Graduated from Aligarh Muslim University with a 7.6 CGPA.",
+      "kind": "education",
+      "icon": "graduation-cap"
+    },
+    {
+      "id": "m2",
+      "date": "2018-08",
+      "title": "Admitted to M.Sc. Biotechnology",
+      "description": "Joined the School of Life Sciences, University of Hyderabad.",
+      "kind": "education",
+      "icon": "award"
+    },
+    {
+      "id": "m3",
+      "date": "2020-08",
+      "title": "Completed M.Sc. with distinction",
+      "description": "Graduated with 8.4 CGPA; began PhD groundwork in neurodegeneration.",
+      "kind": "education",
+      "icon": "graduation-cap"
+    },
+    {
+      "id": "m4",
+      "date": "2020-10",
+      "title": "Started PhD in Bioinformatics",
+      "description": "Research scholar in the Department of Biotechnology & Bioinformatics, focusing on computational Parkinson's research.",
+      "kind": "research",
+      "icon": "microscope"
+    },
+    {
+      "id": "m5",
+      "date": "2022-07",
+      "title": "First peer-reviewed publication",
+      "description": "Review article in Neurochemistry International on oxidative phosphorylation in Parkinson's pathogenesis.",
+      "kind": "recognition",
+      "icon": "sparkles"
+    },
+    {
+      "id": "m6",
+      "date": "2023-08",
+      "title": "First international conference poster",
+      "description": "Presented at the European Conference on Computational Biology, Copenhagen.",
+      "kind": "growth",
+      "icon": "mic"
+    },
+    {
+      "id": "m7",
+      "date": "2024-09",
+      "title": "First international oral presentation",
+      "description": "Invited oral talk at the MDS International Congress, Philadelphia.",
+      "kind": "growth",
+      "icon": "mic"
+    }
+  ],
+
+  "experience": [
+    {
+      "id": 1,
+      "company": "University of Hyderabad",
+      "position": "Doctoral Research Scholar",
+      "duration": "2020 — Present",
+      "location": "Hyderabad, India",
+      "description": "Computational research on Parkinson's disease, applying machine learning and systems biology approaches to identify clinically relevant biomarkers.",
+      "achievements": [
+        "Developed interactive computational tools for Parkinson's risk assessment",
+        "Oral presentation at MDS International Congress (Philadelphia, 2024)",
+        "Published review article in Neurochemistry International (2022)"
+      ],
+      "technologies": [
+        "Python",
+        "R",
+        "Machine Learning",
+        "Collaborative Filtering",
+        "Transcriptomics"
+      ]
+    },
+    {
+      "id": 2,
+      "company": "University of Hyderabad",
+      "position": "M.Sc. Research — Biotechnology",
+      "duration": "2019 — 2020",
+      "location": "Hyderabad, India",
+      "description": "Analysis of Complex-I associated genes in Parkinson's disease for risk assessment.",
+      "achievements": [
+        "Integrated Complex-I associated gene interactions into a unified platform",
+        "Developed a predictive model for Parkinson's disease risk",
+        "Demonstrated compensatory effects among Parkinson's risk genes"
+      ],
+      "technologies": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Molecular Biology"
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "id": 1,
+      "title": "Early Biomarkers for Parkinson's via ML and WGCNA",
+      "subtitle": "Molecular basis of smell loss in Parkinson's disease",
+      "description": "Applying machine learning and WGCNA on clinical and transcriptomic data to detect early biomarkers, with special focus on smell loss; improving patient–healthy classification.",
+      "image": {
+        "src": "/images/projects/olfactory.jpg",
+        "alt": "Olfactory biomarkers research",
+        "width": 1200,
+        "height": 800
+      },
+      "technologies": ["R", "Python", "WGCNA", "RNA-Seq", "Pathway Analysis"],
+      "features": [
+        "A subset of non-motor symptoms predicts Parkinson's disease",
+        "Smell loss is the strongest predictive symptom for PD",
+        "Important molecular pathway identification",
+        "Integration of clinical and transcriptomic data"
+      ],
+      "links": [
+        {
+          "label": "Live site",
+          "url": "https://olfactory-research.netlify.app",
+          "kind": "external"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/iam-zain/olfactory-research",
+          "kind": "github"
+        }
+      ],
+      "status": "active",
+      "year": "2023 — 2025"
+    },
+    {
+      "id": 2,
+      "title": "PD-INSPECT",
+      "subtitle": "Parkinson's Disease - Integrated Non-motor Symptom-based Prediction and Evaluation using Computational Tool",
+      "description": "PD-INSPECT integrates transfer learning and collaborative filtering to evaluate Parkinson's disease risk from non-motor symptoms and molecular biomarkers, providing clinician-friendly insights for early diagnosis.",
+      "image": {
+        "src": "/images/projects/pdprevent.jpg",
+        "alt": "PD-INSPECT risk assessment tool",
+        "width": 1200,
+        "height": 800
+      },
+      "technologies": [
+        "Python",
+        "Flask",
+        "Transfer Learning",
+        "Collaborative Filtering"
+      ],
+      "features": [
+        "Risk assessment based on non-motor symptoms",
+        "Interactive visualization of results",
+        "Real-time prediction"
+      ],
+      "links": [
+        {
+          "label": "Live site",
+          "url": "https://pdinspect.pythonanywhere.com/",
+          "kind": "external"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/iam-zain/pdprevent",
+          "kind": "github"
+        }
+      ],
+      "status": "completed",
+      "year": "2021 — 2023"
+    },
+    {
+      "id": 3,
+      "title": "Complex-I Associated Genes in Parkinson's Disease",
+      "subtitle": "Interactive data exploration",
+      "description": "An online predictor built with HTML/CSS/JavaScript for gene-based risk assessment in Parkinson's disease.",
+      "image": {
+        "src": "/images/projects/pdviz.jpg",
+        "alt": "PDViz interactive predictor",
+        "width": 1200,
+        "height": 800
+      },
+      "technologies": [
+        "Bioinformatics",
+        "HTML",
+        "Statistical Analysis",
+        "Data Integration"
+      ],
+      "features": [
+        "Complex-I & PD gene interaction mapping",
+        "Gene compensation effect analysis",
+        "Computational risk prediction model"
+      ],
+      "links": [
+        {
+          "label": "Live site",
+          "url": "https://iam-zain.github.io/parkinson-predictor/",
+          "kind": "external"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/iam-zain/pd-visualization",
+          "kind": "github"
+        }
+      ],
+      "status": "completed",
+      "year": "2019 — 2020"
+    }
+  ],
+
+  "social": {
+    "github": "https://github.com/iam-zain",
+    "linkedin": "https://linkedin.com/in/mdzainulali",
+    "twitter": "https://twitter.com/zain_research",
+    "researchgate": "https://www.researchgate.net/profile/Md-Ali-141?ev=hdr_xprf",
+    "orcid": "https://orcid.org/0000-0001-8001-8339"
+  },
+
+  "contact": {
+    "availability": "Open to research collaborations and academic opportunities",
+    "preferredContact": "email",
+    "responseTime": "Within 48 hours",
+    "timezone": "IST (UTC+5:30)",
+    "form": {
+      "enabled": true,
+      "honeypot": true,
+      "successMsg": "Thank you — your message is on its way. I'll reply within 48 hours.",
+      "errorMsg": "Something went wrong. Please email me directly at mdzainulali@gmail.com."
+    }
+  },
+
+  "conferences": [
+    {
+      "id": 1,
+      "title": "International Conference on Parkinson's Disease Research",
+      "description": "Presented research on computational approaches to identify early biomarkers of Parkinson's disease.",
+      "location": "Philadelphia, US",
+      "date": "2024-09-29",
+      "presentationType": "oral",
+      "image": {
+        "src": "/images/conferences/us-philadelphia-oral.jpg",
+        "alt": "Oral presentation in Philadelphia, 2024",
+        "width": 1200,
+        "height": 800
+      }
+    },
+    {
+      "id": 2,
+      "title": "International Symposium on Neurodegenerative Disorders",
+      "description": "Showcased research on network-based analysis of neurodegenerative disorders using multi-omics data integration.",
+      "location": "Philadelphia, US",
+      "date": "2024-09-27",
+      "presentationType": "poster",
+      "image": {
+        "src": "/images/conferences/us-philadelphia-poster.jpg",
+        "alt": "Poster presentation in Philadelphia, 2024",
+        "width": 1200,
+        "height": 800
+      }
+    },
+    {
+      "id": 3,
+      "title": "European Conference on Computational Biology",
+      "description": "Presented work on machine learning approaches for predicting disease progression in Parkinson's patients.",
+      "location": "Copenhagen, Denmark",
+      "date": "2023-08-26",
+      "presentationType": "poster",
+      "image": {
+        "src": "/images/conferences/denmark-copenhagen.jpeg",
+        "alt": "Poster presentation in Copenhagen, 2023",
+        "width": 1200,
+        "height": 800
+      }
+    }
+  ],
+
+  "workshops": [
+    {
+      "id": 1,
+      "title": "International Workshop on Computational Biology",
+      "description": "Intensive workshop on applying machine learning techniques to biological data analysis and interpretation.",
+      "location": "Seoul, South Korea",
+      "date": "2024-02-14",
+      "mode": "offline",
+      "image": {
+        "src": "/images/workshops/korea-seoul.jpeg",
+        "alt": "Seoul workshop, 2024",
+        "width": 1200,
+        "height": 800
+      }
+    },
+    {
+      "id": 2,
+      "title": "Advanced Bioinformatics Workshop",
+      "description": "Hands-on training in computational modeling of biological systems and network analysis techniques.",
+      "location": "Manila, Philippines",
+      "date": "2023-04-16",
+      "mode": "offline",
+      "image": {
+        "src": "/images/workshops/philippines-manila.jpeg",
+        "alt": "Manila workshop, 2023",
+        "width": 1200,
+        "height": 800
+      }
+    }
+  ],
+
+  "articles": [
+    {
+      "id": "art-1",
+      "type": "review",
+      "title": "Oxidative phosphorylation–mediated pathogenesis of Parkinson's disease and its implication via Akt signaling",
+      "summary": "Comprehensive review examining the role of oxidative phosphorylation dysfunction in Parkinson's disease pathogenesis and its implications through Akt signaling pathways.",
+      "year": "2022",
+      "url": "https://doi.org/10.1016/j.neuint.2022.105312",
+      "venue": "Neurochemistry International",
+      "impactFactor": "4.0",
+      "authorship": "1st author",
+      "publicationDate": "2022-07",
+      "image": {
+        "src": "/images/articles/review-01.jpg",
+        "alt": "Neurochemistry International review",
+        "width": 1200,
+        "height": 800
+      }
+    },
+    {
+      "id": "art-2",
+      "type": "bookChapter",
+      "title": "Early Diagnosis of Parkinson's Disease: Utility of Animal Models",
+      "summary": "Chapter on the utility of animal models in early diagnosis of Parkinson's disease, exploring their role in understanding disease mechanisms and developing diagnostic strategies.",
+      "year": "2022",
+      "url": "https://doi.org/10.5772/intechopen.108234",
+      "venue": "Parkinson's Disease — Animal Models, Current Therapies and Clinical Trials (IntechOpen)",
+      "authorship": "Shared 1st author",
+      "publicationDate": "2022-11-11",
+      "image": {
+        "src": "/images/articles/book-01.jpg",
+        "alt": "IntechOpen book chapter",
+        "width": 1200,
+        "height": 800
+      }
+    },
+    {
+      "id": "art-3",
+      "type": "abstract",
+      "title": "Integrating Non-Motor Symptoms and Gender Variability in Machine Learning for Early Parkinson's Disease Detection",
+      "summary": "Novel machine learning approaches integrating non-motor symptoms and gender variability for early detection of Parkinson's disease.",
+      "year": "2024",
+      "url": "https://doi.org/10.1016/example-abstract-philadelphia",
+      "venue": "International Conference on Parkinson's Disease Research, Philadelphia",
+      "publicationDate": "2024-09-27",
+      "image": {
+        "src": "/images/articles/us-abstract.jpeg",
+        "alt": "Philadelphia abstract, 2024",
+        "width": 1200,
+        "height": 800
+      }
+    },
+    {
+      "id": "art-4",
+      "type": "abstract",
+      "title": "Gender-Specific Classification Models for Parkinson's Disease Using Non-Motor Symptoms and DNA Methylation Data",
+      "summary": "Gender-specific classification models using non-motor symptoms and DNA methylation data for Parkinson's disease diagnosis.",
+      "year": "2023",
+      "url": "https://doi.org/10.1016/example-abstract-copenhagen",
+      "venue": "European Conference on Computational Biology, Copenhagen",
+      "publicationDate": "2023-08-26",
+      "image": {
+        "src": "/images/articles/denmark-abstract.jpg",
+        "alt": "Copenhagen abstract, 2023",
+        "width": 1200,
+        "height": 800
+      }
+    },
+    {
+      "id": "art-5",
+      "type": "research",
+      "title": "Research articles in preparation",
+      "summary": "Multiple research articles are currently being prepared for publication. Updates will appear here as they are released.",
+      "year": "2026",
+      "url": "",
+      "venue": "In preparation",
+      "status": "draft"
+    }
+  ],
+
+  "testimonials": [],
+
+  "writing": [],
+
+  "certifications": [
+    {
+      "id": 1,
+      "title": "International Workshop on Proteins: Sequence, Structure & Function",
+      "year": "2025",
+      "type": "Workshop"
+    },
+    {
+      "id": 2,
+      "title": "International Workshop on Genomes: Sequence to Insights",
+      "year": "2025",
+      "type": "Workshop"
+    },
+    {
+      "id": 3,
+      "title": "International Workshop on Bioinformatics, Data Science and Machine Learning with Python",
+      "year": "2024",
+      "type": "Workshop"
+    },
+    {
+      "id": 4,
+      "title": "International Workshop on NGS: Sequence to Insights",
+      "year": "2024",
+      "type": "Workshop"
+    },
+    {
+      "id": 5,
+      "title": "Virtual Workshop — Decode Proteomics with R Programming",
+      "year": "2024",
+      "type": "Workshop"
+    },
+    {
+      "id": 6,
+      "title": "Hands-on Workshop — Data into Insights: Bridging Metabolomics and Systems Biology",
+      "year": "2024",
+      "type": "Workshop"
+    },
+    {
+      "id": 7,
+      "title": "Virtual Internship — Next Generation Sequencing and Whole Genome Sequencing",
+      "year": "2024",
+      "type": "Internship"
+    }
+  ],
+
+  "sections": {
+    "order": [
+      "hero",
+      "about",
+      "milestones",
+      "experience",
+      "projects",
+      "conferences",
+      "articles",
+      "testimonials",
+      "writing",
+      "certifications",
+      "contact"
+    ],
+    "hidden": []
+  },
+
+  "sectionOverrides": {
+    "articles": { "title": "Publications" },
+    "conferences": { "title": "Talks & Posters" },
+    "writing": { "title": "Writing & Notes" }
+  },
+
+  "seo": {
+    "metaTitle": "Md Zainul Ali — Doctoral Research Scholar, Computational Neuroscience",
+    "metaDescription": "Md Zainul Ali is a doctoral research scholar specializing in computational approaches to neurodegenerative disorders, with a focus on Parkinson's disease at University of Hyderabad.",
+    "keywords": [
+      "computational neuroscience",
+      "Parkinson's disease",
+      "bioinformatics",
+      "machine learning",
+      "systems biology",
+      "neurodegenerative disorders",
+      "research"
+    ],
+    "ogImage": "/images/og-image.jpeg"
+  }
+}

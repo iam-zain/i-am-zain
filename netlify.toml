@@ -1,167 +1,96 @@
 [build]
-  # Build command
+  publish = "."
   command = "npm run build"
-  
-  # Publish directory (where the built files are located)
-  publish = "src"
-  
-  # Environment variables for build
-  [build.environment]
-    NODE_VERSION = "18"
 
-# Redirect rules
+[build.environment]
+  NODE_VERSION = "20"
+
+# ── REDIRECTS ──
+# Friendly resume URL
 [[redirects]]
-  # Redirect /resume to the actual resume file
   from = "/resume"
   to = "/documents/zain-resume.pdf"
-  status = 302
+  status = 200
 
+# SPA fallback — anchor navigation is the only routing
 [[redirects]]
-  # Handle client-side routing (if needed in the future)
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Headers for better performance and security
-[[headers]]
-  for = "/*"
-  [headers.values]
-    # Security headers
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    
-    # Performance headers
-    X-DNS-Prefetch-Control = "on"
-
-[[headers]]
-  for = "*.html"
-  [headers.values]
-    # HTML files - cache for a short time
-    Cache-Control = "public, max-age=3600, s-maxage=3600"
-
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    # CSS files - cache for a long time with versioning
-    Cache-Control = "public, max-age=31536000, s-maxage=31536000, immutable"
-
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    # JavaScript files - cache for a long time with versioning
-    Cache-Control = "public, max-age=31536000, s-maxage=31536000, immutable"
-
+# ── CACHING ──
+# Long-lived immutable assets
 [[headers]]
   for = "/images/*"
   [headers.values]
-    # Image files - cache for a long time
-    Cache-Control = "public, max-age=31536000, s-maxage=31536000, immutable"
+    Cache-Control = "public, max-age=31536000, immutable"
 
+[[headers]]
+  for = "/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Resume may be updated occasionally
 [[headers]]
   for = "/documents/*"
   [headers.values]
-    # Document files - cache for a medium time
-    Cache-Control = "public, max-age=86400, s-maxage=86400"
+    Cache-Control = "public, max-age=2592000"
+
+# Favicons — medium cache
+[[headers]]
+  for = "/favicon/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# CSS and JS — revalidate every hour, serve stale while fetching new
+[[headers]]
+  for = "/styles/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
 
 [[headers]]
-  for = "/config/*"
+  for = "/js/*"
   [headers.values]
-    # Config files - cache for a short time to allow updates
-    Cache-Control = "public, max-age=1800, s-maxage=1800"
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+# HTML — always revalidate so client edits appear immediately
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# data.json — always revalidate so client edits appear immediately
+[[headers]]
+  for = "/data.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
     Content-Type = "application/json; charset=utf-8"
 
+# ── SECURITY (applies site-wide) ──
 [[headers]]
-  for = "*.json"
+  for = "/*"
   [headers.values]
-    # JSON files - cache for a short time
-    Cache-Control = "public, max-age=3600, s-maxage=3600"
-    Content-Type = "application/json; charset=utf-8"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
 
-[[headers]]
-  for = "*.ico"
-  [headers.values]
-    # Favicon - cache for a very long time
-    Cache-Control = "public, max-age=31536000, s-maxage=31536000, immutable"
-
-[[headers]]
-  for = "*.png"
-  [headers.values]
-    # PNG images - cache for a long time
-    Cache-Control = "public, max-age=31536000, s-maxage=31536000, immutable"
-
-[[headers]]
-  for = "*.jpg"
-  [headers.values]
-    # JPG images - cache for a long time
-    Cache-Control = "public, max-age=31536000, s-maxage=31536000, immutable"
-
-[[headers]]
-  for = "*.jpeg"
-  [headers.values]
-    # JPEG images - cache for a long time
-    Cache-Control = "public, max-age=31536000, s-maxage=31536000, immutable"
-
-[[headers]]
-  for = "*.svg"
-  [headers.values]
-    # SVG images - cache for a long time
-    Cache-Control = "public, max-age=31536000, s-maxage=31536000, immutable"
-
-[[headers]]
-  for = "*.webp"
-  [headers.values]
-    # WebP images - cache for a long time
-    Cache-Control = "public, max-age=31536000, s-maxage=31536000, immutable"
-
-[[headers]]
-  for = "*.woff"
-  [headers.values]
-    # WOFF fonts - cache for a long time
-    Cache-Control = "public, max-age=31536000, s-maxage=31536000, immutable"
-
-[[headers]]
-  for = "*.woff2"
-  [headers.values]
-    # WOFF2 fonts - cache for a long time
-    Cache-Control = "public, max-age=31536000, s-maxage=31536000, immutable"
-
-# Form handling
+# ── NETLIFY FORMS ──
 [[forms]]
   name = "contact"
 
-# Plugin configuration
-# Uncomment and install the plugin if you want to use Lighthouse audits
-# [[plugins]]
-#   package = "netlify-plugin-lighthouse"
-#   
-#   [plugins.inputs.audits]
-#     output_path = "reports/lighthouse.html"
-#     
-#   [plugins.inputs.settings]
-#     # Lighthouse settings for performance optimization
-#     preset = "desktop"
-#     
-#   [plugins.inputs.assert]
-#     assertions = '''
-#       {
-#         "categories:performance": ["error", {"minScore": 0.95}],
-#         "categories:accessibility": ["error", {"minScore": 0.95}],
-#         "categories:best-practices": ["error", {"minScore": 0.95}],
-#         "categories:seo": ["error", {"minScore": 0.95}]
-#       }
-#     '''
-
-# Edge functions (if needed for advanced functionality)
-# [[edge_functions]]
-#   function = "hello"
-#   path = "/api/hello"
-
-# Development settings
+# ── LOCAL DEV ──
 [dev]
   command = "npm run dev"
   port = 3000
-  publish = "src"
-  autoLaunch = true
+  publish = "."
+  autoLaunch = false

@@ -1,0 +1,40 @@
+/* ==========================================================================
+   MAIN — cascade layer order + @imports.
+   This is the ONLY file linked from index.html.
+   ========================================================================== */
+
+@layer reset, tokens, base, layout, components, sections, utilities;
+
+@import url("./tokens.css");
+@import url("./reset.css");
+@import url("./base.css");
+@import url("./layout.css");
+
+/* Components */
+@import url("./components/button.css");
+@import url("./components/card.css");
+@import url("./components/chip.css");
+@import url("./components/badge.css");
+@import url("./components/input.css");
+@import url("./components/icon.css");
+@import url("./components/nav.css");
+@import url("./components/carousel.css");
+@import url("./components/timeline.css");
+@import url("./components/theme-toggle.css");
+
+/* Sections */
+@import url("./sections/hero.css");
+@import url("./sections/about.css");
+@import url("./sections/milestones.css");
+@import url("./sections/experience.css");
+@import url("./sections/projects.css");
+@import url("./sections/conferences.css");
+@import url("./sections/articles.css");
+@import url("./sections/testimonials.css");
+@import url("./sections/writing.css");
+@import url("./sections/certifications.css");
+@import url("./sections/contact.css");
+@import url("./sections/footer.css");
+
+@import url("./utilities.css");
+@import url("./print.css");

@@ -24,7 +24,7 @@
         "src": "/images/profile_04.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       }
-    ],  
+    ],
     "resumeUrl": "/documents/zain-resume.pdf"
   },
   "education": [
@@ -33,32 +33,57 @@
       "degree": "Ph.D. in Biotechnology & Bioinformatics",
       "graduationYear": "Ongoing",
       "gpa": "Excellent Academic Record",
-      "relevantCoursework": ["Computational Biology", "Machine Learning", "Systems Biology", "Neurodegenerative Disorders"]
+      "relevantCoursework": [
+        "Computational Biology",
+        "Machine Learning",
+        "Systems Biology",
+        "Neurodegenerative Disorders"
+      ]
     },
     {
       "institution": "University of Hyderabad, India",
       "degree": "M.Sc. in Biotechnology",
       "graduationYear": "Completed 2020",
       "gpa": "8.4",
-      "relevantCoursework": ["Bioinformatics", "Computational Biology", "Molecular Biology"]
+      "relevantCoursework": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Molecular Biology"
+      ]
     },
     {
       "institution": "Aligarh Muslim University, Aligarh",
       "degree": "B.Sc. in Biochemistry",
       "graduationYear": "Completed 2018",
       "gpa": "7.6",
-      "relevantCoursework": ["Biochemistry", "Molecular Biology", "Cell Biology"]
+      "relevantCoursework": [
+        "Biochemistry",
+        "Molecular Biology",
+        "Cell Biology"
+      ]
     }
   ],
   "summary": "Md Zainul Ali is a doctoral research scholar in the Department of Biotechnology & Bioinformatics, School of Life Sciences, University of Hyderabad, India. His research broadly focuses on the computational exploration of neurodegenerative disorders, with a specialization in Parkinson's disease. He applies machine learning, statistical modeling, and systems biology approaches to identify clinically relevant non-motor features and their molecular underpinnings.",
   "skills": {
     "technical": {
       "programming": ["Python", "R", "SQL", "Bash"],
-      "backend": ["Collaborative Filtering", "Contrastive Learning", "Neural Network", "Transfer Learning"],
+      "backend": [
+        "Collaborative Filtering",
+        "Contrastive Learning",
+        "Neural Network",
+        "Transfer Learning"
+      ],
       "tools": ["Bulk RNA-Seq", "Single-cell RNA Seq", "WGCNA", "Epigenomics"],
       "concepts": ["Flask", "Shiny", "Git", "Jupyter", "Colab", "Conda"]
     },
-    "soft": ["Research", "Scientific Writing", "Presentation", "Leadership", "Multilingual", "Science Outreach"]
+    "soft": [
+      "Research",
+      "Scientific Writing",
+      "Presentation",
+      "Leadership",
+      "Multilingual",
+      "Science Outreach"
+    ]
   },
   "experience": [
     {
@@ -73,7 +98,13 @@
         "Oral presentation at MDS International Congress (Philadelphia, 2024)",
         "Published review article in Neurochemistry International (2022)"
       ],
-      "technologies": ["Python", "R", "Machine Learning", "Collaborative Filtering", "Transcriptomics"]
+      "technologies": [
+        "Python",
+        "R",
+        "Machine Learning",
+        "Collaborative Filtering",
+        "Transcriptomics"
+      ]
     },
     {
       "id": 2,
@@ -87,7 +118,11 @@
         "Developed a predictive model for Parkinson’s disease risk.",
         "Demonstrated compensatory effects among Parkinson’s risk genes."
       ],
-      "technologies": ["Bioinformatics", "Computational Biology", "Molecular Biology"]
+      "technologies": [
+        "Bioinformatics",
+        "Computational Biology",
+        "Molecular Biology"
+      ]
     }
   ],
   "projects": [
@@ -97,7 +132,13 @@
       "subtitle": "Molecular Basis of Smell Loss in Parkinson's",
       "description": "Applying ML and WGCNA on clinical and transcriptomic data to detect early biomarkers, with special focus on smell loss; improving patient-healthy control classification.",
       "image": "/images/projects/olfactory.jpg",
-      "technologies": ["R", "Python", "WGCNA", "RNA Seq Analysis", "Pathway Analysis"],
+      "technologies": [
+        "R",
+        "Python",
+        "WGCNA",
+        "RNA Seq Analysis",
+        "Pathway Analysis"
+      ],
       "features": [
         "A subset of Non-motor symptom predicts Parkinson's disease",
         "Smell loss is the strongest predictive symptom for PD",
@@ -111,17 +152,22 @@
     },
     {
       "id": 2,
-      "title": "Early Diagnosis Tool Using Transfer Learning & Collaborative Filtering",
-      "subtitle": "Parkinson's Disease Risk Assessment Tool",
-      "description": "An interactive computational tool for assessing Parkinson's disease risk based on non-motor symptoms and molecular biomarkers, integrating machine learning models for early diagnosis.",
+      "title": "PD-INSPECT",
+      "subtitle": "Parkinson's Disease - Integrated Non-motor Symptom-based Prediction and Evaluation using Computational Tool",
+      "description": "PD-INSPECT integrates transfer learning and collaborative filtering to evaluate Parkinson's disease risk from non-motor symptoms and molecular biomarkers, delivering clinician-friendly insights for early intervention.",
       "image": "/images/projects/pdprevent.jpg",
-      "technologies": ["Python", "Flask", "Transfer Learning", "Collaborative Filtering"],
+      "technologies": [
+        "Python",
+        "Flask",
+        "Transfer Learning",
+        "Collaborative Filtering"
+      ],
       "features": [
         "Risk assessment based on non-motor symptoms",
         "Interactive visualization of results",
         "Real time prediction"
       ],
-      "liveUrl": "https://pdprevent-demo.netlify.app",
+      "liveUrl": "https://pdinspect.pythonanywhere.com/",
       "githubUrl": "https://github.com/iam-zain/pdprevent",
       "status": "completed",
       "year": "2021-2023"
@@ -132,7 +178,12 @@
       "subtitle": "Interactive Data Exploration for Parkinson's Research",
       "description": "An online predictor tool using HTML, CSS, JavaScript to assess gene-based risk in Parkinson's Disease.",
       "image": "/images/projects/pdviz.jpg",
-      "technologies": ["Bioinformatics", "HTML", "Statistical Analysis", "Data Integration"],
+      "technologies": [
+        "Bioinformatics",
+        "HTML",
+        "Statistical Analysis",
+        "Data Integration"
+      ],
       "features": [
         "Complex-I & PD genes interaction mapping",
         "Gene compensation effect analysis",
@@ -320,7 +371,15 @@
   "seo": {
     "metaTitle": "Zain - Doctoral Research Scholar in Computational Neuroscience",
     "metaDescription": "Md Zainul Ali is a doctoral research scholar specializing in computational approaches to neurodegenerative disorders, with a focus on Parkinson's disease at University of Hyderabad.",
-    "keywords": ["computational neuroscience", "Parkinson's disease", "bioinformatics", "machine learning", "systems biology", "neurodegenerative disorders", "research"],
+    "keywords": [
+      "computational neuroscience",
+      "Parkinson's disease",
+      "bioinformatics",
+      "machine learning",
+      "systems biology",
+      "neurodegenerative disorders",
+      "research"
+    ],
     "ogImage": "/images/og-image.jpeg"
   }
 }

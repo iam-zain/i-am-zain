@@ -1,0 +1,24 @@
+/* ==========================================================================
+   ICON — sizes + color inheritance. Every SVG uses currentColor.
+   ========================================================================== */
+
+@layer components {
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: var(--icon-md);
+    height: var(--icon-md);
+    flex: none;
+    color: currentColor;
+    stroke: currentColor;
+    fill: none;
+  }
+
+  .icon--sm { width: var(--icon-sm); height: var(--icon-sm); }
+  .icon--md { width: var(--icon-md); height: var(--icon-md); }
+  .icon--lg { width: var(--icon-lg); height: var(--icon-lg); }
+  .icon--xl { width: var(--icon-xl); height: var(--icon-xl); }
+
+  .icon--accent { color: var(--accent); }
+  .icon--muted  { color: var(--text-muted); }
+}

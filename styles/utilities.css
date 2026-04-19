@@ -1,0 +1,72 @@
+/* ==========================================================================
+   UTILITIES — small helpers only. Not a replacement for components.
+   ========================================================================== */
+
+@layer utilities {
+  .visually-hidden,
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: var(--space-2);
+    left: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    background: var(--accent);
+    color: var(--text-on-brand);
+    font-weight: var(--fw-semibold);
+    border-radius: var(--radius-md);
+    z-index: var(--z-toast);
+    transform: translateY(-200%);
+    transition: transform var(--motion-base) var(--ease-standard);
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
+  .text-gradient {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .text-muted { color: var(--text-muted); }
+  .text-secondary { color: var(--text-secondary); }
+  .text-mono { font-family: var(--font-mono); }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity var(--motion-slow) var(--ease-standard),
+      transform var(--motion-slow) var(--ease-standard);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+}

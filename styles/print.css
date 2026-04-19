@@ -1,0 +1,63 @@
+/* ==========================================================================
+   PRINT — resume-style view. Hides navigation, carousels, forms, decoration.
+   ========================================================================== */
+
+@media print {
+  :root {
+    --surface-page: #ffffff;
+    --surface-card: #ffffff;
+    --text-primary: #111;
+    --text-secondary: #333;
+    --text-muted: #555;
+    --border-subtle: #ccc;
+    --border-default: #bbb;
+    --accent: #000;
+    --gradient-brand: #000;
+    --gradient-page-glow: none;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111 !important;
+    font-size: 11pt;
+  }
+
+  .site-nav,
+  .theme-toggle,
+  .hero__cta,
+  .carousel__controls,
+  .carousel__dots,
+  .contact-form,
+  .site-footer__social,
+  .skip-link,
+  [data-print="hide"] {
+    display: none !important;
+  }
+
+  .section {
+    padding-block: var(--space-8);
+    page-break-inside: avoid;
+  }
+
+  .card,
+  .chip {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+}
