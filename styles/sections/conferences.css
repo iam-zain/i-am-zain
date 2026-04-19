@@ -1,0 +1,17 @@
+@layer sections {
+  .conferences__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+  }
+
+  .conferences__group-title {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
+    margin-bottom: var(--space-6);
+    letter-spacing: var(--tracking-snug);
+  }
+}

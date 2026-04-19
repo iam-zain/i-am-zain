@@ -1,0 +1,282 @@
+/* ==========================================================================
+   HERO — bold modern tech: confident type, gradient wash, portrait lift.
+   ========================================================================== */
+
+@layer sections {
+  .section--hero {
+    min-height: calc(100vh - var(--nav-height));
+    min-height: calc(100dvh - var(--nav-height));
+    padding-top: calc(var(--nav-height) + var(--space-16));
+    padding-bottom: var(--space-24);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section--hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(
+        40% 50% at 15% 30%,
+        color-mix(in oklch, var(--brand-500) 20%, transparent) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        35% 45% at 85% 20%,
+        color-mix(in oklch, var(--brand2-500) 18%, transparent) 0%,
+        transparent 55%
+      );
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero__layout {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .hero__layout {
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: var(--space-16);
+    }
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .hero__now {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) var(--space-4);
+    background: color-mix(
+      in oklch,
+      var(--success-500) 10%,
+      var(--surface-card)
+    );
+    border: var(--border-width) solid
+      color-mix(in oklch, var(--success-500) 40%, transparent);
+    border-radius: var(--radius-full);
+    max-width: fit-content;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-medium);
+    color: var(--text-secondary);
+  }
+
+  .hero__now-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    background: var(--success-500);
+    box-shadow: 0 0 0 0 color-mix(in oklch, var(--success-500) 60%, transparent);
+    animation: hero-now-pulse 2.2s ease-out infinite;
+    flex: none;
+  }
+
+  @keyframes hero-now-pulse {
+    0% {
+      box-shadow: 0 0 0 0
+        color-mix(in oklch, var(--success-500) 60%, transparent);
+    }
+    80% {
+      box-shadow: 0 0 0 8px
+        color-mix(in oklch, var(--success-500) 0%, transparent);
+    }
+    100% {
+      box-shadow: 0 0 0 0
+        color-mix(in oklch, var(--success-500) 0%, transparent);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__now-dot {
+      animation: none;
+    }
+  }
+
+  .hero__now-label {
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--success-500);
+  }
+
+  .hero__now-text {
+    color: var(--text-secondary);
+  }
+
+  .hero__title {
+    font-size: var(--fs-display);
+    font-weight: var(--fw-black);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .hero__title-accent {
+    display: inline-block;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero__lead {
+    font-size: var(--fs-lg);
+    color: var(--text-secondary);
+    max-width: 44ch;
+    line-height: var(--lh-snug);
+  }
+
+  .hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4) var(--space-6);
+    color: var(--text-muted);
+    font-size: var(--fs-sm);
+  }
+
+  .hero__meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: inherit;
+  }
+
+  a.hero__meta-item {
+    transition: color var(--motion-fast) var(--ease-standard);
+  }
+
+  a.hero__meta-item:hover {
+    color: var(--accent);
+  }
+
+  .hero__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-block: var(--space-2);
+  }
+
+  .hero__social {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  /* ── Portrait ─────────────────────────────────────────────────────────── */
+
+  .hero__portrait {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    max-width: 480px;
+    margin-inline: auto;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: var(--surface-sunken);
+  }
+
+  .hero__portrait:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+  }
+
+  .hero__portrait-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.02);
+    transition:
+      opacity var(--motion-slow) var(--ease-standard),
+      transform var(--motion-slow) var(--ease-standard);
+  }
+
+  .hero__portrait-slide.is-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .hero__portrait:hover .hero__portrait-slide.is-active {
+    transform: scale(1.04);
+  }
+
+  /* Fallback for the single-image case: first slide auto-shows. */
+  .hero__portrait:not(:has(.hero__portrait-slide.is-active))
+    .hero__portrait-slide:first-of-type {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .hero__portrait-dots {
+    position: absolute;
+    bottom: var(--space-4);
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+    z-index: 2;
+  }
+
+  .hero__portrait-dot {
+    width: 24px;
+    height: 4px;
+    border: none;
+    border-radius: var(--radius-full);
+    background: color-mix(in oklch, white 45%, transparent);
+    cursor: pointer;
+    padding: 0;
+    transition:
+      background var(--motion-fast) var(--ease-standard),
+      width var(--motion-base) var(--ease-standard);
+  }
+
+  .hero__portrait-dot:hover {
+    background: color-mix(in oklch, white 75%, transparent);
+  }
+
+  .hero__portrait-dot[aria-selected="true"] {
+    background: white;
+    width: 36px;
+  }
+
+  .hero__portrait-dot:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+  }
+
+  .hero__portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px
+      color-mix(in oklch, var(--accent) 25%, transparent);
+    pointer-events: none;
+  }
+
+  .hero__portrait-glow {
+    position: absolute;
+    inset: -20%;
+    background: var(--gradient-brand);
+    opacity: 0.25;
+    filter: blur(80px);
+    z-index: -1;
+    pointer-events: none;
+  }
+}

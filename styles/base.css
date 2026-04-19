@@ -1,0 +1,107 @@
+/* ==========================================================================
+   BASE — html/body defaults, typography, links, focus.
+   Uses only semantic tokens from tokens.css.
+   ========================================================================== */
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--fs-base);
+    line-height: var(--lh-normal);
+    color: var(--text-primary);
+    background: var(--surface-page);
+  }
+
+  body {
+    font-weight: var(--fw-regular);
+    background-image: var(--gradient-page-glow);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--tracking-tight);
+    color: var(--text-primary);
+  }
+
+  h1 {
+    font-size: var(--fs-display);
+    font-weight: var(--fw-black);
+    letter-spacing: var(--tracking-tight);
+  }
+
+  h2 {
+    font-size: var(--fs-3xl);
+    letter-spacing: var(--tracking-tight);
+  }
+
+  h3 {
+    font-size: var(--fs-2xl);
+    letter-spacing: var(--tracking-snug);
+  }
+
+  h4 {
+    font-size: var(--fs-xl);
+    letter-spacing: var(--tracking-snug);
+  }
+
+  h5 {
+    font-size: var(--fs-lg);
+  }
+
+  h6 {
+    font-size: var(--fs-md);
+  }
+
+  p {
+    line-height: var(--lh-relaxed);
+    color: var(--text-secondary);
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color var(--motion-fast) var(--ease-standard);
+  }
+
+  a:hover {
+    color: var(--accent-hover);
+  }
+
+  strong,
+  b {
+    font-weight: var(--fw-semibold);
+    color: var(--text-primary);
+  }
+
+  small {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+  }
+
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+
+  hr {
+    border: none;
+    height: var(--border-width);
+    background: var(--border-subtle);
+    margin-block: var(--space-8);
+  }
+
+  mark {
+    background: var(--accent-subtle);
+    color: var(--text-primary);
+    padding: 0 0.2em;
+    border-radius: var(--radius-xs);
+  }
+}

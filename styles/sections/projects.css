@@ -1,0 +1,11 @@
+@layer sections {
+  .projects__grid {
+    margin-top: var(--space-4);
+  }
+
+  /* Projects cards compress their technology cluster to stop the card from
+     growing too tall with many tags. */
+  #projects .card .cluster {
+    margin-top: auto;
+  }
+}

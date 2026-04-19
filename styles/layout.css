@@ -1,0 +1,107 @@
+/* ==========================================================================
+   LAYOUT — containers, sections, grids, primitives.
+   ========================================================================== */
+
+@layer layout {
+  .container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--container-pad);
+  }
+
+  .container--narrow {
+    max-width: var(--container-narrow);
+  }
+
+  .section {
+    padding-block: var(--section-gap);
+    position: relative;
+  }
+
+  .section__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--space-4);
+  }
+
+  .section__eyebrow::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .section__title {
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--tracking-tight);
+    margin-bottom: var(--space-4);
+    max-width: 22ch;
+  }
+
+  .section__subtitle {
+    font-size: var(--fs-md);
+    color: var(--text-muted);
+    max-width: 60ch;
+    margin-bottom: var(--space-12);
+    line-height: var(--lh-relaxed);
+  }
+
+  .section__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-12);
+  }
+
+  @media (min-width: 768px) {
+    .section__header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: var(--space-8);
+    }
+  }
+
+  .grid {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .grid--cols-2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .grid--cols-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .grid--cols-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+  .stack > * + * {
+    margin-block-start: var(--space-4);
+  }
+
+  .stack--sm > * + * { margin-block-start: var(--space-2); }
+  .stack--lg > * + * { margin-block-start: var(--space-8); }
+
+  .cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    align-items: center;
+  }
+
+  .divider {
+    height: var(--border-width);
+    background: var(--border-subtle);
+    width: 100%;
+  }
+
+  .divider--gradient {
+    height: 2px;
+    background: var(--gradient-brand);
+    opacity: 0.6;
+    border-radius: var(--radius-full);
+  }
+}

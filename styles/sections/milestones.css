@@ -1,0 +1,7 @@
+@layer sections {
+  /* Section uses the shared .timeline component. Nothing section-specific
+     needs overriding for milestones — composition only. */
+  #milestones .timeline {
+    margin-top: var(--space-8);
+  }
+}

@@ -1,0 +1,138 @@
+/* ==========================================================================
+   CARD — used for projects, conferences, articles, testimonials, experience.
+   ========================================================================== */
+
+@layer components {
+  .card {
+    --_bg: var(--surface-card);
+    --_border: var(--border-subtle);
+    --_lift: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background: var(--_bg);
+    border: var(--border-width) solid var(--_border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xs);
+    position: relative;
+    overflow: hidden;
+    transition:
+      background  var(--motion-base) var(--ease-standard),
+      border      var(--motion-base) var(--ease-standard),
+      box-shadow  var(--motion-base) var(--ease-standard),
+      transform   var(--motion-base) var(--ease-standard);
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-brand-subtle);
+    opacity: 0;
+    transition: opacity var(--motion-base) var(--ease-standard);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    --_border: var(--border-accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .card:hover::before,
+  .card:focus-within::before {
+    opacity: 1;
+  }
+
+  /* ── Card pieces ──────────────────────────────────────────────────────── */
+
+  .card__media {
+    margin: calc(var(--space-6) * -1);
+    margin-bottom: var(--space-2);
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--surface-sunken);
+  }
+
+  .card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--motion-slow) var(--ease-standard);
+  }
+
+  .card:hover .card__media img {
+    transform: scale(1.03);
+  }
+
+  .card__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    color: var(--text-muted);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+  }
+
+  .card__title {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--tracking-snug);
+    color: var(--text-primary);
+  }
+
+  .card__subtitle {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+    font-weight: var(--fw-medium);
+  }
+
+  .card__body {
+    font-size: var(--fs-sm);
+    line-height: var(--lh-relaxed);
+    color: var(--text-secondary);
+  }
+
+  .card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+    font-weight: var(--fw-medium);
+  }
+
+  .card__meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .card__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: auto;
+    padding-top: var(--space-2);
+  }
+
+  .card--compact { padding: var(--space-4); gap: var(--space-3); }
+  .card--compact .card__media { margin: calc(var(--space-4) * -1); margin-bottom: var(--space-1); }
+
+  .card--feature {
+    background: var(--gradient-brand-subtle);
+    border-color: var(--border-accent);
+  }
+}

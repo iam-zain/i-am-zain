@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0a0b10" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+
+  <!-- Title, description, social tags are filled in at runtime by js/render/meta.js -->
+  <title>Md Zainul Ali — Research Portfolio</title>
+  <meta name="description" content="Research portfolio of Md Zainul Ali — Doctoral Research Scholar in Computational Neuroscience & Bioinformatics." />
+
+  <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon-32x32.png" />
+
+  <link rel="stylesheet" href="/styles/main.css" />
+
+  <!-- Google Fonts: Inter (variable) + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+
+  <script type="module" src="/js/main.js"></script>
+
+  <!-- Initial theme — avoid flash by setting attribute before CSS paints -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "light" || saved === "dark") {
+          document.documentElement.setAttribute("data-theme", saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <a href="#about" class="skip-link">Skip to content</a>
+
+  <!-- Nav is rendered into this container by js/components/nav.js -->
+  <header id="site-nav" class="site-nav" data-print="hide"></header>
+
+  <main id="main">
+    <section id="hero" class="section section--hero"></section>
+    <section id="about" class="section" aria-labelledby="about-title"></section>
+    <section id="milestones" class="section" aria-labelledby="milestones-title"></section>
+    <section id="experience" class="section" aria-labelledby="experience-title"></section>
+    <section id="projects" class="section" aria-labelledby="projects-title"></section>
+    <section id="conferences" class="section" aria-labelledby="conferences-title"></section>
+    <section id="articles" class="section" aria-labelledby="articles-title"></section>
+    <section id="testimonials" class="section" aria-labelledby="testimonials-title"></section>
+    <section id="writing" class="section" aria-labelledby="writing-title"></section>
+    <section id="certifications" class="section" aria-labelledby="certifications-title"></section>
+    <section id="contact" class="section" aria-labelledby="contact-title"></section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <noscript>
+    <div style="padding:2rem; max-width:780px; margin:auto; font-family: system-ui, sans-serif; line-height:1.6;">
+      <h1>Md Zainul Ali</h1>
+      <p>Doctoral Research Scholar — Computational Neuroscience &amp; Bioinformatics, University of Hyderabad.</p>
+      <p>This site uses JavaScript to render content from <code>data.json</code>. To reach me without JavaScript:</p>
+      <ul>
+        <li>Email: <a href="mailto:mdzainulali@gmail.com">mdzainulali@gmail.com</a></li>
+        <li>Resume: <a href="/documents/zain-resume.pdf">Download PDF</a></li>
+      </ul>
+    </div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* ==========================================================================
+   INPUT — text, email, textarea. Consistent states with button.
+   ========================================================================== */
+
+@layer components {
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .field__label {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    color: var(--text-primary);
+  }
+
+  .field__hint {
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+  }
+
+  .field__error {
+    font-size: var(--fs-xs);
+    color: var(--danger-500);
+    font-weight: var(--fw-medium);
+    min-height: 1em;
+  }
+
+  .input,
+  .textarea {
+    --_bg: var(--surface-card);
+    --_border: var(--border-default);
+    --_fg: var(--text-primary);
+
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    font-family: inherit;
+    font-size: var(--fs-base);
+    line-height: var(--lh-normal);
+    color: var(--_fg);
+    background: var(--_bg);
+    border: var(--border-width) solid var(--_border);
+    border-radius: var(--radius-md);
+    transition:
+      background var(--motion-fast) var(--ease-standard),
+      border     var(--motion-fast) var(--ease-standard),
+      box-shadow var(--motion-fast) var(--ease-standard);
+  }
+
+  .input::placeholder,
+  .textarea::placeholder {
+    color: var(--text-disabled);
+  }
+
+  .input:hover:not(:disabled),
+  .textarea:hover:not(:disabled) {
+    --_border: var(--border-strong);
+  }
+
+  .input:focus-visible,
+  .textarea:focus-visible {
+    outline: none;
+    --_border: var(--accent);
+    box-shadow: var(--shadow-focus);
+  }
+
+  .input:disabled,
+  .textarea:disabled {
+    --_fg: var(--text-disabled);
+    --_bg: var(--surface-sunken);
+    cursor: not-allowed;
+  }
+
+  .input[aria-invalid="true"],
+  .textarea[aria-invalid="true"] {
+    --_border: var(--danger-500);
+  }
+
+  .input[aria-invalid="true"]:focus-visible,
+  .textarea[aria-invalid="true"]:focus-visible {
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--danger-500) 30%, transparent);
+  }
+
+  .textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  /* Honeypot — hidden from real users, visible to bots */
+  .field--honeypot {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+}
