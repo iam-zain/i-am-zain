@@ -15,7 +15,7 @@
     "title": "Doctoral Research Scholar",
     "tagline": "Computational Neuroscience & Bioinformatics",
     "location": "University of Hyderabad, India",
-    "email": "mdzainulali@gmail.com",
+    "email": "ZainDotScience@gmail.com",
     "phone": "+91 9475810661",
     "website": "https://i-am-zain.netlify.app",
     "profileImages": [
@@ -340,7 +340,7 @@
       "enabled": true,
       "honeypot": true,
       "successMsg": "Thank you — your message is on its way. I'll reply within 48 hours.",
-      "errorMsg": "Something went wrong. Please email me directly at mdzainulali@gmail.com."
+      "errorMsg": "Something went wrong. Please email me directly at ZainDotScience@gmail.com."
     }
   },
 
