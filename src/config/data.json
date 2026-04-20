@@ -146,7 +146,7 @@
         "Integration with clinical data with transcriptomic data"
       ],
       "liveUrl": "https://olfactory-research.netlify.app",
-      "githubUrl": "https://github.com/iam-zain/olfactory-research",
+      "githubUrl": "https://github.com/iam-zain/PD_and_Non_Motor_Symptoms",
       "status": "in-progress",
       "year": "2023-2025"
     },
@@ -168,7 +168,7 @@
         "Real time prediction"
       ],
       "liveUrl": "https://pdinspect.pythonanywhere.com/",
-      "githubUrl": "https://github.com/iam-zain/pdprevent",
+      "githubUrl": "https://github.com/iam-zain/pd_inspect",
       "status": "completed",
       "year": "2021-2023"
     },
@@ -190,7 +190,7 @@
         "Computational risk prediction model"
       ],
       "liveUrl": "https://iam-zain.github.io/parkinson-predictor/",
-      "githubUrl": "https://github.com/iam-zain/pd-visualization",
+      "githubUrl": "https://github.com/iam-zain/parkinson-predictor",
       "status": "completed",
       "year": "2019-2020"
     }
@@ -211,28 +211,28 @@
   "conferences": [
     {
       "id": 1,
-      "title": "International Conference on Parkinson's Disease Research",
+      "title": "International Congress of Parkinson's Disease and Movement Disorders",
       "description": "Presented research on computational approaches to identify early biomarkers of Parkinson's disease.",
       "location": "Philadelphia, US",
-      "date": "29 September 2024",
+      "date": "30 September 2024",
       "presentationType": "oral",
       "image": "/images/us_o.jpg"
     },
     {
       "id": 2,
-      "title": "International Symposium on Neurodegenerative Disorders",
+      "title": "International Congress of Parkinson's Disease and Movement Disorders",
       "description": "Showcased research on network-based analysis of neurodegenerative disorders using multi-omics data integration.",
       "location": "Philadelphia, US",
-      "date": "27 September 2024",
+      "date": "28 September 2024",
       "presentationType": "poster",
       "image": "/images/us_p.jpg"
     },
     {
       "id": 3,
-      "title": "European Conference on Computational Biology",
+      "title": "International Congress of Parkinson's Disease and Movement Disorders",
       "description": "Presented work on machine learning approaches for predicting disease progression in Parkinson's patients.",
       "location": "Copenhagen, Denmark",
-      "date": "26 August 2023",
+      "date": "28 August 2023",
       "presentationType": "poster",
       "image": "/images/denmark.jpeg"
     }
@@ -240,19 +240,19 @@
   "workshops": [
     {
       "id": 1,
-      "title": "International Workshop on Computational Biology",
+      "title": "MDS-AOS Neuropathology and Neuroimaging Integrated Education Course for Movement Disorders",
       "description": "Intensive workshop on applying machine learning techniques to biological data analysis and interpretation.",
       "location": "Seoul, South Korea",
-      "date": "14-16 Feb 2024",
+      "date": "16-17 Feb 2024",
       "mode": "offline",
       "image": "/images/korea.jpeg"
     },
     {
       "id": 2,
-      "title": "Advanced Bioinformatics Workshop",
+      "title": "MDS-AOS Basic Science School",
       "description": "Hands-on training in computational modeling of biological systems and network analysis techniques.",
       "location": "Manila, Philippines",
-      "date": "16-18 April 2023",
+      "date": "13-14 April 2023",
       "mode": "offline",
       "image": "/images/philip.jpeg"
     }
