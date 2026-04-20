@@ -16,7 +16,7 @@ export function initNav() {
   if (!nav) return;
 
   const brandMark = el("span", { class: "site-nav__brand-mark", "aria-hidden": "true" }, "Z");
-  const brandName = el("span", {}, "Md Zainul Ali");
+  const brandName = el("span", {}, "Zain");
   const brand = el("a", { class: "site-nav__brand", href: "#hero", "aria-label": "Home" }, [brandMark, brandName]);
 
   const links = el("nav", { class: "site-nav__links", "aria-label": "Primary" },
