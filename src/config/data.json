@@ -177,7 +177,7 @@
       "title": "Analysis of Complex-I Associated Genes in Parkinson's Disease",
       "subtitle": "Interactive Data Exploration for Parkinson's Research",
       "description": "An online predictor tool using HTML, CSS, JavaScript to assess gene-based risk in Parkinson's Disease.",
-      "image": "/images/projects/pdviz.png",
+      "image": "/images/projects/pdviz.jpg",
       "technologies": [
         "Bioinformatics",
         "HTML",

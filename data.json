@@ -290,7 +290,7 @@
       "subtitle": "Interactive data exploration",
       "description": "An online predictor built with HTML/CSS/JavaScript for gene-based risk assessment in Parkinson's disease.",
       "image": {
-        "src": "/images/projects/pdviz.png",
+        "src": "/images/projects/pdviz.jpg",
         "alt": "PDViz interactive predictor",
         "width": 1200,
         "height": 800
