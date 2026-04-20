@@ -155,7 +155,7 @@
       "title": "PD-INSPECT",
       "subtitle": "Parkinson's Disease - Integrated Non-motor Symptom-based Prediction and Evaluation using Computational Tool",
       "description": "PD-INSPECT integrates transfer learning and collaborative filtering to evaluate Parkinson's disease risk from non-motor symptoms and molecular biomarkers, delivering clinician-friendly insights for early intervention.",
-      "image": "/images/projects/pdprevent.jpg",
+      "image": "/images/projects/pdinspect.jpg",
       "technologies": [
         "Python",
         "Flask",
@@ -177,7 +177,7 @@
       "title": "Analysis of Complex-I Associated Genes in Parkinson's Disease",
       "subtitle": "Interactive Data Exploration for Parkinson's Research",
       "description": "An online predictor tool using HTML, CSS, JavaScript to assess gene-based risk in Parkinson's Disease.",
-      "image": "/images/projects/pdviz.jpg",
+      "image": "/images/projects/pdviz.png",
       "technologies": [
         "Bioinformatics",
         "HTML",

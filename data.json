@@ -253,7 +253,7 @@
       "subtitle": "Parkinson's Disease - Integrated Non-motor Symptom-based Prediction and Evaluation using Computational Tool",
       "description": "PD-INSPECT integrates transfer learning and collaborative filtering to evaluate Parkinson's disease risk from non-motor symptoms and molecular biomarkers, providing clinician-friendly insights for early diagnosis.",
       "image": {
-        "src": "/images/projects/pdprevent.jpg",
+        "src": "/images/projects/pdinspect.jpg",
         "alt": "PD-INSPECT risk assessment tool",
         "width": 1200,
         "height": 800
@@ -290,7 +290,7 @@
       "subtitle": "Interactive data exploration",
       "description": "An online predictor built with HTML/CSS/JavaScript for gene-based risk assessment in Parkinson's disease.",
       "image": {
-        "src": "/images/projects/pdviz.jpg",
+        "src": "/images/projects/pdviz.png",
         "alt": "PDViz interactive predictor",
         "width": 1200,
         "height": 800
