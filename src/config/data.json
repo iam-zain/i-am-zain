@@ -9,19 +9,19 @@
     "website": "https://i-am-zain.netlify.app",
     "profileImages": [
       {
-        "src": "/images/profile_01.jpg",
+        "src": "/images/profile/profile_01.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       },
       {
-        "src": "/images/profile_02.jpeg",
+        "src": "/images/profile/profile_02.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       },
       {
-        "src": "/images/profile_03.jpg",
+        "src": "/images/profile/profile_03.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       },
       {
-        "src": "/images/profile_04.jpg",
+        "src": "/images/profile/profile_04.jpg",
         "alt": "Md Zainul Ali - Profile Photo"
       }
     ],
